@@ -9,7 +9,6 @@ public class Shoot : MonoBehaviour
   public float fireRate = 2f;
   private float nextShot = 0.0f;
 
-  // Update is called once per frame
   void Update()
   {
     if (Input.GetMouseButton(0) && Time.time > nextShot)

@@ -5,24 +5,21 @@ using UnityEngine;
 public class EnemyProperties : MonoBehaviour
 {
 
-    public int baseHealth = 100;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  public int baseHealth = 100;
 
-    // Update is called once per frame
-    void Update()
+  void Update()
+  {
+    if (baseHealth <= 0)
     {
-        if (baseHealth <= 0) {
-            Destroy(gameObject);
-        }
+      Destroy(gameObject);
     }
+  }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "Projectile"){
-            baseHealth -= 10;
-        }
+  private void OnCollisionEnter2D(Collision2D other)
+  {
+    if (other.gameObject.tag == "Projectile")
+    {
+      baseHealth -= 10;
     }
+  }
 }

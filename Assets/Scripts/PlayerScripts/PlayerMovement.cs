@@ -7,24 +7,17 @@ public class PlayerMovement : MonoBehaviour
   [SerializeField]
   LayerMask blinkLayerMask;
 
+  private Vector3 moveDirection;
   public float moveSpeed = 10f;
-
-
   public int energy = 10;
   public float blinkRange = 3f;
   float horizontalMovement;
   float verticalMovement;
-
   bool isBlinking = false;
 
   public Animator animator;
   private SpriteRenderer playerSprite;
-
-
   private Rigidbody2D rigidBody2D;
-
-
-  private Vector3 moveDirection;
 
   private void Awake()
   {
@@ -35,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
   private void Update()
   {
 
-    Debug.DrawRay(transform.position, moveDirection * blinkRange, Color.green);
+    // Debug.DrawRay(transform.position, moveDirection * blinkRange, Color.green);
 
     animator.SetFloat("movementSpeed", Mathf.Abs(horizontalMovement));
     GetMoveDir();

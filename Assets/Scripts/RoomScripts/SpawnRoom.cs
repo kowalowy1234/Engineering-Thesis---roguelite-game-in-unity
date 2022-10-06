@@ -5,9 +5,7 @@ using UnityEngine;
 public class SpawnRoom : MonoBehaviour
 {
   public int dir;
-
   public Rooms rooms;
-
   private bool spawned = false;
 
   void Start()
@@ -20,29 +18,33 @@ public class SpawnRoom : MonoBehaviour
   {
     if (spawned == false)
     {
-      if (dir == 1)
+      int randIndex;
+      switch (dir)
       {
-        // Spawn top room variation
-        int randIndex = Random.Range(0, rooms.TR.Length);
-        Instantiate(rooms.TR[randIndex], transform.position, Quaternion.identity);
-      }
-      else if (dir == 2)
-      {
-        // Spawn right room variation
-        int randIndex = Random.Range(0, rooms.RR.Length);
-        Instantiate(rooms.RR[randIndex], transform.position, Quaternion.identity);
-      }
-      else if (dir == 3)
-      {
-        // Spawn bottom room variation
-        int randIndex = Random.Range(0, rooms.BR.Length);
-        Instantiate(rooms.BR[randIndex], transform.position, Quaternion.identity);
-      }
-      else if (dir == 4)
-      {
-        // Spawn left room variation
-        int randIndex = Random.Range(0, rooms.LR.Length);
-        Instantiate(rooms.LR[randIndex], transform.position, Quaternion.identity);
+        case 1:
+          // Spawn top room variation
+          randIndex = Random.Range(0, rooms.TR.Length);
+          Instantiate(rooms.TR[randIndex], transform.position, Quaternion.identity);
+          break;
+
+        case 2:
+          // Spawn right room variation
+          randIndex = Random.Range(0, rooms.RR.Length);
+          Instantiate(rooms.RR[randIndex], transform.position, Quaternion.identity);
+          break;
+
+        case 3:
+          // Spawn bottom room variation
+          randIndex = Random.Range(0, rooms.BR.Length);
+          Instantiate(rooms.BR[randIndex], transform.position, Quaternion.identity);
+          break;
+
+        case 4:
+          // Spawn left room variation
+          randIndex = Random.Range(0, rooms.LR.Length);
+          Instantiate(rooms.LR[randIndex], transform.position, Quaternion.identity);
+          break;
+
       }
       spawned = true;
     }
@@ -52,7 +54,6 @@ public class SpawnRoom : MonoBehaviour
   {
     if (other.CompareTag("RoomSpawner"))
     {
-      Debug.Log("Destroyed");
       Destroy(gameObject);
     }
   }

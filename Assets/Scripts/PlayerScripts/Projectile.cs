@@ -9,8 +9,7 @@ public class Projectile : MonoBehaviour
 
   public Rigidbody2D rigidBD;
 
-  // Update is called once per frame
-  void Update()
+  void Start()
   {
     rigidBD.velocity = transform.right * velocity;
   }
