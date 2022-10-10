@@ -5,11 +5,13 @@ using UnityEngine;
 public class SpawnRoom : MonoBehaviour
 {
   public int dir;
-  public Rooms rooms;
+  private Rooms rooms;
+  private GameController gameController;
   private bool spawned = false;
 
   void Start()
   {
+    gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     rooms = GameObject.FindGameObjectWithTag("Rooms").GetComponent<Rooms>();
     Invoke("chooseSpawnRoom", 0.2f);
   }
@@ -18,6 +20,8 @@ public class SpawnRoom : MonoBehaviour
   {
     if (spawned == false)
     {
+      gameController.lastRoomSpawn = Time.time;
+      gameController.lastRoomPosition = transform.position;
       int randIndex;
       switch (dir)
       {
@@ -52,10 +56,9 @@ public class SpawnRoom : MonoBehaviour
 
   private void OnTriggerEnter2D(Collider2D other)
   {
-    if (other.CompareTag("RoomSpawner"))
+    if (other.CompareTag("RoomSpawner") && !spawned)
     {
       Destroy(gameObject);
     }
   }
-
 }
