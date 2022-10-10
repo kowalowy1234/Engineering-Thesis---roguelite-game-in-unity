@@ -6,6 +6,8 @@ public class CameraMove : MonoBehaviour
 {
 
   public Transform playerPosition;
+  public float xOffset = 18f;
+  public float yOffset = 12f;
   private float diffx;
   private float diffy;
 
@@ -19,21 +21,21 @@ public class CameraMove : MonoBehaviour
     diffx = playerPosition.position.x - transform.position.x;
     diffy = playerPosition.position.y - transform.position.y;
 
-    if (Mathf.Ceil(diffx) > 9f)
+    if (Mathf.Ceil(diffx) > xOffset / 2)
     {
-      transform.position = new Vector3(transform.position.x + 18f, transform.position.y, transform.position.z);
+      transform.position = new Vector3(transform.position.x + xOffset, transform.position.y, transform.position.z);
     }
-    else if (Mathf.Ceil(diffx) < -9f)
+    else if (Mathf.Ceil(diffx) < -xOffset - 2)
     {
-      transform.position = new Vector3(transform.position.x - 18f, transform.position.y, transform.position.z);
+      transform.position = new Vector3(transform.position.x - xOffset, transform.position.y, transform.position.z);
     }
-    else if (Mathf.Ceil(diffy) > 6f)
+    else if (Mathf.Ceil(diffy) > yOffset / 2)
     {
-      transform.position = new Vector3(transform.position.x, transform.position.y + 12f, transform.position.z);
+      transform.position = new Vector3(transform.position.x, transform.position.y + yOffset, transform.position.z);
     }
-    else if (Mathf.Ceil(diffy) < -6f)
+    else if (Mathf.Ceil(diffy) < -yOffset / 2)
     {
-      transform.position = new Vector3(transform.position.x, transform.position.y - 12f, transform.position.z);
+      transform.position = new Vector3(transform.position.x, transform.position.y - yOffset, transform.position.z);
     }
   }
 }
