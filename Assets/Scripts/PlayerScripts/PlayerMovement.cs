@@ -56,6 +56,28 @@ public class PlayerMovement : MonoBehaviour
     }
   }
 
+  private void OnTriggerEnter2D(Collider2D other)
+  {
+    string tag = other.gameObject.tag;
+
+    switch (tag)
+    {
+      default:
+        break;
+    }
+  }
+
+  private void OnTriggerExit2D(Collider2D other)
+  {
+    string tag = other.gameObject.tag;
+
+    switch (tag)
+    {
+      default:
+        break;
+    }
+  }
+
   private void GetMoveDir()
   {
 

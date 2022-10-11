@@ -9,6 +9,7 @@ TagManager:
   - Rooms
   - Blocker
   - DungeonGenerator
+  - RoomCover
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Doors
   - Background
   - Projectile
-  - 
+  - RoomCover
   - 
   - 
   - 
@@ -69,4 +70,7 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 3244201441
+    locked: 0
+  - name: RoomCover
+    uniqueID: 1726921483
     locked: 0
