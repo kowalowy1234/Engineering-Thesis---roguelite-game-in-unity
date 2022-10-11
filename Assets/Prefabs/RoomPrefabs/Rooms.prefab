@@ -67,6 +67,4 @@ MonoBehaviour:
   - {fileID: 3805174427697097390, guid: 25653e53736451549b36b0fa12278d29, type: 3}
   - {fileID: 9353166635456586, guid: 1a181479856b8ec439ecbe978f78409a, type: 3}
   - {fileID: 9353166635456586, guid: 1a181479856b8ec439ecbe978f78409a, type: 3}
-  RoomsList: []
-  boss: {fileID: 9104392897368079256, guid: 8c14dacada53cb54b8fca7e30865feaa, type: 3}
-  wait: 2
+  blocker: {fileID: 8725293203608151084, guid: a13d49d49de08b34daf351c918213bb2, type: 3}

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-
   public Transform playerPosition;
   public float xOffset = 18f;
   public float yOffset = 12f;
@@ -25,7 +24,7 @@ public class CameraMove : MonoBehaviour
     {
       transform.position = new Vector3(transform.position.x + xOffset, transform.position.y, transform.position.z);
     }
-    else if (Mathf.Ceil(diffx) < -xOffset - 2)
+    else if (Mathf.Ceil(diffx) < -xOffset / 2)
     {
       transform.position = new Vector3(transform.position.x - xOffset, transform.position.y, transform.position.z);
     }

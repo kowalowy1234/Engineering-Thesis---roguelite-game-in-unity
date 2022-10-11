@@ -5,13 +5,15 @@ using UnityEngine;
 public class SpawnRoom : MonoBehaviour
 {
   public int dir;
+  public bool spawned = false;
+  public List<bool> otherTriggers;
   private Rooms rooms;
-  private GameController gameController;
-  private bool spawned = false;
+  private DungeonGenerator dungeonGenerator;
+  private bool otherSpawned = false;
 
-  void Start()
+  void Awake()
   {
-    gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    dungeonGenerator = GameObject.FindGameObjectWithTag("DungeonGenerator").GetComponent<DungeonGenerator>();
     rooms = GameObject.FindGameObjectWithTag("Rooms").GetComponent<Rooms>();
     Invoke("chooseSpawnRoom", 0.2f);
   }
@@ -20,8 +22,8 @@ public class SpawnRoom : MonoBehaviour
   {
     if (spawned == false)
     {
-      gameController.lastRoomSpawn = Time.time;
-      gameController.lastRoomPosition = transform.position;
+      dungeonGenerator.lastRoomSpawn = Time.time;
+      dungeonGenerator.lastRoomPosition = transform.position;
       int randIndex;
       switch (dir)
       {
@@ -56,9 +58,19 @@ public class SpawnRoom : MonoBehaviour
 
   private void OnTriggerEnter2D(Collider2D other)
   {
-    if (other.CompareTag("RoomSpawner") && !spawned)
+    if (other.CompareTag("RoomSpawner"))
     {
-      Destroy(gameObject);
+      otherSpawned = other.gameObject.GetComponent<SpawnRoom>().spawned;
+      otherTriggers.Add(otherSpawned);
+      if (otherTriggers.Contains(true) && spawned == false)
+      {
+        Destroy(gameObject);
+      }
+      if (!otherTriggers.Contains(true) && spawned == false)
+      {
+        Instantiate(rooms.blocker, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+      }
     }
   }
 }

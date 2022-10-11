@@ -27,9 +27,6 @@ public class PlayerMovement : MonoBehaviour
 
   private void Update()
   {
-
-    // Debug.DrawRay(transform.position, moveDirection * blinkRange, Color.green);
-
     animator.SetFloat("movementSpeed", Mathf.Abs(horizontalMovement));
     GetMoveDir();
 
@@ -54,10 +51,8 @@ public class PlayerMovement : MonoBehaviour
 
     if (isBlinking)
     {
-      gameObject.layer = LayerMask.NameToLayer("PlayerDodge");
       rigidBody2D.MovePosition(blinkTarget);
       isBlinking = false;
-      gameObject.layer = LayerMask.NameToLayer("Player");
     }
   }
 
