@@ -74,3 +74,6 @@ TagManager:
   - name: RoomCover
     uniqueID: 1726921483
     locked: 0
+  - name: UI
+    uniqueID: 737113359
+    locked: 0
