@@ -5,11 +5,15 @@ using UnityEngine;
 public class SpawnRoom : MonoBehaviour
 {
   public int dir;
-  public Rooms rooms;
-  private bool spawned = false;
+  public bool spawned = false;
+  public List<bool> otherTriggers;
+  private Rooms rooms;
+  private DungeonGenerator dungeonGenerator;
+  private bool otherSpawned = false;
 
-  void Start()
+  void Awake()
   {
+    dungeonGenerator = GameObject.FindGameObjectWithTag("DungeonGenerator").GetComponent<DungeonGenerator>();
     rooms = GameObject.FindGameObjectWithTag("Rooms").GetComponent<Rooms>();
     Invoke("chooseSpawnRoom", 0.2f);
   }
@@ -18,6 +22,8 @@ public class SpawnRoom : MonoBehaviour
   {
     if (spawned == false)
     {
+      dungeonGenerator.lastRoomSpawn = Time.time;
+      dungeonGenerator.lastRoomPosition = transform.position;
       int randIndex;
       switch (dir)
       {
@@ -54,8 +60,17 @@ public class SpawnRoom : MonoBehaviour
   {
     if (other.CompareTag("RoomSpawner"))
     {
-      Destroy(gameObject);
+      otherSpawned = other.gameObject.GetComponent<SpawnRoom>().spawned;
+      otherTriggers.Add(otherSpawned);
+      if (otherTriggers.Contains(true) && spawned == false)
+      {
+        Destroy(gameObject);
+      }
+      if (!otherTriggers.Contains(true) && spawned == false)
+      {
+        Instantiate(rooms.blocker, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+      }
     }
   }
-
 }

@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: 0
-  rooms: {fileID: 0}
 --- !u!61 &4144289825754487088
 BoxCollider2D:
   m_ObjectHideFlags: 0
