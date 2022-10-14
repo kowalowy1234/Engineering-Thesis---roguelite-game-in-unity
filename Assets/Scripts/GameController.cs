@@ -6,11 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
   public static GameController instance;
-  // private bool isDungeon;
-  // public float lastRoomSpawn;
-  // public Vector3 lastRoomPosition;
-  // public GameObject boss;
-  // private bool spawnedFinish = false;
 
   void Awake()
   {
@@ -27,26 +22,13 @@ public class GameController : MonoBehaviour
 
   void Update()
   {
-    // isDungeon = SceneManager.GetActiveScene().name.StartsWith("Dungeon");
-    // if (Time.time - lastRoomSpawn > 1 && !spawnedFinish)
-    // {
-    //   SpawnBossOrPortal();
-    //   DestroySpawners();
-    // }
+    if (Input.GetKey(KeyCode.B))
+    {
+      SceneManager.LoadScene("Solitude");
+    }
+    if (Input.GetKey(KeyCode.M))
+    {
+      SceneManager.LoadScene("Main menu");
+    }
   }
-
-  // private void SpawnBossOrPortal()
-  // {
-  //   Instantiate(boss, lastRoomPosition, Quaternion.identity);
-  //   spawnedFinish = true;
-  // }
-
-  // private void DestroySpawners()
-  // {
-  //   GameObject[] roomSpawners = GameObject.FindGameObjectsWithTag("RoomSpawner");
-  //   foreach (var spawner in roomSpawners)
-  //   {
-  //     Destroy(spawner);
-  //   }
-  // }
 }
