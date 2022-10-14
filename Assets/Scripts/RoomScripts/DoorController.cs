@@ -5,36 +5,28 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
 
-  public bool isOpen = false;
   public LayerMask layerMask;
+  [SerializeField]
   private bool blocked = false;
 
   private void Update()
   {
     checkIfHitWall();
-    if (isOpen == true)
-    {
-      gameObject.GetComponent<BoxCollider2D>().enabled = false;
-      gameObject.GetComponent<SpriteRenderer>().color = Color.green;
-    }
-    else
-    {
-      gameObject.GetComponent<BoxCollider2D>().enabled = true;
-      gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-    }
   }
 
   public void openDoor()
   {
     if (blocked == false)
     {
-      isOpen = true;
+      gameObject.GetComponent<BoxCollider2D>().enabled = false;
+      gameObject.GetComponent<SpriteRenderer>().color = Color.green;
     }
   }
 
   public void closeDoor()
   {
-    isOpen = false;
+    gameObject.GetComponent<BoxCollider2D>().enabled = true;
+    gameObject.GetComponent<SpriteRenderer>().color = Color.red;
   }
 
   public void checkIfHitWall()
@@ -48,6 +40,11 @@ public class DoorController : MonoBehaviour
     {
       closeDoor();
       blocked = true;
+    }
+    else
+    {
+      openDoor();
+      blocked = false;
     }
   }
 

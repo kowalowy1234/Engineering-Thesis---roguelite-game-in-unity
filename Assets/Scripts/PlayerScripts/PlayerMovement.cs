@@ -84,29 +84,7 @@ public class PlayerMovement : MonoBehaviour
     horizontalMovement = Input.GetAxisRaw("Horizontal");
     verticalMovement = Input.GetAxisRaw("Vertical");
 
-
-    int moveX = 0;
-    int moveY = 0;
-
-    if (horizontalMovement > 0)
-    {
-      moveX += 1;
-    }
-    else if (horizontalMovement < 0)
-    {
-      moveX -= 1;
-    }
-
-    if (verticalMovement > 0)
-    {
-      moveY += 1;
-    }
-    else if (verticalMovement < 0)
-    {
-      moveY -= 1;
-    }
-
     // vector needs to be normalized so the player's movement speed is always the same on main axis and diagonally (length of vector is always 1)
-    moveDirection = new Vector3(moveX, moveY).normalized;
+    moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
   }
 }
