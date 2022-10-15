@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421084cc90b727346acb41c878fafe46, type: 3}
+  m_Name: Water Staff
+  m_EditorClassIdentifier: 
+  name: Water Staff
+  rateOfFire: 0.2
+  sprite: {fileID: 903854775207698278, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  projectile: {fileID: 3670291305755581006, guid: e21b834bdbe4d7347b5dbf06ee3ca02a, type: 3}
