@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
-  public float nextShot = 0.0f;
-  public SpriteRenderer weaponSprite;
-  public WeaponTemplate weapon;
+  private float nextShot = 0.0f;
+  private SpriteRenderer weaponSprite;
+  private WeaponTemplate weapon;
   public Transform shootingPoint;
 
   private void Start()
   {
+    weapon = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().currentWeapon;
     weaponSprite = gameObject.GetComponent<SpriteRenderer>();
     weaponSprite.sprite = weapon.sprite;
   }

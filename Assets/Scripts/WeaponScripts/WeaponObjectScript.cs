@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class WeaponObjectScript : MonoBehaviour
 {
-  public GameObject player;
-  public Vector3 playerPosition;
-  public GameController gameController;
+  private GameObject player;
+  private Vector3 playerPosition;
+  private GameController gameController;
   [SerializeField]
-  public WeaponTemplate weaponData;
+  private WeaponTemplate weaponData;
 
   private void Awake()
   {
