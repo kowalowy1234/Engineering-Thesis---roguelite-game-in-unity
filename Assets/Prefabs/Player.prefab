@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 177394153800778314}
   - component: {fileID: 5534246007120346598}
-  - component: {fileID: 5544715840962513394}
   m_Layer: 0
   m_Name: WeaponPivot
   m_TagString: Untagged
@@ -48,21 +47,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentPlayer: {fileID: 177394154407302712}
---- !u!114 &5544715840962513394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177394153800778315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 987481223a8674046a2d1ee84e34d353, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootingPoint: {fileID: 177394154429077657}
-  projectile: {fileID: 1954915016909739917, guid: e2d3e2f4481d33d4982ccd18733fbeed, type: 3}
-  fireRate: 0.2
 --- !u!1 &177394154060989600
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,9 +57,10 @@ GameObject:
   m_Component:
   - component: {fileID: 177394154060989603}
   - component: {fileID: 177394154060989602}
+  - component: {fileID: 1565194540}
   m_Layer: 0
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: WeaponController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +121,7 @@ SpriteRenderer:
   m_SortingLayerID: -780322723
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7555586439735394427, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -144,9 +129,23 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 1.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1565194540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177394154060989600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21474e374ca23f845a75fb8a84302918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 8ab68691a8d00fb4184d0c8304943c46, type: 2}
+  shootingPoint: {fileID: 177394154429077657}
 --- !u!1 &177394154407302712
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +160,6 @@ GameObject:
   - component: {fileID: 177394154407302715}
   - component: {fileID: 177394154407302662}
   - component: {fileID: 177394154407302661}
-  - component: {fileID: 6003141682687647065}
   - component: {fileID: 491258470694432245}
   - component: {fileID: 5895072563321485393}
   m_Layer: 6
@@ -325,18 +323,6 @@ MonoBehaviour:
   energy: 100
   blinkRange: 3
   animator: {fileID: 177394154407302662}
---- !u!114 &6003141682687647065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177394154407302712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21474e374ca23f845a75fb8a84302918, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &491258470694432245
 MonoBehaviour:
   m_ObjectHideFlags: 0

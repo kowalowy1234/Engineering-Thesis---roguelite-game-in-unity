@@ -10,6 +10,7 @@ TagManager:
   - Blocker
   - DungeonGenerator
   - RoomCover
+  - WeaponController
   layers:
   - Default
   - TransparentFX

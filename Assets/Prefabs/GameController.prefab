@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -43,6 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f236e287c3a03874ead5da6435ffa025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastRoomSpawn: 0
-  lastRoomPosition: {x: 0, y: 0, z: 0}
-  boss: {fileID: 9104392897368079256, guid: 8c14dacada53cb54b8fca7e30865feaa, type: 3}
+  currentWeapon: {fileID: 11400000, guid: 8ab68691a8d00fb4184d0c8304943c46, type: 2}
+  weaponController: {fileID: 0}

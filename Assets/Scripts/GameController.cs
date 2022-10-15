@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
   public static GameController instance;
+  public WeaponTemplate currentWeapon;
+  public WeaponScript weaponController;
 
-  void Awake()
+  void Start()
   {
+
+    weaponController = GameObject.FindGameObjectWithTag("WeaponController").GetComponent<WeaponScript>();
+
     if (instance == null)
     {
       instance = this;
@@ -30,5 +35,30 @@ public class GameController : MonoBehaviour
     {
       SceneManager.LoadScene("Main menu");
     }
+    if (Input.GetKey(KeyCode.T))
+    {
+      SceneManager.LoadScene("TestingScene");
+    }
+
+    if (weaponController == null)
+    {
+      weaponController = GameObject.FindGameObjectWithTag("WeaponController").GetComponent<WeaponScript>();
+    }
+  }
+
+  public void SwapWeapon(WeaponTemplate newWeapon)
+  {
+    currentWeapon = newWeapon;
+    weaponController.Swap(newWeapon);
+  }
+
+  public void SwapScroll()
+  {
+
+  }
+
+  public void SwapElixir()
+  {
+
   }
 }
