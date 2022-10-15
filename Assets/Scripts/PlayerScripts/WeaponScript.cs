@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
-  private float nextShot = 0.0f;
+  public float nextShot = 0.0f;
+  public SpriteRenderer weaponSprite;
   public WeaponTemplate weapon;
-  private SpriteRenderer weaponSprite;
-  [SerializeField]
-  private Transform shootingPoint;
+  public Transform shootingPoint;
 
-  private void Awake()
+  private void Start()
   {
-    gameObject.GetComponent<SpriteRenderer>().sprite = weapon.sprite;
+    weaponSprite = gameObject.GetComponent<SpriteRenderer>();
+    weaponSprite.sprite = weapon.sprite;
   }
 
   private void Update()
@@ -29,9 +29,9 @@ public class WeaponScript : MonoBehaviour
     Instantiate(weapon.projectile, shootingPoint.position, transform.rotation);
   }
 
-  // Should this exist here?
-  private void Swap()
+  public void Swap(WeaponTemplate newWeapon)
   {
-
+    weapon = newWeapon;
+    weaponSprite.sprite = newWeapon.sprite;
   }
 }

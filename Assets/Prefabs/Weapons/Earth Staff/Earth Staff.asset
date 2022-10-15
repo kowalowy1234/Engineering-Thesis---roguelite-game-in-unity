@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Earth Staff
   m_EditorClassIdentifier: 
   name: Earth Staff
-  rateOfFire: 0.2
+  rateOfFire: 0.7
   sprite: {fileID: -4287818238573078866, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
   projectile: {fileID: 3670291305755581006, guid: a28fb47c52c15e04f98452d7147c5b4f, type: 3}
