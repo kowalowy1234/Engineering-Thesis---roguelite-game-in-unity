@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
   private bool invoulnerable = false;
 
   public HealthBar healthBar;
+  private IEnumerator coroutine;
 
   void Start()
   {
@@ -40,7 +41,15 @@ public class Enemy : MonoBehaviour
   {
     if (!takingDotDamage)
     {
-      StartCoroutine(damageOverTime(damage, duration));
+      coroutine = damageOverTime(damage, duration);
+      StartCoroutine(coroutine);
+    }
+    else
+    {
+      StopCoroutine(coroutine);
+      dotTicks = 0;
+      coroutine = damageOverTime(damage, duration);
+      StartCoroutine(coroutine);
     }
   }
 
