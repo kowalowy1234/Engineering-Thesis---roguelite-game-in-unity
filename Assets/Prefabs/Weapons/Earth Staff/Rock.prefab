@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8445731841488332510}
   - component: {fileID: 5532399819287587509}
   - component: {fileID: 4279359107575453814}
-  - component: {fileID: 1946055819203785717}
+  - component: {fileID: -2111588140803720592}
   m_Layer: 14
   m_Name: Rock
   m_TagString: Projectile
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.87318224}
   m_EdgeRadius: 0
---- !u!114 &1946055819203785717
+--- !u!114 &-2111588140803720592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3670291305755581006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5798ebc0c73a78a4f8e9b99eef451f04, type: 3}
+  m_Script: {fileID: 11500000, guid: 45af9653606806448b1f5969bc290cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 20
+  damage: 10
+  damageOverTime: 0
+  dotDuration: 0

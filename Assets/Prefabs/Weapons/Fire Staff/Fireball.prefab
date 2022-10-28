@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8445731841488332510}
   - component: {fileID: 5532399819287587509}
   - component: {fileID: 4279359107575453814}
-  - component: {fileID: 1946055819203785717}
+  - component: {fileID: 3013791889004681416}
   m_Layer: 14
   m_Name: Fireball
   m_TagString: Projectile
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.87318224}
   m_EdgeRadius: 0
---- !u!114 &1946055819203785717
+--- !u!114 &3013791889004681416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3670291305755581006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5798ebc0c73a78a4f8e9b99eef451f04, type: 3}
+  m_Script: {fileID: 11500000, guid: 955a5b6debd3d3441bc64b76cbc679ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 20
+  damage: 8
+  damageOverTime: 5
+  dotDuration: 3
