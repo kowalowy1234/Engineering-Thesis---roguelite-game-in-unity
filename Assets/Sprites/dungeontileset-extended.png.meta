@@ -6616,9 +6616,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 304
-        y: 640
-        width: 48
-        height: 48
+        y: 672
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7724,6 +7724,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: dungeontileset-extended_116
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e525af892bc8f8f4abb86b8d8b375871
+      internalID: 1318744446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeontileset-extended_117
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9d1b31199b06d4bb64d49381dc32a5
+      internalID: -1997415880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -7836,6 +7878,7 @@ TextureImporter:
       dungeontileset-extended_144: -1938194289007382079
       dungeontileset-extended_266: 3730335036833338792
       dungeontileset-extended_312: -6095411606902287209
+      dungeontileset-extended_116: 1318744446
       dungeontileset-extended_7: -1390105924216010715
       dungeontileset-extended_76: 7860657943104043798
       dungeontileset-extended_206: -6166166585253037138
@@ -7895,9 +7938,9 @@ TextureImporter:
       dungeontileset-extended_115: -1490181413384702928
       dungeontileset-extended_276: 7192411664771848787
       dungeontileset-extended_107: -3591835200049019890
+      dungeontileset-extended_301: 2272637256206533509
       dungeontileset-extended_78: -8459389000273260372
       dungeontileset-extended_267: 93821904125972630
-      dungeontileset-extended_301: 2272637256206533509
       dungeontileset-extended_29: -384832650739702563
       dungeontileset-extended_208: -4272248844292877940
       dungeontileset-extended_27: -1653024243684722396
@@ -8035,6 +8078,7 @@ TextureImporter:
       dungeontileset-extended_114: 2430185381374506039
       Staff2: -4287818238573078866
       dungeontileset-extended_232: 6766972794534599263
+      dungeontileset-extended_117: -1997415880
       dungeontileset-extended_90: -7654971821013076408
       dungeontileset-extended_166: -4648389236469432986
       dungeontileset-extended_270: 4876691745601019256
