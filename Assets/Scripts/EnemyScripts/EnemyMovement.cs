@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+  private float xDiff;
+
   public GameObject player;
   private Vector3 playerPosition;
-
-  private float xDiff;
   private Vector3 tempScale;
+  private SpriteRenderer spriteRenderer;
 
   void Start()
   {
     player = GameObject.FindGameObjectWithTag("Player");
+    spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     tempScale = transform.localScale;
   }
 
@@ -28,13 +30,15 @@ public class EnemyMovement : MonoBehaviour
   {
     if (xDiff >= 0)
     {
-      tempScale.x = -1;
-      transform.localScale = tempScale;
+      spriteRenderer.flipX = false;
+      // tempScale.x = -1;
+      // transform.localScale = tempScale;
     }
     else
     {
-      tempScale.x = 1;
-      transform.localScale = tempScale;
+      spriteRenderer.flipX = true;
+      // tempScale.x = 1;
+      // transform.localScale = tempScale;
     }
   }
 }
