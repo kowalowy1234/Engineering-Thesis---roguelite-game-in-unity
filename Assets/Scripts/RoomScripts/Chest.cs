@@ -32,7 +32,7 @@ public class Chest : MonoBehaviour
   {
     animator.SetBool("isOpen", false);
     GameObject item = lootPool[Random.Range(0, lootPool.Length)];
-    Instantiate(item, transform.position, Quaternion.identity);
+    Instantiate(item, transform.position, Quaternion.Euler(item.transform.eulerAngles));
     inactive = true;
   }
 }
