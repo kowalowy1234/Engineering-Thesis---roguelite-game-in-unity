@@ -5,34 +5,46 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-  public float damageReduce = 0f;
+  public float damageReduce = 1f;
   public bool invoulnerable = false;
 
-  [SerializeField]
-  private float maxHealth;
-  [SerializeField]
-  private float currentHealth;
+  public float maxHealth;
+  public float currentHealth;
   private int dotTicks;
   private bool takingDotDamage = false;
 
+  private GameController gameController;
+  public HealthBar healthBar;
+
   void Start()
   {
-    currentHealth = maxHealth;
-    // healthBar.SetHealth(maxHealth);
+    gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    maxHealth = gameController.playerMaxHealth;
+    currentHealth = gameController.playerMaxHealth;
+    healthBar.SetMaxHealth(gameController.playerMaxHealth);
+    healthBar.SetHealth(gameController.playerMaxHealth);
   }
 
-  public void takeDamage(int damage)
+  void Update()
+  {
+    if (Input.GetKeyDown(KeyCode.K))
+    {
+      takeDamage(2f);
+    }
+  }
+
+  public void takeDamage(float damage)
   {
     if (!invoulnerable)
     {
-      if (currentHealth - damage * damageReduce <= 0)
+      if (currentHealth - (damage * damageReduce) <= 0)
       {
         die();
       }
       else
       {
         currentHealth -= damage * damageReduce;
-        // healthBar.SetHealth(currentHealth);
+        healthBar.SetHealth(currentHealth);
       }
     }
   }

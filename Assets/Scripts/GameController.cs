@@ -15,6 +15,11 @@ public class GameController : MonoBehaviour
   public GameObject player;
   // Passive boss trophy goes here (not yet implemented)
   public int currentTrophy;
+  public int points;
+  public float bonusPointsModificator = 1f;
+  public float maxBonusModificator = 3f;
+  public float playerMaxHealth = 10f;
+  public float playerMaxEnergy = 10f;
 
   void Start()
   {
@@ -77,5 +82,17 @@ public class GameController : MonoBehaviour
   {
     currentElixir = newElixir;
     elixirController.Swap(newElixir);
+  }
+
+  public void ModifyBonusPoints(float value) {
+    if (bonusPointsModificator + value > maxBonusModificator) {
+      bonusPointsModificator = maxBonusModificator;
+    } else {
+      bonusPointsModificator += value;
+    }
+  }
+
+  public void ResetBonusPoints() {
+    bonusPointsModificator = 0f;
   }
 }

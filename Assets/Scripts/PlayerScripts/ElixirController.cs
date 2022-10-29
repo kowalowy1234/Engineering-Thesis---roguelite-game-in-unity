@@ -23,6 +23,10 @@ public class ElixirController : MonoBehaviour
   {
     currentElixir = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().currentElixir;
     chargesLeft = currentElixir.charges;
+    if (chargesLeft == 0)
+    {
+      currentState = State.DEPLETED;
+    }
   }
 
   void Update()
@@ -58,10 +62,6 @@ public class ElixirController : MonoBehaviour
             currentState = State.READY;
           }
         }
-        break;
-
-      case State.DEPLETED:
-        Debug.Log("Charges depleted, find a new set of elixirs");
         break;
 
       default:
