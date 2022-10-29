@@ -11,6 +11,8 @@ TagManager:
   - DungeonGenerator
   - RoomCover
   - WeaponController
+  - Enemy
+  - Chest
   layers:
   - Default
   - TransparentFX
@@ -48,29 +50,29 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 3514644573
-    locked: 0
-  - name: Enemies
-    uniqueID: 2890551561
-    locked: 0
-  - name: Walls
-    uniqueID: 4062265809
+  - name: Background
+    uniqueID: 3244201441
     locked: 0
   - name: Floor
     uniqueID: 3858434829
     locked: 0
-  - name: Items
-    uniqueID: 3139025471
-    locked: 0
   - name: Chests
     uniqueID: 1667601047
+    locked: 0
+  - name: Enemies
+    uniqueID: 2890551561
     locked: 0
   - name: Doors
     uniqueID: 4228602689
     locked: 0
-  - name: Background
-    uniqueID: 3244201441
+  - name: Walls
+    uniqueID: 4062265809
+    locked: 0
+  - name: Items
+    uniqueID: 3139025471
+    locked: 0
+  - name: Player
+    uniqueID: 3514644573
     locked: 0
   - name: RoomCover
     uniqueID: 1726921483

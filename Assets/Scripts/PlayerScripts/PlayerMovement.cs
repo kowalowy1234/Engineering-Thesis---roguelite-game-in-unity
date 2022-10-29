@@ -7,22 +7,34 @@ public class PlayerMovement : MonoBehaviour
   [SerializeField]
   LayerMask blinkLayerMask;
 
-  private Vector3 moveDirection;
   public float moveSpeed = 10f;
-  public int energy = 10;
+  public float maxEnergy = 10f;
+  public float currentEnergy = 10f;
   public float blinkRange = 3f;
+  public float energyRechargeRate = 0f;
+
   float horizontalMovement;
   float verticalMovement;
   bool isBlinking = false;
 
   public Animator animator;
+  private GameController gameController;
+  private Vector3 moveDirection;
   private SpriteRenderer playerSprite;
   private Rigidbody2D rigidBody2D;
+  public EnergyBar energyBar;
 
-  private void Awake()
+  private void Start()
   {
+    gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    maxEnergy = gameController.playerMaxEnergy;
+    currentEnergy = maxEnergy;
     rigidBody2D = GetComponent<Rigidbody2D>();
     playerSprite = gameObject.GetComponent<SpriteRenderer>();
+    energyBar.SetMaxEnergy(maxEnergy);
+    energyBar.SetEnergy(maxEnergy);
+
+    InvokeRepeating("RechargeEnergy", 1f, 1f);
   }
 
   private void Update()
@@ -30,9 +42,14 @@ public class PlayerMovement : MonoBehaviour
     animator.SetFloat("movementSpeed", Mathf.Abs(horizontalMovement));
     GetMoveDir();
 
-    if (Input.GetButtonDown("Jump") && energy >= 10)
+    if (Input.GetButtonDown("Jump") && currentEnergy >= 10)
     {
-      isBlinking = true;
+      if (moveDirection != Vector3.zero)
+      {
+        currentEnergy -= 10f;
+        energyBar.SetEnergy(currentEnergy);
+        isBlinking = true;
+      }
     }
   }
 
@@ -86,5 +103,14 @@ public class PlayerMovement : MonoBehaviour
 
     // vector needs to be normalized so the player's movement speed is always the same on main axis and diagonally (length of vector is always 1)
     moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+  }
+
+  private void RechargeEnergy()
+  {
+    if (currentEnergy < maxEnergy)
+    {
+      currentEnergy += 5f + (5f * energyRechargeRate);
+      energyBar.SetEnergy(currentEnergy);
+    }
   }
 }
