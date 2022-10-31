@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d978d8d8e2702b4db1af3dcea8ec15c, type: 3}
-  m_Name: ExplosionScroll
+  m_Script: {fileID: 11500000, guid: b064237c4472c4046907aef6130aa645, type: 3}
+  m_Name: HealingScroll
   m_EditorClassIdentifier: 
-  name: Explosion scroll
+  ScrollName: Healing scroll
   cooldown: 10
   duration: 0
-  sprite: {fileID: -3331354820723732956, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  sprite: {fileID: -4766192262669789229, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}

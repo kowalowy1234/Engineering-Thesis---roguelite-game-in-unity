@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 330c4cc76fad2a940a9f3b466de34d28, type: 3}
-  m_Name: ShieldScroll
+  m_Script: {fileID: 11500000, guid: afdc12cdc529b6e40a72a1707592955c, type: 3}
+  m_Name: DefaultScroll
   m_EditorClassIdentifier: 
-  name: Shield scroll
-  cooldown: 10
-  duration: 2
-  sprite: {fileID: 1100671667349740886, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  ScrollName: Default scroll
+  cooldown: 0
+  duration: 0
+  sprite: {fileID: 0}

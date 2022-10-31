@@ -13,6 +13,7 @@ TagManager:
   - WeaponController
   - Enemy
   - Chest
+  - SaveManager
   layers:
   - Default
   - TransparentFX

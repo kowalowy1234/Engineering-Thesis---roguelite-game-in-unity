@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Scrolls/HealingScroll")]
 public class HealingScrollScript : ScrollTemplate
 {
   public override void Activate()
