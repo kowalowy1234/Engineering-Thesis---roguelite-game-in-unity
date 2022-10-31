@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ElixirTemplate : ScriptableObject
 {
-  public new string name;
+  public string ElixirName;
   public float duration;
   public int charges;
 

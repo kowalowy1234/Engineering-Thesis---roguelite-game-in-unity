@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class WeaponTemplate : ScriptableObject
 {
-  public new string name;
+  public string weaponName;
   public float rateOfFire;
   public Sprite sprite;
   public GameObject projectile;

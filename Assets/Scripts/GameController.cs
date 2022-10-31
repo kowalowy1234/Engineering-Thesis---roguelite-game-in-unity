@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
   public static GameController instance;
+  public SaveManager saveManager;
   public WeaponTemplate currentWeapon;
   private WeaponScript weaponController;
   public ScrollTemplate currentScroll;
@@ -21,8 +22,9 @@ public class GameController : MonoBehaviour
   public float playerMaxHealth = 10f;
   public float playerMaxEnergy = 10f;
 
-  void Start()
+  void Awake()
   {
+    saveManager = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>();
     player = GameObject.FindGameObjectWithTag("Player");
     scrollController = player.GetComponent<ScrollController>();
     elixirController = player.GetComponent<ElixirController>();
@@ -37,6 +39,13 @@ public class GameController : MonoBehaviour
     {
       Destroy(gameObject);
     }
+
+    currentElixir = saveManager.currentElixir;
+    currentScroll = saveManager.currentScroll;
+    currentWeapon = saveManager.currentWeapon;
+    bonusPointsModificator = saveManager.bonusPointsModificator;
+    playerMaxHealth = saveManager.playerMaxHealth;
+    playerMaxEnergy = saveManager.playerMaxEnergy;
   }
 
   void Update()
@@ -47,6 +56,7 @@ public class GameController : MonoBehaviour
     }
     if (Input.GetKey(KeyCode.M))
     {
+      SaveGame();
       SceneManager.LoadScene("Main menu");
     }
     if (Input.GetKey(KeyCode.T))
@@ -54,13 +64,13 @@ public class GameController : MonoBehaviour
       SceneManager.LoadScene("TestingScene");
     }
 
-    if (player == null)
+    if (player == null && SceneManager.GetActiveScene().name != "Main menu")
     {
       player = GameObject.FindGameObjectWithTag("Player");
       scrollController = player.GetComponent<ScrollController>();
       elixirController = player.GetComponent<ElixirController>();
     }
-    if (weaponController == null)
+    if (weaponController == null && SceneManager.GetActiveScene().name != "Main menu")
     {
       weaponController = GameObject.FindGameObjectWithTag("WeaponController").GetComponent<WeaponScript>();
     }
@@ -70,29 +80,58 @@ public class GameController : MonoBehaviour
   {
     currentWeapon = newWeapon;
     weaponController.Swap(newWeapon);
+    saveManager.currentWeapon = newWeapon;
   }
 
   public void SwapScroll(ScrollTemplate newScroll)
   {
     currentScroll = newScroll;
     scrollController.Swap(newScroll);
+    saveManager.currentScroll = newScroll;
   }
 
   public void SwapElixir(ElixirTemplate newElixir)
   {
     currentElixir = newElixir;
     elixirController.Swap(newElixir);
+    saveManager.currentElixir = newElixir;
   }
 
-  public void ModifyBonusPoints(float value) {
-    if (bonusPointsModificator + value > maxBonusModificator) {
+  public void ModifyBonusPoints(float value)
+  {
+    if (bonusPointsModificator + value > maxBonusModificator)
+    {
       bonusPointsModificator = maxBonusModificator;
-    } else {
+    }
+    else
+    {
       bonusPointsModificator += value;
     }
+
+    saveManager.bonusPointsModificator = bonusPointsModificator;
   }
 
-  public void ResetBonusPoints() {
+  public void ResetBonusPoints()
+  {
     bonusPointsModificator = 0f;
+    saveManager.bonusPointsModificator = bonusPointsModificator;
+  }
+
+  private void OnApplicationQuit()
+  {
+    SaveGame();
+  }
+
+  private void SaveGame()
+  {
+    saveManager.currentElixir = currentElixir;
+    saveManager.currentScroll = currentScroll;
+    saveManager.currentTrophy = currentTrophy;
+    saveManager.points = points;
+    saveManager.bonusPointsModificator = bonusPointsModificator;
+    saveManager.playerMaxHealth = playerMaxHealth;
+    saveManager.playerMaxEnergy = playerMaxEnergy;
+
+    saveManager.Save();
   }
 }

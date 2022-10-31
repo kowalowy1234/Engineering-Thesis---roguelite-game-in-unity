@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScrollTemplate : ScriptableObject
 {
-  public new string name;
+  public string ScrollName;
   public float cooldown;
   public float duration;
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Scrolls/ExplosionScroll")]
 public class ExplosionScrollScript : ScrollTemplate
 {
   public override void Activate()

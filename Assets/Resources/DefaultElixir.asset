@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1f55b784221034b99d7442b1dd1424, type: 3}
-  m_Name: EnergyElixir
+  m_Script: {fileID: 11500000, guid: 42633511877bed44ba3159c84b646988, type: 3}
+  m_Name: DefaultElixir
   m_EditorClassIdentifier: 
-  name: Energy elixir
-  duration: 1
-  charges: 5
-  sprite: {fileID: 4749735453482056809, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  ElixirName: Default elixir
+  duration: 0
+  charges: 0
+  sprite: {fileID: 0}

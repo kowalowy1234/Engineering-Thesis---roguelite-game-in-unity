@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Scrolls/ShieldScroll")]
 public class ShieldScrollScript : ScrollTemplate
 {
   public override void Activate()
