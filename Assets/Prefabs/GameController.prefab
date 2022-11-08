@@ -55,3 +55,4 @@ MonoBehaviour:
   maxBonusModificator: 3
   playerMaxHealth: 10
   playerMaxEnergy: 10
+  inGameMenu: {fileID: 0}
