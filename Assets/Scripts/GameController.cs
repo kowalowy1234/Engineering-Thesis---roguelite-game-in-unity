@@ -40,7 +40,6 @@ public class GameController : MonoBehaviour
     elixirController = player.GetComponent<ElixirController>();
     weaponController = GameObject.FindGameObjectWithTag("WeaponController").GetComponent<WeaponScript>();
 
-
     currentElixir = saveManager.currentElixir;
     currentScroll = saveManager.currentScroll;
     currentWeapon = saveManager.currentWeapon;
