@@ -485,7 +485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2071454943563674693, guid: ec00317372954694196275bd76116b56, type: 3}
       propertyPath: sceneName
-      value: Dugeon2
+      value: Dungeon2
       objectReference: {fileID: 0}
     - target: {fileID: 3421820264853996319, guid: ec00317372954694196275bd76116b56, type: 3}
       propertyPath: m_Color.b
@@ -1120,6 +1120,14 @@ PrefabInstance:
     - target: {fileID: 177394154407302712, guid: 50b0cc2bf6761ae4e924b9c91b41ee6d, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 776671654908726955, guid: 50b0cc2bf6761ae4e924b9c91b41ee6d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384583390251941822, guid: 50b0cc2bf6761ae4e924b9c91b41ee6d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b0cc2bf6761ae4e924b9c91b41ee6d, type: 3}
