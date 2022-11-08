@@ -24,12 +24,6 @@ public class GameController : MonoBehaviour
 
   void Awake()
   {
-    saveManager = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>();
-    player = GameObject.FindGameObjectWithTag("Player");
-    scrollController = player.GetComponent<ScrollController>();
-    elixirController = player.GetComponent<ElixirController>();
-    weaponController = GameObject.FindGameObjectWithTag("WeaponController").GetComponent<WeaponScript>();
-
     if (instance == null)
     {
       instance = this;
@@ -39,6 +33,13 @@ public class GameController : MonoBehaviour
     {
       Destroy(gameObject);
     }
+
+    saveManager = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>();
+    player = GameObject.FindGameObjectWithTag("Player");
+    scrollController = player.GetComponent<ScrollController>();
+    elixirController = player.GetComponent<ElixirController>();
+    weaponController = GameObject.FindGameObjectWithTag("WeaponController").GetComponent<WeaponScript>();
+
 
     currentElixir = saveManager.currentElixir;
     currentScroll = saveManager.currentScroll;
@@ -66,6 +67,7 @@ public class GameController : MonoBehaviour
 
     if (player == null && SceneManager.GetActiveScene().name != "Main menu")
     {
+      Debug.Log("hello");
       player = GameObject.FindGameObjectWithTag("Player");
       scrollController = player.GetComponent<ScrollController>();
       elixirController = player.GetComponent<ElixirController>();

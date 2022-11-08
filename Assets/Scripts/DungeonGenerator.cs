@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DungeonGenerator : MonoBehaviour
 {
   public float lastRoomSpawn;
+  public int minRooms = 5;
   public Vector3 lastRoomPosition;
   public GameObject boss;
   private bool spawnedFinish = false;
@@ -21,6 +22,12 @@ public class DungeonGenerator : MonoBehaviour
 
   private void SpawnBossOrPortal()
   {
+    GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
+
+    if (rooms.Length <= minRooms)
+    {
+      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     Instantiate(boss, lastRoomPosition, Quaternion.identity);
     spawnedFinish = true;
   }
