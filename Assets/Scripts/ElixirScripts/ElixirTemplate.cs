@@ -13,6 +13,15 @@ public class ElixirTemplate : ScriptableObject
   public virtual void Activate()
   {
     // Elixir activation logic
-    charges -= 1;
+  }
+
+  public virtual void Active()
+  {
+    // Elixir active logic
+  }
+
+  public virtual void Deactivate()
+  {
+    // Elixir deactivate logic
   }
 }
