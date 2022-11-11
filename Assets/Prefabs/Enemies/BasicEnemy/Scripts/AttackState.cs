@@ -20,12 +20,12 @@ public class AttackState : State
     playerPosition = player.transform.position;
     distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
 
-    if (distanceToPlayer >= 1.3f && !isAttacking)
+    if (distanceToPlayer >= 1.7f && !isAttacking)
     {
       return chaseState;
     }
 
-    if (distanceToPlayer < 1.3f && !isAttacking)
+    if (distanceToPlayer <= 1.7f && !isAttacking)
     {
       if (performedAttack == false)
       {
@@ -39,16 +39,19 @@ public class AttackState : State
   {
     isAttacking = true;
     performedAttack = true;
-    StartCoroutine(CurrentlyAttacking());
+    StartCoroutine(CurrentlyAttacking(playerPosition));
     StartCoroutine(NextAttackDelay());
   }
 
-  private IEnumerator CurrentlyAttacking()
+  private IEnumerator CurrentlyAttacking(Vector3 designatedPosition)
   {
     performedAttack = true;
     Animator animator = body.GetComponent<Animator>();
     animator.SetTrigger("Attack");
     yield return new WaitForSeconds(0.3f);
+    designatedPosition.y += 0.5f;
+    body.transform.position = designatedPosition;
+
     if (distanceToPlayer <= 2f)
     {
       player.GetComponent<PlayerController>().takeDamage(damage);
@@ -58,7 +61,7 @@ public class AttackState : State
 
   private IEnumerator NextAttackDelay()
   {
-    yield return new WaitForSeconds(1f);
+    yield return new WaitForSeconds(0.6f);
     performedAttack = false;
   }
 }

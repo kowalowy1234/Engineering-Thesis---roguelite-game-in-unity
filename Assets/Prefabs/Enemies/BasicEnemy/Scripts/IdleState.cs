@@ -18,9 +18,12 @@ public class IdleState : State
     float distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
     Vector3 directionToPlayer = playerPosition - transform.position;
 
-    RaycastHit2D playerHit = Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, layerMask);
+    directionToPlayer.y += 0.1f;
 
-    playerVisible = playerHit.collider.CompareTag("Player");
+    RaycastHit2D playerHit = Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, layerMask);
+    Debug.DrawRay(transform.position, directionToPlayer, Color.black);
+
+    playerVisible = playerHit ? playerHit.collider.CompareTag("Player") : false;
 
     if (wait && playerVisible)
     {

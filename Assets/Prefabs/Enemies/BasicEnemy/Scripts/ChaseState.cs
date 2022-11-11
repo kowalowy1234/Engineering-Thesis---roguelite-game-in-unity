@@ -16,10 +16,11 @@ public class ChaseState : State
     playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
     distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
 
-    if (distanceToPlayer < 1.3f)
+    if (distanceToPlayer <= 1.7f)
     {
       return attackState;
     }
+
     body.transform.position = Vector3.MoveTowards(transform.position, playerPosition, chaseSpeed * Time.deltaTime);
     return this;
   }

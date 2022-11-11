@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde1b1fee8ff8c446bc950ff7cfcf5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 6.5
+  chaseSpeed: 6
   attackState: {fileID: 2136218814593605195}
   body: {fileID: 1582297631582259628}
 --- !u!1 &5750187871355036096
