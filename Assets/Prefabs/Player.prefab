@@ -121,7 +121,7 @@ SpriteRenderer:
   m_SortingLayerID: -780322723
   m_SortingLayer: 8
   m_SortingOrder: 1
-  m_Sprite: {fileID: -5658476418126016101, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  m_Sprite: {fileID: 7555586439735394427, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -382,7 +382,7 @@ GameObject:
   m_Layer: 0
   m_Name: ShootingPoint
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
