@@ -10,8 +10,9 @@ public class ScrollTemplate : ScriptableObject
 
   public Sprite sprite;
 
-  public virtual void Activate()
-  {
-    // Scroll activation logic
-  }
+  public virtual void Activate() { }
+
+  public virtual void Active() { }
+
+  public virtual void Deactivate() { }
 }

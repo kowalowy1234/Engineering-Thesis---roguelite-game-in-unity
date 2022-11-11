@@ -31,12 +31,18 @@ public class PlayerController : MonoBehaviour
     {
       takeDamage(2f);
     }
+
+    if (Input.GetKeyDown(KeyCode.H))
+    {
+      Heal(10);
+    }
   }
 
   public void takeDamage(float damage)
   {
     if (!invoulnerable)
     {
+      Debug.Log(currentHealth - (damage * damageReduce));
       if (currentHealth - (damage * damageReduce) <= 0)
       {
         die();
@@ -60,6 +66,7 @@ public class PlayerController : MonoBehaviour
   public void die()
   {
     // Destroy(gameObject);
+    healthBar.SetHealth(0);
     Debug.Log("Game Over");
   }
 

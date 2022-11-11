@@ -31,14 +31,10 @@ public class EnemyMovement : MonoBehaviour
     if (xDiff >= 0)
     {
       spriteRenderer.flipX = false;
-      // tempScale.x = -1;
-      // transform.localScale = tempScale;
     }
     else
     {
       spriteRenderer.flipX = true;
-      // tempScale.x = 1;
-      // transform.localScale = tempScale;
     }
   }
 }

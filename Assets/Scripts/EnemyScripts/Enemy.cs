@@ -14,9 +14,11 @@ public class Enemy : MonoBehaviour
 
   public HealthBar healthBar;
   private IEnumerator coroutine;
+  private Animator animator;
 
   void Start()
   {
+    animator = gameObject.GetComponent<Animator>();
     currentHealth = maxHealth;
     healthBar.SetHealth(maxHealth);
   }
@@ -31,6 +33,7 @@ public class Enemy : MonoBehaviour
       }
       else
       {
+        animator.SetTrigger("TakeDamage");
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
       }
