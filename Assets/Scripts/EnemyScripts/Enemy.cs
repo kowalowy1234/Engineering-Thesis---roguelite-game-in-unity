@@ -5,22 +5,20 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-  public int maxHealth = 100;
+  public float maxHealth = 100;
   [SerializeField]
-  public int currentHealth;
+  public float currentHealth;
   private int dotTicks;
   private bool takingDotDamage = false;
   private bool invoulnerable = false;
 
   public HealthBar healthBar;
   private IEnumerator coroutine;
-  private Animator animator;
 
   void Start()
   {
-    animator = gameObject.GetComponent<Animator>();
     currentHealth = maxHealth;
-    healthBar.SetHealth(maxHealth);
+    healthBar.SetMaxHealth(maxHealth);
   }
 
   public void takeDamage(int damage)
@@ -33,7 +31,6 @@ public class Enemy : MonoBehaviour
       }
       else
       {
-        animator.SetTrigger("TakeDamage");
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
       }
