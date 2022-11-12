@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
   {
     if (!invoulnerable)
     {
-      Debug.Log(currentHealth - (damage * damageReduce));
       if (currentHealth - (damage * damageReduce) <= 0)
       {
         die();

@@ -10,6 +10,10 @@ public class DoorController : MonoBehaviour
   private bool blocked = false;
   private bool isOpen = false;
 
+  private void Start() {
+    Debug.Log(gameObject.layer);
+  }
+
   private void Update()
   {
     checkIfHitWall();
@@ -53,7 +57,4 @@ public class DoorController : MonoBehaviour
       other.transform.position = other.transform.position + transform.right * (-3);
     }
   }
-
-
-
 }

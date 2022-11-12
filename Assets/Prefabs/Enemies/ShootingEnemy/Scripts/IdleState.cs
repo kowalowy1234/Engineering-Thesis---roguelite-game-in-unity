@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BasicEnemy
+namespace ShootingEnemy
 {
   public class IdleState : State
   {
@@ -10,20 +10,24 @@ namespace BasicEnemy
     private bool wait = true;
 
     public ChaseState chaseState;
+    public RunState runState;
     public LayerMask layerMask;
     public Vector3 playerPosition;
     public GameObject body;
+    public GameObject player;
+
+    private void Start()
+    {
+      player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     public override State RunCurrentState()
     {
-      playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+      playerPosition = player.transform.position;
       float distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
       Vector3 directionToPlayer = playerPosition - transform.position;
 
-      directionToPlayer.y += 0.1f;
-
       RaycastHit2D playerHit = Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, layerMask);
-      Debug.DrawRay(transform.position, directionToPlayer, Color.black);
 
       playerVisible = playerHit ? playerHit.collider.CompareTag("Player") : false;
 
@@ -34,7 +38,14 @@ namespace BasicEnemy
 
       if (!wait && playerVisible)
       {
-        return chaseState;
+        if (distanceToPlayer > 6f)
+        {
+          return chaseState;
+        }
+        else if (distanceToPlayer < 4f)
+        {
+          return runState;
+        }
       }
       return this;
     }
