@@ -3005,7 +3005,7 @@ TextureImporter:
         serializedVersion: 2
         x: 368
         y: 896
-        width: 32
+        width: 16
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3068,7 +3068,7 @@ TextureImporter:
         serializedVersion: 2
         x: 432
         y: 896
-        width: 32
+        width: 16
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -7766,6 +7766,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: dungeontileset-extended_116
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 896
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20280623b3c0630409211c8b51d20a9f
+      internalID: -1693117940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeontileset-extended_117
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29439e2e268fe54a81e22bf81fe6d18
+      internalID: -680109832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -7878,6 +7920,7 @@ TextureImporter:
       dungeontileset-extended_144: -1938194289007382079
       dungeontileset-extended_266: 3730335036833338792
       dungeontileset-extended_312: -6095411606902287209
+      dungeontileset-extended_116: -1693117940
       dungeontileset-extended_7: -1390105924216010715
       dungeontileset-extended_76: 7860657943104043798
       dungeontileset-extended_206: -6166166585253037138
@@ -8079,6 +8122,7 @@ TextureImporter:
       dungeontileset-extended_114: 2430185381374506039
       Staff2: -4287818238573078866
       dungeontileset-extended_232: 6766972794534599263
+      dungeontileset-extended_117: -680109832
       dungeontileset-extended_90: -7654971821013076408
       dungeontileset-extended_166: -4648389236469432986
       dungeontileset-extended_270: 4876691745601019256
