@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ExplodingEnemy
@@ -18,7 +16,7 @@ namespace ExplodingEnemy
       playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
       distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
 
-      if (distanceToPlayer <= 1f)
+      if (distanceToPlayer <= 1.5f)
       {
         body.GetComponent<Animator>().SetBool("Exploding", true);
         return explodeState;

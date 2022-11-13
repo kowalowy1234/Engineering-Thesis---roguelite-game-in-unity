@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ExplodingEnemy
@@ -12,14 +11,12 @@ namespace ExplodingEnemy
     private float explosionCountdown;
     private float distanceToPlayer;
     private Vector3 playerPosition;
-    private Color initialColor;
     private Vector3 initialScale;
 
     private void Start()
     {
       explosionCountdown = explosionTimer;
       initialScale = transform.localScale;
-      initialColor = gameObject.GetComponent<SpriteRenderer>().color;
     }
 
     private void Update()
@@ -44,9 +41,6 @@ namespace ExplodingEnemy
     public void Explode()
     {
       gameObject.GetComponent<CircleCollider2D>().enabled = true;
-      Color color;
-      ColorUtility.TryParseHtmlString("#E2DC0B", out color);
-      gameObject.GetComponent<SpriteRenderer>().color = color;
       StartCoroutine(Delay());
     }
 
@@ -54,8 +48,6 @@ namespace ExplodingEnemy
     {
       StopCoroutine(Delay());
       gameObject.GetComponent<CircleCollider2D>().enabled = false;
-      gameObject.GetComponent<SpriteRenderer>().color = initialColor;
-      Debug.Log(initialScale);
       transform.localScale = initialScale;
       explosionCountdown = explosionTimer;
       gameObject.SetActive(false);
