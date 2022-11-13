@@ -64,7 +64,7 @@ namespace ExplodingEnemy
     private IEnumerator Delay()
     {
       yield return new WaitForSeconds(0.1f);
-      Destroy(body);
+      body.GetComponent<Enemy>().die();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
