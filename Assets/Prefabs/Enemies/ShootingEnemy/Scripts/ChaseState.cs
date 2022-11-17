@@ -4,14 +4,14 @@ namespace ShootingEnemy
 {
   public class ChaseState : State
   {
-    private float distanceToPlayer;
     public float chaseSpeed;
+    private float distanceToPlayer;
 
     public RunState runState;
     public IdleState idleState;
-    private Vector3 playerPosition;
-    public GameObject player;
     public GameObject body;
+    private Vector3 playerPosition;
+    private GameObject player;
 
     private void Start()
     {
@@ -29,8 +29,6 @@ namespace ShootingEnemy
       }
 
       body.transform.position = Vector3.MoveTowards(transform.position, playerPosition, chaseSpeed * Time.deltaTime);
-      // Vector3 direction = playerPosition - transform.position;
-      // rb.AddRelativeForce(direction.normalized * chaseSpeed, ForceMode2D.Force);
       return this;
     }
 

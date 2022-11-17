@@ -5,11 +5,13 @@ namespace ExplodingEnemy
 {
   public class ExplosionTrigger : MonoBehaviour
   {
-    public GameObject body;
     public float explosionDamage;
     public float explosionTimer;
     private float explosionCountdown;
     private float distanceToPlayer;
+
+    public GameObject body;
+    private GameObject player;
     private Vector3 playerPosition;
     private Vector3 initialScale;
 
@@ -17,11 +19,12 @@ namespace ExplodingEnemy
     {
       explosionCountdown = explosionTimer;
       initialScale = transform.localScale;
+      player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
     {
-      playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+      playerPosition = player.transform.position;
       distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
 
       float scale = 10 * Time.deltaTime;

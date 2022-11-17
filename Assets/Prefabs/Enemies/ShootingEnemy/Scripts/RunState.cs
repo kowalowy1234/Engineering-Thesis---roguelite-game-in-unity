@@ -10,10 +10,9 @@ namespace ShootingEnemy
 
     public ChaseState chaseState;
     public IdleState idleState;
-    private Vector3 playerPosition;
     public GameObject body;
-    public GameObject player;
-    // public LayerMask layerMask;
+    private Vector3 playerPosition;
+    private GameObject player;
 
     private void Start()
     {

@@ -5,15 +5,18 @@ namespace ShootingEnemy
 {
   public class IdleState : State
   {
-    public bool playerVisible;
+    private bool playerVisible;
     private bool wait = true;
+    private float distanceToPlayer;
 
     public ChaseState chaseState;
     public RunState runState;
     public LayerMask layerMask;
-    public Vector3 playerPosition;
     public GameObject body;
-    public GameObject player;
+    private Vector3 playerPosition;
+    private GameObject player;
+    private Vector3 directionToPlayer;
+    private RaycastHit2D playerHit;
 
     private void Start()
     {
@@ -23,10 +26,10 @@ namespace ShootingEnemy
     public override State RunCurrentState()
     {
       playerPosition = player.transform.position;
-      float distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
-      Vector3 directionToPlayer = playerPosition - transform.position;
+      distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
+      directionToPlayer = playerPosition - transform.position;
 
-      RaycastHit2D playerHit = Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, layerMask);
+      playerHit = Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, layerMask);
 
       playerVisible = playerHit ? playerHit.collider.CompareTag("Player") : false;
 

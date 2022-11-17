@@ -5,19 +5,25 @@ namespace BasicEnemy
 {
   public class AttackState : State
   {
+    public float damage = 4f;
     private float distanceToPlayer;
     private bool isAttacking;
     private bool performedAttack;
-    public float damage = 4f;
 
     public ChaseState chaseState;
+    public GameObject body;
     private GameObject player;
     private Vector3 playerPosition;
-    public GameObject body;
+    private Animator animator;
+
+    private void Start()
+    {
+      player = GameObject.FindGameObjectWithTag("Player");
+      animator = body.GetComponent<Animator>();
+    }
 
     public override State RunCurrentState()
     {
-      player = GameObject.FindGameObjectWithTag("Player");
       playerPosition = player.transform.position;
       distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
 
@@ -47,7 +53,6 @@ namespace BasicEnemy
     private IEnumerator CurrentlyAttacking(Vector3 designatedPosition)
     {
       performedAttack = true;
-      Animator animator = body.GetComponent<Animator>();
       animator.SetTrigger("Attack");
       yield return new WaitForSeconds(0.3f);
       designatedPosition.y += 0.5f;

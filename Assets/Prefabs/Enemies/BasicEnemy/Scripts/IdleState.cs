@@ -7,23 +7,28 @@ namespace BasicEnemy
   {
     public bool playerVisible;
     private bool wait = true;
+    private float distanceToPlayer;
 
     public ChaseState chaseState;
     public LayerMask layerMask;
-    public Vector3 playerPosition;
     public GameObject body;
+    private Vector3 playerPosition;
+    private GameObject player;
+    private RaycastHit2D playerHit;
+    private Vector3 directionToPlayer;
+
+    private void Start()
+    {
+      player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     public override State RunCurrentState()
     {
-      playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-      float distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
-      Vector3 directionToPlayer = playerPosition - transform.position;
+      playerPosition = player.transform.position;
+      distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
+      directionToPlayer = playerPosition - transform.position;
 
-      directionToPlayer.y += 0.1f;
-
-      RaycastHit2D playerHit = Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, layerMask);
-      Debug.DrawRay(transform.position, directionToPlayer, Color.black);
-
+      playerHit = Physics2D.Raycast(transform.position, directionToPlayer, distanceToPlayer, layerMask);
       playerVisible = playerHit ? playerHit.collider.CompareTag("Player") : false;
 
       if (wait && playerVisible)

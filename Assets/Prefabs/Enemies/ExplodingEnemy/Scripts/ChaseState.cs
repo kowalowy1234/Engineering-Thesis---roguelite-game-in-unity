@@ -8,12 +8,18 @@ namespace ExplodingEnemy
     public float chaseSpeed;
 
     public ExplodeState explodeState;
-    private Vector3 playerPosition;
     public GameObject body;
+    private GameObject player;
+    private Vector3 playerPosition;
+
+    private void Start()
+    {
+      player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     public override State RunCurrentState()
     {
-      playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+      playerPosition = player.transform.position;
       distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
 
       if (distanceToPlayer <= 1.5f)
