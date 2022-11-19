@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ namespace ShootingEnemy
 
     public float fireRate = 1f;
     public float nextShot = 0f;
+    private bool wait = true;
 
     public Transform shootingPoint;
     private GameObject player;
@@ -31,7 +33,7 @@ namespace ShootingEnemy
       playerPosition = player.transform.position;
       transform.right = playerPosition - transform.position;
 
-      if (Time.time > nextShot)
+      if (Time.time > nextShot && !wait)
       {
         Fire();
       }
@@ -39,7 +41,7 @@ namespace ShootingEnemy
 
     private void CreateProjectilePool()
     {
-      for (int i = 0; i < 5; i++)
+      for (int i = 0; i < 3; i++)
       {
         GameObject clone = Instantiate(projectile);
         clone.name = clone.name + i;
@@ -74,6 +76,17 @@ namespace ShootingEnemy
       }
 
       return null;
+    }
+
+    public void StartShooting()
+    {
+      StartCoroutine(Delay());
+    }
+
+    private IEnumerator Delay()
+    {
+      yield return new WaitForSeconds(0.5f);
+      wait = false;
     }
   }
 }

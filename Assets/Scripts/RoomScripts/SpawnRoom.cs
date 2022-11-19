@@ -21,7 +21,7 @@ public class SpawnRoom : MonoBehaviour
   {
     if (spawned == false)
     {
-      dungeonGenerator.lastRoomSpawn = Time.time;
+      dungeonGenerator.lastRoomSpawn = System.DateTime.Now;
       dungeonGenerator.lastRoomPosition = transform.position;
       int randIndex;
       switch (dir)

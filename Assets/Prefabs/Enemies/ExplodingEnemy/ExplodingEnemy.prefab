@@ -177,7 +177,6 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 4416
-  playerPosition: {x: 0, y: 0, z: 0}
   body: {fileID: 2455989573852539209}
 --- !u!1 &1806751557523982870
 GameObject:
@@ -293,9 +292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300d5941e51c8934e846120e84acda55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 2455989573852539209}
   explosionDamage: 15
   explosionTimer: 0.4
+  body: {fileID: 2455989573852539209}
 --- !u!1 &2455989573852539209
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +310,7 @@ GameObject:
   - component: {fileID: 4727892343648011455}
   - component: {fileID: 4094789254457754082}
   - component: {fileID: 5406710623729346266}
+  - component: {fileID: -3042161906383952927}
   m_Layer: 7
   m_Name: ExplodingEnemy
   m_TagString: Enemy
@@ -475,6 +475,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 1528549599030593047}
+--- !u!50 &-3042161906383952927
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2455989573852539209}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1001 &6592007506842133039
 PrefabInstance:
   m_ObjectHideFlags: 0

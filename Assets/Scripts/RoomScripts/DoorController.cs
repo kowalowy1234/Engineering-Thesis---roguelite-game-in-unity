@@ -6,11 +6,8 @@ public class DoorController : MonoBehaviour
   public LayerMask layerMask;
   [SerializeField]
   private bool blocked = false;
-  private bool isOpen = false;
-
-  private void Start() {
-    Debug.Log(gameObject.layer);
-  }
+  [SerializeField]
+  private bool isOpen = true;
 
   private void Update()
   {
@@ -40,11 +37,6 @@ public class DoorController : MonoBehaviour
     {
       closeDoor();
       blocked = true;
-    }
-    else
-    {
-      openDoor();
-      blocked = false;
     }
   }
 

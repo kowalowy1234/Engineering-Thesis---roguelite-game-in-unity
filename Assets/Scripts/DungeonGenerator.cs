@@ -3,18 +3,26 @@ using UnityEngine.SceneManagement;
 
 public class DungeonGenerator : MonoBehaviour
 {
-  public float lastRoomSpawn;
+  public System.DateTime lastRoomSpawn;
   public int minRooms = 5;
   public Vector3 lastRoomPosition;
   public GameObject boss;
-  private bool spawnedFinish = false;
+  public bool spawnedFinish = false;
+  private GameObject player;
+
+  private void Start()
+  {
+    player = GameObject.FindGameObjectWithTag("Player");
+    player.GetComponent<PlayerMovement>().enabled = false;
+  }
 
   void Update()
   {
-    if (Time.timeSinceLevelLoad - lastRoomSpawn > 1 && !spawnedFinish)
+    if ((int)(System.DateTime.Now - lastRoomSpawn).TotalSeconds >= 1 && !spawnedFinish)
     {
       SpawnBossOrPortal();
       DestroySpawners();
+      player.GetComponent<PlayerMovement>().enabled = true;
     }
   }
 
