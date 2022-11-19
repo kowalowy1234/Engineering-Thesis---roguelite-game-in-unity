@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421084cc90b727346acb41c878fafe46, type: 3}
+  m_Name: Earth Staff
+  m_EditorClassIdentifier: 
+  weaponName: Earth staff
+  rateOfFire: 0.7
+  sprite: {fileID: -4287818238573078866, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  projectile: {fileID: 3670291305755581006, guid: a28fb47c52c15e04f98452d7147c5b4f, type: 3}

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponPivot : MonoBehaviour
@@ -17,6 +15,7 @@ public class WeaponPivot : MonoBehaviour
 
   private void FixedUpdate()
   {
+    // Flip sprite accordingly
     Vector3 diff = mainCamera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
     if (diff.x >= 0 && faceLeft == true)
@@ -30,6 +29,7 @@ public class WeaponPivot : MonoBehaviour
       faceLeft = true;
     }
 
+    // rotation logic of weapon pivot
     diff.Normalize();
 
     float rotZ = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;

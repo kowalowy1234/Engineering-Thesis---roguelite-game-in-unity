@@ -15,7 +15,7 @@ GameObject:
   m_Layer: 0
   m_Name: RoomSpawner
   m_TagString: RoomSpawner
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: 0
-  rooms: {fileID: 0}
+  spawned: 0
+  otherTriggers: 
 --- !u!61 &4144289825754487088
 BoxCollider2D:
   m_ObjectHideFlags: 0

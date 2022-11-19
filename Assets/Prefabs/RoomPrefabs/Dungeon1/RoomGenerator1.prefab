@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7136851341841294089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7136851341841294103}
+  - component: {fileID: 7136851341841294088}
+  m_Layer: 0
+  m_Name: RoomGenerator1
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7136851341841294103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7136851341841294089}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7136851341841294088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7136851341841294089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183863f1935b8734e85bbdd5178efb99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpawnRate: 0.5
+  chestSpawnRate: 0.1
+  maxEnemies: 3
+  maxChests: 1
+  enemies:
+  - {fileID: 5649672276972881955, guid: 64f1c2dbfc8e5fb4c896426316059013, type: 3}
+  chest: {fileID: 990687657484470015, guid: 0035615606b754a498b2aa9be53e80ef, type: 3}
+  roomController: {fileID: 5755763583787789500, guid: 56ed3fee8bbe1524a8b593a730ad33a2, type: 3}
+  positions: []
