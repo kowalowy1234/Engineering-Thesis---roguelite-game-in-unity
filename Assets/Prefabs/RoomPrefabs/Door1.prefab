@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 5553568878504842835}
   m_Layer: 12
   m_Name: Door1
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,6 +214,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   blocked: 0
+  isOpen: 1
 --- !u!50 &5553568878504842835
 Rigidbody2D:
   serializedVersion: 4

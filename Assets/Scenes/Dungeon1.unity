@@ -498,6 +498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StarterRoom1
       objectReference: {fileID: 0}
+    - target: {fileID: 5544701020651980468, guid: cc84aa5d6cd65db4fb298ed0fef34b1a, type: 3}
+      propertyPath: isOpen
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6195409708878571911, guid: cc84aa5d6cd65db4fb298ed0fef34b1a, type: 3}
       propertyPath: m_RootOrder
       value: 1

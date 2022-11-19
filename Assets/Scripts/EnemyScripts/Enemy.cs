@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
   private bool invoulnerable = false;
 
   public HealthBar healthBar;
+  private RoomController roomController;
   private IEnumerator coroutine;
 
   void Start()
@@ -49,12 +50,18 @@ public class Enemy : MonoBehaviour
       StopCoroutine(coroutine);
       dotTicks = 0;
       coroutine = damageOverTime(damage, duration);
-      StartCoroutine(coroutine);
+      if (gameObject.activeInHierarchy)
+      {
+        StartCoroutine(coroutine);
+      }
     }
   }
 
   public void die()
   {
+    StopAllCoroutines();
+    roomController = transform.parent.GetComponent<RoomController>();
+    roomController.Kill(gameObject);
     Destroy(gameObject);
   }
 

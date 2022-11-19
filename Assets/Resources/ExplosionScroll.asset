@@ -15,4 +15,4 @@ MonoBehaviour:
   ScrollName: Explosion scroll
   cooldown: 10
   duration: 0
-  sprite: {fileID: -3331354820723732956, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  sprite: {fileID: 21300000, guid: d581fe4d9e0db4146af4b52eb190a132, type: 3}

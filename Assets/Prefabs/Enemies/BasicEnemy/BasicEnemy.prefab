@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8537918725012186202}
   - component: {fileID: 6058667169977971678}
   - component: {fileID: -7831191521889065705}
+  - component: {fileID: 2768916462289749749}
   m_Layer: 7
   m_Name: BasicEnemy
   m_TagString: Enemy
@@ -178,6 +179,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &2768916462289749749
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582297631582259628}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &4847909502062610372
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +296,6 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 4416
-  playerPosition: {x: 0, y: 0, z: 0}
   body: {fileID: 1582297631582259628}
 --- !u!1 &6305195587160613045
 GameObject:

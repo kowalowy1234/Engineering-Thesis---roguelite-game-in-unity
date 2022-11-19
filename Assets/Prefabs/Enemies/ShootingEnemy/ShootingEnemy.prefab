@@ -47,7 +47,6 @@ MonoBehaviour:
   chaseSpeed: 5
   runState: {fileID: 7832057463445766981}
   idleState: {fileID: 8810909093407006362}
-  player: {fileID: 0}
   body: {fileID: 5649672276972881955}
 --- !u!1 &1133973974009910002
 GameObject:
@@ -93,15 +92,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93df081f81dfdf489f769eb3ac3d034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerVisible: 0
   chaseState: {fileID: 7201875601983050025}
   runState: {fileID: 7832057463445766981}
   layerMask:
     serializedVersion: 2
     m_Bits: 4416
-  playerPosition: {x: 0, y: 0, z: 0}
   body: {fileID: 5649672276972881955}
-  player: {fileID: 0}
+  shootingComponent: {fileID: 6756734909506896787}
 --- !u!1 &2235627796288515061
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,8 +178,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a82d7088c0804445aa61b12cc855786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireRate: 1
+  nextShot: 0
   shootingPoint: {fileID: 1298031133746549386}
   projectile: {fileID: 6500548832922387537, guid: 5f6f449affb43f04b9b994a6fd9c16a5, type: 3}
+  projectilePool: []
 --- !u!1 &3086005952229261459
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +264,6 @@ MonoBehaviour:
   chaseState: {fileID: 7201875601983050025}
   idleState: {fileID: 8810909093407006362}
   body: {fileID: 5649672276972881955}
-  player: {fileID: 0}
 --- !u!58 &6056855611792945812
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -296,6 +295,7 @@ GameObject:
   - component: {fileID: 3309617447701685717}
   - component: {fileID: 1037297088233292403}
   - component: {fileID: -6630310153281855753}
+  - component: {fileID: 4604124711854346928}
   m_Layer: 7
   m_Name: ShootingEnemy
   m_TagString: Enemy
@@ -460,6 +460,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 8810909093407006362}
+--- !u!50 &4604124711854346928
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649672276972881955}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1001 &3965777256329298757
 PrefabInstance:
   m_ObjectHideFlags: 0

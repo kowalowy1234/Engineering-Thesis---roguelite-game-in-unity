@@ -13,6 +13,7 @@ namespace ShootingEnemy
     public RunState runState;
     public LayerMask layerMask;
     public GameObject body;
+    public Shoot shootingComponent;
     private Vector3 playerPosition;
     private GameObject player;
     private Vector3 directionToPlayer;
@@ -56,6 +57,7 @@ namespace ShootingEnemy
     {
       yield return new WaitForSeconds(0.5f);
       wait = false;
+      shootingComponent.StartShooting();
     }
   }
 }
