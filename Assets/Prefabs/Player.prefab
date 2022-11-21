@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 177394154429077657}
+  playerController: {fileID: 4811333706428777456}
 --- !u!1 &177394154407302712
 GameObject:
   m_ObjectHideFlags: 0
