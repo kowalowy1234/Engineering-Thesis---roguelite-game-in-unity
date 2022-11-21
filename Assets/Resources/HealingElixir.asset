@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b064237c4472c4046907aef6130aa645, type: 3}
-  m_Name: HealingScroll
+  m_Script: {fileID: 11500000, guid: 8a7704f18c828b24bb1746f496538cbb, type: 3}
+  m_Name: HealingElixir
   m_EditorClassIdentifier: 
-  ScrollName: Healing scroll
-  cooldown: 60
+  ElixirName: Healing elixir
   duration: 0
-  sprite: {fileID: 21300000, guid: caa85b6b7a7a2ac488ae9b73c5dba30c, type: 3}
-  healValue: 10
+  charges: 3
+  sprite: {fileID: -3793461776831691290, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  healValue: 5

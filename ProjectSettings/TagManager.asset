@@ -17,6 +17,7 @@ TagManager:
   - Room
   - RoomController
   - Door
+  - Shield
   layers:
   - Default
   - TransparentFX
@@ -36,7 +37,7 @@ TagManager:
   - RoomCover
   - EnemyProjectile
   - RoomController
-  - 
+  - Shield
   - 
   - 
   - 

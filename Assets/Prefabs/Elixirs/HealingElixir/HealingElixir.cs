@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Scrolls/HealingScroll")]
-public class HealingScrollScript : ScrollTemplate
+[CreateAssetMenu(menuName = "Elixirs/HealingElixir")]
+public class HealingElixir : ElixirTemplate
 {
   public float healValue = 10f;
   public override bool Activate()

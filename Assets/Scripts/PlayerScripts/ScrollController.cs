@@ -18,6 +18,7 @@ public class ScrollController : MonoBehaviour
   void Start()
   {
     currentScroll = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().currentScroll;
+    currentState = State.READY;
   }
 
   void Update()
@@ -28,9 +29,11 @@ public class ScrollController : MonoBehaviour
       case State.READY:
         if (Input.GetKeyDown(KeyCode.Q))
         {
-          currentScroll.Activate();
-          currentState = State.iS_ACTIVE;
-          activeTime = currentScroll.duration;
+          if (currentScroll.Activate() == true)
+          {
+            currentState = State.iS_ACTIVE;
+            activeTime = currentScroll.duration;
+          }
         }
         break;
 
@@ -42,6 +45,7 @@ public class ScrollController : MonoBehaviour
         }
         else
         {
+          currentScroll.Deactivate();
           currentState = State.ON_COOLDOWN;
           cooldownTime = currentScroll.cooldown;
         }

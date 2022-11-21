@@ -8,7 +8,10 @@ public class ScrollTemplate : ScriptableObject
 
   public Sprite sprite;
 
-  public virtual void Activate() { }
+  public virtual bool Activate()
+  {
+    return true;
+  }
 
   public virtual void Active() { }
 

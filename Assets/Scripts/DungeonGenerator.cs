@@ -3,12 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class DungeonGenerator : MonoBehaviour
 {
-  public System.DateTime lastRoomSpawn;
-  public int minRooms = 5;
-  public Vector3 lastRoomPosition;
-  public GameObject boss;
   public bool spawnedFinish = false;
+  public int minRooms = 5;
+
+  public GameObject loadingScreen;
+  public Vector3 lastRoomPosition;
+  public System.DateTime lastRoomSpawn;
+  public GameObject boss;
   private GameObject player;
+
+  private void Awake()
+  {
+    loadingScreen.SetActive(true);
+  }
 
   private void Start()
   {
@@ -23,6 +30,7 @@ public class DungeonGenerator : MonoBehaviour
       SpawnBossOrPortal();
       DestroySpawners();
       player.GetComponent<PlayerMovement>().enabled = true;
+      loadingScreen.SetActive(false);
     }
   }
 
