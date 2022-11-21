@@ -8,12 +8,18 @@ public class WeaponScript : MonoBehaviour
   private SpriteRenderer weaponSprite;
   private WeaponTemplate weapon;
   public Transform shootingPoint;
+  public PlayerController playerController;
 
   private void Start()
   {
     weapon = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().currentWeapon;
     weaponSprite = gameObject.GetComponent<SpriteRenderer>();
     weaponSprite.sprite = weapon.sprite;
+
+    if (weapon.name == "Earth Staff")
+    {
+      playerController.damageReduce = 0.5f;
+    }
   }
 
   private void Update()
@@ -34,5 +40,14 @@ public class WeaponScript : MonoBehaviour
   {
     weapon = newWeapon;
     weaponSprite.sprite = newWeapon.sprite;
+
+    if (weapon.name == "Earth Staff")
+    {
+      playerController.damageReduce = 0.5f;
+    }
+    else
+    {
+      playerController.damageReduce = 1f;
+    }
   }
 }

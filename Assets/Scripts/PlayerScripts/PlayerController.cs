@@ -67,9 +67,18 @@ public class PlayerController : MonoBehaviour
     Debug.Log("Game Over");
   }
 
-  public void Heal(int health)
+  public void Heal(float health)
   {
-    //heal logic;
+    if (currentHealth + health > maxHealth)
+    {
+      currentHealth = maxHealth;
+      healthBar.SetHealth(maxHealth);
+    }
+    else
+    {
+      currentHealth += health;
+      healthBar.SetHealth(currentHealth);
+    }
   }
 
   IEnumerator damageOverTime(int damage, int duration)

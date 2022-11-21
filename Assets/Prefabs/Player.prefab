@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5534246007120346598}
   m_Layer: 0
   m_Name: WeaponPivot
-  m_TagString: Untagged
+  m_TagString: WeaponPivot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 177394154429077657}
+  playerController: {fileID: 4811333706428777456}
 --- !u!1 &177394154407302712
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,6 +163,7 @@ GameObject:
   - component: {fileID: 5895072563321485393}
   - component: {fileID: 505817237372608860}
   - component: {fileID: 4811333706428777456}
+  - component: {fileID: 5635885283031692073}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -339,7 +341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5ee925843eae94f8b8b98aa48dcd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentElixir: {fileID: 0}
+  currentElixir: {fileID: 11400000, guid: fcb919b9267bb8748a2865596a0c3a80, type: 2}
+  chargesLeft: 0
 --- !u!114 &505817237372608860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3dd7dc45d064a4ca1cc1a5d157bf51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScroll: {fileID: 0}
+  currentScroll: {fileID: 11400000, guid: 018d1ff915506a9409f5859b67fe217a, type: 2}
 --- !u!114 &4811333706428777456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +373,18 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   healthBar: {fileID: 7212094885846652165}
+--- !u!114 &5635885283031692073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177394154407302712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d816a3c2e1498c4187cf6d47ed7c84b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &177394154429077662
 GameObject:
   m_ObjectHideFlags: 0

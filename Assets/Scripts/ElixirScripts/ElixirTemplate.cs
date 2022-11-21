@@ -8,9 +8,10 @@ public class ElixirTemplate : ScriptableObject
 
   public Sprite sprite;
 
-  public virtual void Activate()
+  public virtual bool Activate()
   {
     // Elixir activation logic
+    return true;
   }
 
   public virtual void Active()

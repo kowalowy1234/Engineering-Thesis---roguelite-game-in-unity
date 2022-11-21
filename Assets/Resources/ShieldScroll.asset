@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: ShieldScroll
   m_EditorClassIdentifier: 
   ScrollName: Shield scroll
-  cooldown: 10
+  cooldown: 120
   duration: 2
   sprite: {fileID: 21300000, guid: c056ca73bada421468e92b64a0b24d8d, type: 3}
+  shieldObject: {fileID: 3241000389002406280, guid: c19aa12c5e910a34ab60fb06cad5afdf, type: 3}
+  shieldInstance: {fileID: 0}

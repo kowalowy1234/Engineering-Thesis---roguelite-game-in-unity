@@ -24,11 +24,13 @@ public class ElixirObject : MonoBehaviour
     float distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
     if (distanceToPlayer < 1 && Input.GetKey(KeyCode.F))
     {
-      if (gameController.currentElixir.name != elixirData.name)
+      ElixirController elixirController = player.GetComponent<ElixirController>();
+      if (elixirController.chargesLeft == elixirData.charges && gameController.currentElixir.name == elixirData.name)
       {
-        gameController.SwapElixir(elixirData);
-        Destroy(gameObject);
+        return;
       }
+      gameController.SwapElixir(elixirData);
+      Destroy(gameObject);
     }
   }
 }
