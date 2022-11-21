@@ -9,6 +9,10 @@ public class StateMachine : MonoBehaviour
     Run();
   }
 
+  void FixedUpdate() {
+    RunFixed();
+  }
+
   private void Run()
   {
     State nextState = currentState?.RunCurrentState();
@@ -17,6 +21,10 @@ public class StateMachine : MonoBehaviour
     {
       NextState(nextState);
     }
+  }
+
+  private void RunFixed() {
+    currentState.RunPhysicsState();
   }
 
   private void NextState(State nextState)

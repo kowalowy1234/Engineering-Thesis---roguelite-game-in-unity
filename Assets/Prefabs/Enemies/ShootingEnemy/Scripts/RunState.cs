@@ -10,7 +10,8 @@ namespace ShootingEnemy
 
     public ChaseState chaseState;
     public IdleState idleState;
-    public GameObject body;
+    public Rigidbody2D rb;
+    private Vector3 destination;
     private Vector3 playerPosition;
     private GameObject player;
 
@@ -30,30 +31,14 @@ namespace ShootingEnemy
         return idleState;
       }
 
-      Vector3 destination = (transform.position - playerPosition).normalized;
-
-      if (!stopMoving)
-      {
-        body.transform.position = Vector3.MoveTowards(transform.position, transform.position + destination, chaseSpeed * Time.deltaTime);
-      }
+      destination = (transform.position - playerPosition).normalized;
 
       return this;
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    public override void RunPhysicsState()
     {
-      if (other.gameObject.layer == 8 || other.gameObject.layer == 12)
-      {
-        stopMoving = true;
-      }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-      if (other.gameObject.layer == 8 || other.gameObject.layer == 12)
-      {
-        stopMoving = false;
-      }
+      rb.velocity = destination * chaseSpeed;
     }
   }
 }

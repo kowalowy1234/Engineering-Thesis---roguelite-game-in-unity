@@ -4,6 +4,12 @@ using UnityEngine.SceneManagement;
 public class InGameMenu : MonoBehaviour
 {
   public GameObject container;
+  private SaveManager saveManager;
+
+  private void Start()
+  {
+    saveManager = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>();
+  }
 
   private void Update()
   {
@@ -30,6 +36,7 @@ public class InGameMenu : MonoBehaviour
 
   public void GoToMainMenu()
   {
+    saveManager.Save();
     Time.timeScale = 1;
     SceneManager.LoadScene("Main menu");
   }

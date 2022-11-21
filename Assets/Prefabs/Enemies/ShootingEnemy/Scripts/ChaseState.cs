@@ -9,7 +9,7 @@ namespace ShootingEnemy
 
     public RunState runState;
     public IdleState idleState;
-    public GameObject body;
+    public Rigidbody2D rb;
     private Vector3 playerPosition;
     private GameObject player;
 
@@ -28,9 +28,13 @@ namespace ShootingEnemy
         return idleState;
       }
 
-      body.transform.position = Vector3.MoveTowards(transform.position, playerPosition, chaseSpeed * Time.deltaTime);
+      // body.transform.position = Vector3.MoveTowards(transform.position, playerPosition, chaseSpeed * Time.deltaTime);
       return this;
     }
 
+    public override void RunPhysicsState()
+    {
+      rb.velocity = (playerPosition - transform.position).normalized * chaseSpeed;
+    }
   }
 }
