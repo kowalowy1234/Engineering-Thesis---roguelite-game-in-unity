@@ -12,6 +12,7 @@ namespace BasicEnemy
 
     public ChaseState chaseState;
     public GameObject body;
+    private Rigidbody2D rb;
     private GameObject player;
     private Vector3 playerPosition;
     private Animator animator;
@@ -20,6 +21,7 @@ namespace BasicEnemy
     {
       player = GameObject.FindGameObjectWithTag("Player");
       animator = body.GetComponent<Animator>();
+      rb = body.GetComponent<Rigidbody2D>();
     }
 
     public override State RunCurrentState()
@@ -69,6 +71,11 @@ namespace BasicEnemy
     {
       yield return new WaitForSeconds(0.6f);
       performedAttack = false;
+    }
+
+    public override void RunPhysicsState()
+    {
+      rb.velocity = Vector2.zero;
     }
   }
 }

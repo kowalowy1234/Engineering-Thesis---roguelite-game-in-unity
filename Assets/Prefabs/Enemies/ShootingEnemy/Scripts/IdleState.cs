@@ -12,8 +12,8 @@ namespace ShootingEnemy
     public ChaseState chaseState;
     public RunState runState;
     public LayerMask layerMask;
-    public GameObject body;
     public Shoot shootingComponent;
+    public Rigidbody2D rb;
     private Vector3 playerPosition;
     private GameObject player;
     private Vector3 directionToPlayer;
@@ -58,6 +58,11 @@ namespace ShootingEnemy
       yield return new WaitForSeconds(0.5f);
       wait = false;
       shootingComponent.StartShooting();
+    }
+
+    public override void RunPhysicsState()
+    {
+      rb.velocity = Vector2.zero;
     }
   }
 }

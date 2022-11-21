@@ -11,7 +11,7 @@ namespace ExplodingEnemy
 
     public ChaseState chaseState;
     public LayerMask layerMask;
-    public GameObject body;
+    public Rigidbody2D rb;
     private Vector3 playerPosition;
     private GameObject player;
     private RaycastHit2D playerHit;
@@ -48,6 +48,11 @@ namespace ExplodingEnemy
     {
       yield return new WaitForSeconds(0.5f);
       wait = false;
+    }
+
+    public override void RunPhysicsState()
+    {
+      rb.velocity = Vector2.zero;
     }
   }
 }
