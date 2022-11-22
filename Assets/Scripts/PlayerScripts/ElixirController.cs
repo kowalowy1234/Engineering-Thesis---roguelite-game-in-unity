@@ -4,6 +4,7 @@ public class ElixirController : MonoBehaviour
 {
 
   public ElixirTemplate currentElixir;
+  private HUDScript hud;
   float cooldownTime;
   float activeTime;
   public int chargesLeft;
@@ -20,6 +21,7 @@ public class ElixirController : MonoBehaviour
   void Start()
   {
     currentElixir = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().currentElixir;
+    hud = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>();
     chargesLeft = currentElixir.charges;
     if (chargesLeft == 0)
     {
@@ -40,6 +42,7 @@ public class ElixirController : MonoBehaviour
             currentState = State.iS_ACTIVE;
             activeTime = currentElixir.duration;
             chargesLeft -= 1;
+            hud.UpdateElixirCharges(chargesLeft);
           };
           Debug.Log("Charges left: " + chargesLeft);
         }
@@ -55,6 +58,7 @@ public class ElixirController : MonoBehaviour
         {
           if (chargesLeft == 0)
           {
+            currentElixir.Deactivate();
             currentState = State.DEPLETED;
           }
           else

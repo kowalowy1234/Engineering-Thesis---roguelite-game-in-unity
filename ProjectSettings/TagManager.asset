@@ -19,6 +19,9 @@ TagManager:
   - Door
   - Shield
   - WeaponPivot
+  - HUDHealthbar
+  - HUDEnergybar
+  - HUD
   layers:
   - Default
   - TransparentFX

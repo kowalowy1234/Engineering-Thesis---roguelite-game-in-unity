@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
   private void Start()
   {
     gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    energyBar = GameObject.FindGameObjectWithTag("HUDEnergybar").GetComponent<EnergyBar>();
     maxEnergy = gameController.playerMaxEnergy;
     currentEnergy = maxEnergy;
     rigidBody2D = GetComponent<Rigidbody2D>();
