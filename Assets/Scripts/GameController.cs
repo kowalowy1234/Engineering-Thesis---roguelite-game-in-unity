@@ -77,6 +77,7 @@ public class GameController : MonoBehaviour
 
   public void SwapWeapon(WeaponTemplate newWeapon)
   {
+    GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdateWeaponSprite(newWeapon.sprite);
     currentWeapon = newWeapon;
     weaponController.Swap(newWeapon);
     saveManager.currentWeapon = newWeapon;
@@ -84,6 +85,7 @@ public class GameController : MonoBehaviour
 
   public void SwapScroll(ScrollTemplate newScroll)
   {
+    GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdateScrollSprite(newScroll.sprite);
     currentScroll = newScroll;
     scrollController.Swap(newScroll);
     saveManager.currentScroll = newScroll;
@@ -91,6 +93,8 @@ public class GameController : MonoBehaviour
 
   public void SwapElixir(ElixirTemplate newElixir)
   {
+    GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdateElixirSprite(newElixir.sprite);
+    GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdateElixirCharges(newElixir.charges);
     currentElixir = newElixir;
     elixirController.Swap(newElixir);
     saveManager.currentElixir = newElixir;

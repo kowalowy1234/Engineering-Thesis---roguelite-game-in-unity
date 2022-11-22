@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
   void Start()
   {
     gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    healthBar = GameObject.FindGameObjectWithTag("HUDHealthbar").GetComponent<HealthBar>();
     maxHealth = gameController.playerMaxHealth;
     currentHealth = gameController.playerMaxHealth;
     healthBar.SetMaxHealth(gameController.playerMaxHealth);

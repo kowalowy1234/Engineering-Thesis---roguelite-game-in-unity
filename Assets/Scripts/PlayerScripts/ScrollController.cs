@@ -3,6 +3,7 @@ using UnityEngine;
 public class ScrollController : MonoBehaviour
 {
   public ScrollTemplate currentScroll;
+  private HUDScript hud;
   float cooldownTime;
   float activeTime;
 
@@ -18,6 +19,7 @@ public class ScrollController : MonoBehaviour
   void Start()
   {
     currentScroll = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().currentScroll;
+    hud = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>();
     currentState = State.READY;
   }
 
@@ -33,6 +35,10 @@ public class ScrollController : MonoBehaviour
           {
             currentState = State.iS_ACTIVE;
             activeTime = currentScroll.duration;
+
+            string cooldownString = "";
+            cooldownString = currentScroll.cooldown.ToString("F0");
+            hud.UpdateScrollCooldown(cooldownString);
           }
         }
         break;
@@ -56,10 +62,14 @@ public class ScrollController : MonoBehaviour
         if (cooldownTime > 0)
         {
           cooldownTime -= Time.deltaTime;
+          string cooldownString = "";
+          cooldownString = cooldownTime.ToString("F0");
+          hud.UpdateScrollCooldown(cooldownString);
         }
         else
         {
           currentState = State.READY;
+          hud.UpdateScrollCooldown("0");
         }
         break;
 
@@ -71,6 +81,7 @@ public class ScrollController : MonoBehaviour
   public void Swap(ScrollTemplate newScroll)
   {
     Debug.Log("Swapped Scroll to" + newScroll);
+    hud.UpdateScrollCooldown("0");
     currentScroll = newScroll;
     currentState = State.READY;
   }
