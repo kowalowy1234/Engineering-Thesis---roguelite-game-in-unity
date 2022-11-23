@@ -64,7 +64,6 @@ public class GameController : MonoBehaviour
 
     if (player == null && SceneManager.GetActiveScene().name != "Main menu")
     {
-      Debug.Log("hello");
       player = GameObject.FindGameObjectWithTag("Player");
       scrollController = player.GetComponent<ScrollController>();
       elixirController = player.GetComponent<ElixirController>();

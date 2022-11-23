@@ -4,17 +4,21 @@ using UnityEngine.SceneManagement;
 public class DungeonGenerator : MonoBehaviour
 {
   public bool spawnedFinish = false;
+  public int dungeonNumber;
   public int minRooms = 5;
 
   public GameObject loadingScreen;
   public Vector3 lastRoomPosition;
   public System.DateTime lastRoomSpawn;
   public GameObject boss;
+  public GameObject portal;
+  private ProgressManager progressManager;
   private GameObject player;
 
   private void Awake()
   {
     loadingScreen.SetActive(true);
+    progressManager = GameObject.FindGameObjectWithTag("ProgressManager").GetComponent<ProgressManager>();
   }
 
   private void Start()
@@ -42,7 +46,15 @@ public class DungeonGenerator : MonoBehaviour
     {
       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    Instantiate(boss, lastRoomPosition, Quaternion.identity);
+
+    if (progressManager.DungeonCompleted(dungeonNumber))
+    {
+      Instantiate(boss, lastRoomPosition, Quaternion.identity);
+    }
+    else
+    {
+      Instantiate(portal, lastRoomPosition, Quaternion.identity);
+    }
     spawnedFinish = true;
   }
 
