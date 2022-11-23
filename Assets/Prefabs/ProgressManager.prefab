@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7012516014901638859
+--- !u!1 &1196327125255856760
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7012516014901638856}
-  - component: {fileID: 7012516014901638857}
+  - component: {fileID: 2102412562203580624}
+  - component: {fileID: 6054223376679181583}
   m_Layer: 0
-  m_Name: SaveManager
-  m_TagString: SaveManager
+  m_Name: ProgressManager
+  m_TagString: ProgressManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7012516014901638856
+--- !u!4 &2102412562203580624
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7012516014901638859}
+  m_GameObject: {fileID: 1196327125255856760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,31 +32,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7012516014901638857
+--- !u!114 &6054223376679181583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7012516014901638859}
+  m_GameObject: {fileID: 1196327125255856760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e31bda02731f434f844e4b353f73f18, type: 3}
+  m_Script: {fileID: 11500000, guid: cf3f0b136f13b514e8d3b57f3870b14d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 11400000, guid: 8ab68691a8d00fb4184d0c8304943c46, type: 2}
-  currentScroll: {fileID: 11400000, guid: 018d1ff915506a9409f5859b67fe217a, type: 2}
-  currentElixir: {fileID: 11400000, guid: fcb919b9267bb8748a2865596a0c3a80, type: 2}
-  DungeonList:
-  - DungeonKey: 1
-    levels: 
-  - DungeonKey: 2
-    levels: 00
-  - DungeonKey: 3
-    levels: 0000
-  currentTrophy: 0
-  points: 0
-  bonusPointsModificator: 1
-  playerMaxHealth: 10
-  playerMaxEnergy: 10
-  portalsOpened: 
+  DungeonList: []
+  saveManager: {fileID: 0}

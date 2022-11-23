@@ -9,6 +9,20 @@ public class SaveManager : MonoBehaviour
   public WeaponTemplate currentWeapon;
   public ScrollTemplate currentScroll;
   public ElixirTemplate currentElixir;
+
+  //========================== Level progression =====================================
+  [System.Serializable]
+  public class DungeonStructure
+  {
+    public int DungeonKey;
+    public List<bool> levels;
+  }
+
+  [SerializeField]
+  public List<DungeonStructure> DungeonList = new List<DungeonStructure>();
+  public Dictionary<int, List<bool>> levelCompletion = new Dictionary<int, List<bool>>();
+  //==================================================================================
+
   public int currentTrophy;
   // Passive boss trophy goes here (not yet implemented)
 
@@ -29,6 +43,7 @@ public class SaveManager : MonoBehaviour
   const string POINTS_KEY = "/points";
   const string ATTRIBUTES_KEY = "/attributes";
   const string SETTINGS_KEY = "/settings";
+  const string PROGRESS_KEY = "/progress";
 
   private void Awake()
   {
@@ -41,6 +56,11 @@ public class SaveManager : MonoBehaviour
     {
       Destroy(gameObject);
     }
+    foreach (DungeonStructure dungeon in DungeonList)
+    {
+      levelCompletion[dungeon.DungeonKey] = dungeon.levels;
+    }
+
     Load();
   }
 
@@ -48,15 +68,26 @@ public class SaveManager : MonoBehaviour
   {
     EquipmentData equipmentData = new EquipmentData(currentWeapon, currentScroll, currentElixir);
     SaveSystem.Save(equipmentData, EQUIPMENT_KEY);
+
+    ProgressData progressData = new ProgressData(levelCompletion);
+    SaveSystem.Save(progressData, PROGRESS_KEY);
   }
 
   void Load()
   {
     EquipmentData equipmentData = SaveSystem.Load<EquipmentData>(EQUIPMENT_KEY);
-    Debug.Log(equipmentData.scriptedWeaponName);
     currentWeapon = Resources.Load<WeaponTemplate>(equipmentData.scriptedWeaponName);
     currentScroll = Resources.Load<ScrollTemplate>(equipmentData.scriptedScrollName);
     currentElixir = Resources.Load<ElixirTemplate>(equipmentData.scriptedElixirName);
+
+    // Progression load
+    ProgressData progressData = SaveSystem.Load<ProgressData>(PROGRESS_KEY);
+
+    for (int i = 0; i < progressData.Keys.Count; i++)
+    {
+      levelCompletion[progressData.Keys[i]] = progressData.Levels[i];
+    }
+
     currentTrophy = 1;
   }
 
