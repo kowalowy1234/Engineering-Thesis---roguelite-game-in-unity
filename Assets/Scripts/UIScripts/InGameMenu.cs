@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class InGameMenu : MonoBehaviour
 {
   public GameObject container;
+  public UIManager UIManager;
   private SaveManager saveManager;
 
   private void Start()
@@ -11,26 +13,10 @@ public class InGameMenu : MonoBehaviour
     saveManager = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>();
   }
 
-  private void Update()
-  {
-    if (Input.GetKeyDown(KeyCode.Escape))
-    {
-      if (container.activeSelf)
-      {
-        container.SetActive(false);
-        Time.timeScale = 1;
-      }
-      else
-      {
-        container.SetActive(true);
-        Time.timeScale = 0;
-      }
-    }
-  }
-
   public void Continue()
   {
     container.SetActive(false);
+    UIManager.currentlyOpen = null;
     Time.timeScale = 1;
   }
 
