@@ -63,9 +63,8 @@ public class PlayerController : MonoBehaviour
 
   public void die()
   {
-    // Destroy(gameObject);
     healthBar.SetHealth(0);
-    Debug.Log("Game Over");
+    gameController.PlayerDied();
   }
 
   public void Heal(float health)

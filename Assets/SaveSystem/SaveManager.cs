@@ -71,10 +71,17 @@ public class SaveManager : MonoBehaviour
 
     ProgressData progressData = new ProgressData(levelCompletion);
     SaveSystem.Save(progressData, PROGRESS_KEY);
+
+    PointsData pointsData = new PointsData(points, bonusPointsModificator);
+    SaveSystem.Save(pointsData, POINTS_KEY);
   }
 
   void Load()
   {
+    PointsData pointsData = SaveSystem.Load<PointsData>(POINTS_KEY);
+    points = pointsData.points;
+    bonusPointsModificator = pointsData.bonusPointsModificator;
+
     EquipmentData equipmentData = SaveSystem.Load<EquipmentData>(EQUIPMENT_KEY);
     currentWeapon = Resources.Load<WeaponTemplate>(equipmentData.scriptedWeaponName);
     currentScroll = Resources.Load<ScrollTemplate>(equipmentData.scriptedScrollName);

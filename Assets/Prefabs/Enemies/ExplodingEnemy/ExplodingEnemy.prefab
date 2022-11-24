@@ -429,6 +429,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 7204959864336029408}
+  pointsObject: {fileID: 3531506940919530016, guid: ed96618fe9c0aa14fa4cd9ef02277cae, type: 3}
 --- !u!114 &4727892343648011455
 MonoBehaviour:
   m_ObjectHideFlags: 0
