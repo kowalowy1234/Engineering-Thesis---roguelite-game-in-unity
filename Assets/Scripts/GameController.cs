@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour
     currentElixir = saveManager.currentElixir;
     currentScroll = saveManager.currentScroll;
     currentWeapon = saveManager.currentWeapon;
+    points = saveManager.points;
     bonusPointsModificator = saveManager.bonusPointsModificator;
     playerMaxHealth = saveManager.playerMaxHealth;
     playerMaxEnergy = saveManager.playerMaxEnergy;
@@ -62,7 +63,7 @@ public class GameController : MonoBehaviour
       SceneManager.LoadScene("TestingScene");
     }
 
-    if (player == null && SceneManager.GetActiveScene().name != "Main menu")
+    if (player == null && SceneManager.GetActiveScene().name != "Main menu" && SceneManager.GetActiveScene().name != "DeathScreen")
     {
       player = GameObject.FindGameObjectWithTag("Player");
       scrollController = player.GetComponent<ScrollController>();
@@ -97,6 +98,14 @@ public class GameController : MonoBehaviour
     currentElixir = newElixir;
     elixirController.Swap(newElixir);
     saveManager.currentElixir = newElixir;
+  }
+
+  public void PlayerDied()
+  {
+    points -= (int)(Mathf.Round(points) * 0.4f);
+    bonusPointsModificator = 1f;
+    Debug.Log(points);
+    SceneManager.LoadScene("DeathScreen");
   }
 
   public void ModifyBonusPoints(float value)

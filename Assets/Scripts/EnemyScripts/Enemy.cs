@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
   private bool invoulnerable = false;
 
   public HealthBar healthBar;
+  public GameObject pointsObject;
   private RoomController roomController;
   private IEnumerator coroutine;
 
@@ -60,6 +61,7 @@ public class Enemy : MonoBehaviour
   public void die()
   {
     StopAllCoroutines();
+    Instantiate(pointsObject, transform.position, Quaternion.identity);
     roomController = transform.parent.GetComponent<RoomController>();
     roomController.Kill(gameObject);
     Destroy(gameObject);
