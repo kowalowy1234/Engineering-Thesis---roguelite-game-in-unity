@@ -13,7 +13,7 @@ public class PointsObjectScript : MonoBehaviour
   {
     gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     generatedPoints = Mathf.FloorToInt(Random.Range(minPoints, maxPoints) * gameController.bonusPointsModificator);
-    gameController.points += generatedPoints;
+    gameController.AddPoints(generatedPoints);
     Debug.Log("Gained " + generatedPoints + " points");
     Destroy(gameObject);
   }

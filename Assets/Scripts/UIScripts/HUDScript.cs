@@ -12,6 +12,9 @@ public class HUDScript : MonoBehaviour
   public Image WeaponSprite;
   public Image TrophySprite;
 
+  public Text Points;
+  public Text BonusPointsModificator;
+
   private void Start()
   {
     GameController gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -20,6 +23,7 @@ public class HUDScript : MonoBehaviour
     UpdateElixirCharges(gameController.currentElixir.charges);
     UpdateScrollSprite(gameController.currentScroll.sprite);
     UpdateWeaponSprite(gameController.currentWeapon.sprite);
+    UpdatePoints(gameController.points, gameController.bonusPointsModificator);
   }
 
   public void UpdateElixirSprite(Sprite sprite)
@@ -50,5 +54,11 @@ public class HUDScript : MonoBehaviour
   public void UpdateTrophySprite(Sprite sprite)
   {
     TrophySprite.sprite = sprite;
+  }
+
+  public void UpdatePoints(int points, float bonusPointsModificator)
+  {
+    Points.text = points + "";
+    BonusPointsModificator.text = bonusPointsModificator + "";
   }
 }

@@ -120,12 +120,20 @@ public class GameController : MonoBehaviour
     }
 
     saveManager.bonusPointsModificator = bonusPointsModificator;
+    GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdatePoints(points, bonusPointsModificator);
   }
 
   public void ResetBonusPoints()
   {
-    bonusPointsModificator = 0f;
+    bonusPointsModificator = 1f;
     saveManager.bonusPointsModificator = bonusPointsModificator;
+    GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdatePoints(points, bonusPointsModificator);
+  }
+
+  public void AddPoints(int pointsToAdd)
+  {
+    points += pointsToAdd;
+    GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdatePoints(points, bonusPointsModificator);
   }
 
   private void OnApplicationQuit()
