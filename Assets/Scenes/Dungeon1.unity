@@ -123,6 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &67128713
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5119890363883801592, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: m_Name
+      value: UIManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119890363883801593, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: inGameMenu
+      value: 
+      objectReference: {fileID: 1603063364}
+    - target: {fileID: 5119890363883801598, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119890363883801598, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119890363883801598, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119890363883801598, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119890363883801598, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119890363883801598, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119890363883801598, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119890363883801598, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119890363883801598, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119890363883801598, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119890363883801598, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
 --- !u!1001 &125628626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -339,6 +400,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8772263151312535738, guid: 4b789e641fb83d945a0e6b2fbd82725e, type: 3}
   m_PrefabInstance: {fileID: 637157724}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &736851171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5119890363883801593, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+  m_PrefabInstance: {fileID: 67128713}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04a9b1e65df14d4f8bb233495125da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1245872058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -503,6 +575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InGameMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 646715783372351549, guid: 0d153b08527b3df45a61cb132d3dea3b, type: 3}
+      propertyPath: UIManager
+      value: 
+      objectReference: {fileID: 736851171}
     - target: {fileID: 646715783372351550, guid: 0d153b08527b3df45a61cb132d3dea3b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -585,6 +661,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 646715783372351550, guid: 0d153b08527b3df45a61cb132d3dea3b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 646715783372351551, guid: 0d153b08527b3df45a61cb132d3dea3b, type: 3}
+      propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -758,6 +838,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 294677ebe9799004999d3775360f4966, type: 3}
+--- !u!1 &1603063364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 646715783372351538, guid: 0d153b08527b3df45a61cb132d3dea3b, type: 3}
+  m_PrefabInstance: {fileID: 1570937426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2018622748
 PrefabInstance:
   m_ObjectHideFlags: 0
