@@ -7,6 +7,12 @@ public class UIManager : MonoBehaviour
   public GameObject inGameMenu;
   public GameObject currentlyOpen;
 
+  private void Start()
+  {
+    currentlyOpen = null;
+    Time.timeScale = 1;
+  }
+
   void Update()
   {
     if (Input.GetKeyDown(KeyCode.Escape))

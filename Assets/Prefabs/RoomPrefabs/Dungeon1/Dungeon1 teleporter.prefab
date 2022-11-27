@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3859455140033415280}
-  - component: {fileID: 4575216134853432118}
   - component: {fileID: 9181272601067769669}
+  - component: {fileID: 8096239313488161736}
   m_Layer: 0
   m_Name: Dungeon1 teleporter
   m_TagString: Untagged
@@ -34,19 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4575216134853432118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2292131052784687305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f60182a2557403744abb57c611328ca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Dungeon1
 --- !u!70 &9181272601067769669
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -63,6 +50,22 @@ CapsuleCollider2D:
   m_Offset: {x: -0.00026750565, y: -0.0012130439}
   m_Size: {x: 0.9940667, y: 2.0003405}
   m_Direction: 0
+--- !u!114 &8096239313488161736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292131052784687305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 256e360a18949b546a7f84d424d34c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dungeonNumber: 1
+  sceneName: Dungeon1
+  SelectionWindow: {fileID: 4550727587667428732, guid: df3e2c576a2d98049a2b0de0f4c14dd2, type: 3}
+  UIManager: {fileID: 0}
 --- !u!1 &4867838204723764735
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,8 +136,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1155941825
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
   m_Color: {r: 0.38802803, g: 0.3150943, b: 1, a: 1}

@@ -36,6 +36,14 @@ public class ProgressManager : MonoBehaviour
     levelCompletion = saveManager.levelCompletion;
   }
 
+  private void Update()
+  {
+    if (saveManager == null)
+    {
+      saveManager = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>();
+    }
+  }
+
   public void CompleteLevel(int dungeonNumber)
   {
     for (int i = 0; i < levelCompletion[dungeonNumber].Count; i++)
