@@ -5,8 +5,8 @@ public class PlayerMovement : MonoBehaviour
   [SerializeField]
   LayerMask blinkLayerMask;
 
-  public float moveSpeed = 10f;
-  public float maxEnergy = 10f;
+  public float moveSpeed;
+  public float maxEnergy;
   public float currentEnergy = 10f;
   public float blinkRange = 3f;
   public float energyRechargeRate = 0f;
@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
   private void Start()
   {
     gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    moveSpeed = gameController.playerMoveSpeed;
     energyBar = GameObject.FindGameObjectWithTag("HUDEnergybar").GetComponent<EnergyBar>();
     maxEnergy = gameController.playerMaxEnergy;
     currentEnergy = maxEnergy;

@@ -33,6 +33,7 @@ public class SaveManager : MonoBehaviour
   // Attributes
   public float playerMaxHealth;
   public float playerMaxEnergy;
+  public float playerMoveSpeed;
 
   // Progress
   public Dictionary<string, bool[]> dungeonProgress;
@@ -74,6 +75,9 @@ public class SaveManager : MonoBehaviour
 
     PointsData pointsData = new PointsData(points, bonusPointsModificator);
     SaveSystem.Save(pointsData, POINTS_KEY);
+
+    AttributesData attributesData = new AttributesData(playerMaxHealth, playerMoveSpeed, playerMaxEnergy);
+    SaveSystem.Save(attributesData, ATTRIBUTES_KEY);
   }
 
   void Load()
@@ -86,6 +90,11 @@ public class SaveManager : MonoBehaviour
     currentWeapon = Resources.Load<WeaponTemplate>(equipmentData.scriptedWeaponName);
     currentScroll = Resources.Load<ScrollTemplate>(equipmentData.scriptedScrollName);
     currentElixir = Resources.Load<ElixirTemplate>(equipmentData.scriptedElixirName);
+
+    AttributesData attributesData = SaveSystem.Load<AttributesData>(ATTRIBUTES_KEY);
+    playerMaxHealth = attributesData.health;
+    playerMoveSpeed = attributesData.moveSpeed;
+    playerMaxEnergy = attributesData.energy;
 
     // Progression load
     ProgressData progressData = SaveSystem.Load<ProgressData>(PROGRESS_KEY);

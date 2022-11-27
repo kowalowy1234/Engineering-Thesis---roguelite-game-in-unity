@@ -23,6 +23,7 @@ TagManager:
   - HUDEnergybar
   - HUD
   - ProgressManager
+  - UIManager
   layers:
   - Default
   - TransparentFX

@@ -59,4 +59,5 @@ MonoBehaviour:
   bonusPointsModificator: 1
   playerMaxHealth: 10
   playerMaxEnergy: 10
+  playerMoveSpeed: 7
   portalsOpened: 

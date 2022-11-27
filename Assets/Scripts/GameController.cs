@@ -17,8 +17,12 @@ public class GameController : MonoBehaviour
   public int points;
   public float bonusPointsModificator = 1f;
   public float maxBonusModificator = 3f;
+  public float baseMaxHp = 10f;
+  public float baseMs = 7f;
+  public float baseMaxEnergy = 10f;
   public float playerMaxHealth = 10f;
   public float playerMaxEnergy = 10f;
+  public float playerMoveSpeed = 7f;
 
   void Awake()
   {
@@ -45,6 +49,7 @@ public class GameController : MonoBehaviour
     bonusPointsModificator = saveManager.bonusPointsModificator;
     playerMaxHealth = saveManager.playerMaxHealth;
     playerMaxEnergy = saveManager.playerMaxEnergy;
+    playerMoveSpeed = saveManager.playerMoveSpeed;
   }
 
   void Update()
@@ -141,7 +146,7 @@ public class GameController : MonoBehaviour
     SaveGame();
   }
 
-  private void SaveGame()
+  public void SaveGame()
   {
     saveManager.currentElixir = currentElixir;
     saveManager.currentScroll = currentScroll;
@@ -150,6 +155,7 @@ public class GameController : MonoBehaviour
     saveManager.bonusPointsModificator = bonusPointsModificator;
     saveManager.playerMaxHealth = playerMaxHealth;
     saveManager.playerMaxEnergy = playerMaxEnergy;
+    saveManager.playerMoveSpeed = playerMoveSpeed;
 
     saveManager.Save();
   }

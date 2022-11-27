@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5119890363883801593}
   m_Layer: 0
   m_Name: UIManager
-  m_TagString: Untagged
+  m_TagString: UIManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inGameMenu: {fileID: 646715783372351538, guid: 0d153b08527b3df45a61cb132d3dea3b, type: 3}
+  currentlyOpen: {fileID: 0}
