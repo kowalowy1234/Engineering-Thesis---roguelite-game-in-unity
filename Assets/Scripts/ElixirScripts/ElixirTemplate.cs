@@ -5,6 +5,7 @@ public class ElixirTemplate : ScriptableObject
   public string ElixirName;
   public float duration;
   public int charges;
+  public string description;
 
   public Sprite sprite;
 

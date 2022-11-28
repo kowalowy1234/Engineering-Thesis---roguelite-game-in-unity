@@ -5,6 +5,7 @@ public class ScrollTemplate : ScriptableObject
   public string ScrollName;
   public float cooldown;
   public float duration;
+  public string description;
 
   public Sprite sprite;
 

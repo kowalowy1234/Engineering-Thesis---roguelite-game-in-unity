@@ -15,5 +15,6 @@ MonoBehaviour:
   ElixirName: Healing elixir
   duration: 0
   charges: 3
+  description: Instantly heals a small amount of health.
   sprite: {fileID: -3793461776831691290, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
   healValue: 5

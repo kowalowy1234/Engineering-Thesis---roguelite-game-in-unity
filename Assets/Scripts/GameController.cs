@@ -82,7 +82,9 @@ public class GameController : MonoBehaviour
 
   public void SwapWeapon(WeaponTemplate newWeapon)
   {
-    GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdateWeaponSprite(newWeapon.sprite);
+    HUDScript hud = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>();
+    hud.UpdateWeaponSprite(newWeapon.sprite);
+    hud.UpdateWeaponInfo(newWeapon.name, newWeapon.description);
     currentWeapon = newWeapon;
     weaponController.Swap(newWeapon);
     saveManager.currentWeapon = newWeapon;
@@ -90,7 +92,9 @@ public class GameController : MonoBehaviour
 
   public void SwapScroll(ScrollTemplate newScroll)
   {
-    GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdateScrollSprite(newScroll.sprite);
+    HUDScript hud = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>();
+    hud.UpdateScrollSprite(newScroll.sprite);
+    hud.UpdateScrollInfo(newScroll.name, newScroll.description);
     currentScroll = newScroll;
     scrollController.Swap(newScroll);
     saveManager.currentScroll = newScroll;
@@ -98,8 +102,10 @@ public class GameController : MonoBehaviour
 
   public void SwapElixir(ElixirTemplate newElixir)
   {
-    GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdateElixirSprite(newElixir.sprite);
-    GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdateElixirCharges(newElixir.charges);
+    HUDScript hud = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>();
+    hud.UpdateElixirSprite(newElixir.sprite);
+    hud.UpdateElixirCharges(newElixir.charges);
+    hud.UpdateElixirInfo(newElixir.name, newElixir.description);
     currentElixir = newElixir;
     elixirController.Swap(newElixir);
     saveManager.currentElixir = newElixir;
