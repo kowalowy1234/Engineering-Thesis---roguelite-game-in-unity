@@ -695,9 +695,13 @@ PrefabInstance:
       value: UIManager
       objectReference: {fileID: 0}
     - target: {fileID: 5119890363883801593, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
-      propertyPath: currentlyOpen
+      propertyPath: inGameMenu
       value: 
       objectReference: {fileID: 567375989}
+    - target: {fileID: 5119890363883801593, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
+      propertyPath: currentlyOpen
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5119890363883801598, guid: 403afb8ed22c56a4d89df0a2315fc56c, type: 3}
       propertyPath: m_RootOrder
       value: 18

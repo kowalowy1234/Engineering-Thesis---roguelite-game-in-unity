@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdc12cdc529b6e40a72a1707592955c, type: 3}
   m_Name: DefaultScroll
   m_EditorClassIdentifier: 
-  ScrollName: Default scroll
+  ScrollName: No scroll equipped
   cooldown: 0
   duration: 0
+  description: 
   sprite: {fileID: 1500759465651550764, guid: 89fd46e41f360964e91265944eb0a375, type: 3}

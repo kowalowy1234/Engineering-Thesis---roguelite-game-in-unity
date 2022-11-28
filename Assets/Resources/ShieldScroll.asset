@@ -15,6 +15,7 @@ MonoBehaviour:
   ScrollName: Shield scroll
   cooldown: 120
   duration: 2
+  description: Creates a shield around the player blocking any incoming damage for
+    2s, 120s cooldown.
   sprite: {fileID: 21300000, guid: c056ca73bada421468e92b64a0b24d8d, type: 3}
   shieldObject: {fileID: 3241000389002406280, guid: c19aa12c5e910a34ab60fb06cad5afdf, type: 3}
-  shieldInstance: {fileID: 0}

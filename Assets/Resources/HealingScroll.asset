@@ -15,5 +15,6 @@ MonoBehaviour:
   ScrollName: Healing scroll
   cooldown: 60
   duration: 0
+  description: Instantly heals a large amount of health, 60s cooldown.
   sprite: {fileID: 21300000, guid: caa85b6b7a7a2ac488ae9b73c5dba30c, type: 3}
   healValue: 10
