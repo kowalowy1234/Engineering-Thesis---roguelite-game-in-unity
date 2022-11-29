@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
   bool isBlinking = false;
 
   public Animator animator;
+  public Vector3 playerDestination;
   private GameController gameController;
   private Vector3 moveDirection;
   private SpriteRenderer playerSprite;
@@ -51,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
         isBlinking = true;
       }
     }
+
+    playerDestination = transform.position + moveDirection;
   }
 
   private void FixedUpdate()

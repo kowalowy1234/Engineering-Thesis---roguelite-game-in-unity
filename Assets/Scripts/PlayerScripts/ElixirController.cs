@@ -44,7 +44,6 @@ public class ElixirController : MonoBehaviour
             chargesLeft -= 1;
             hud.UpdateElixirCharges(chargesLeft);
           };
-          Debug.Log("Charges left: " + chargesLeft);
         }
         break;
 

@@ -10,9 +10,12 @@ public class Enemy : MonoBehaviour
   public float currentHealth;
   private int dotTicks;
   private bool takingDotDamage = false;
-  private bool invoulnerable = false;
+  public bool invoulnerable = false;
+  public bool boss;
 
   public HealthBar healthBar;
+  public GameObject Teleport;
+  public GameObject Trophy;
   public GameObject pointsObject;
   private RoomController roomController;
   private IEnumerator coroutine;
@@ -62,6 +65,10 @@ public class Enemy : MonoBehaviour
   {
     StopAllCoroutines();
     Instantiate(pointsObject, transform.position, Quaternion.identity);
+    if (boss)
+    {
+      Instantiate(Teleport, transform.position, Quaternion.identity);
+    }
     roomController = transform.parent.GetComponent<RoomController>();
     roomController.Kill(gameObject);
     Destroy(gameObject);

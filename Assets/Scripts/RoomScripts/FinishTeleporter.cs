@@ -33,7 +33,6 @@ public class FinishTeleporter : MonoBehaviour
     {
       if (Input.GetKeyUp(KeyCode.F))
       {
-        Debug.Log("dupsko");
         UIManager.SetUIAsActive(SelectionWindow);
       }
     }

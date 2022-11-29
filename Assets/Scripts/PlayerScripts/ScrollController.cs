@@ -80,7 +80,6 @@ public class ScrollController : MonoBehaviour
 
   public void Swap(ScrollTemplate newScroll)
   {
-    Debug.Log("Swapped Scroll to" + newScroll);
     hud.UpdateScrollCooldown("0");
     currentScroll = newScroll;
     currentState = State.READY;
