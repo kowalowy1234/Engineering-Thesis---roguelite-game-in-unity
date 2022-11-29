@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class CharacterShop : MonoBehaviour
 {
-  public float maxBonusHp = 50;
-  public float maxBonusMs = 5;
+  public float maxBonusHp = 20;
+  public float maxBonusMs = 3;
   public float maxBonusEn = 20;
 
-  public int HpPrice = 1000;
-  public int MsPrice = 1000;
-  public int EnPrice = 1000;
+  public int HpPrice = 2500;
+  public int MsPrice = 2500;
+  public int EnPrice = 2500;
 
   private GameController gameController;
   private PlayerController playerController;

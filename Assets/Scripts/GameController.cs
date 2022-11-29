@@ -115,7 +115,6 @@ public class GameController : MonoBehaviour
   {
     points -= (int)(Mathf.Round(points) * 0.4f);
     bonusPointsModificator = 1f;
-    Debug.Log(points);
     SceneManager.LoadScene("DeathScreen");
   }
 

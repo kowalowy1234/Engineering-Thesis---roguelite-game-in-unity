@@ -9,7 +9,8 @@ public class StateMachine : MonoBehaviour
     Run();
   }
 
-  void FixedUpdate() {
+  void FixedUpdate()
+  {
     RunFixed();
   }
 
@@ -23,7 +24,8 @@ public class StateMachine : MonoBehaviour
     }
   }
 
-  private void RunFixed() {
+  private void RunFixed()
+  {
     currentState.RunPhysicsState();
   }
 

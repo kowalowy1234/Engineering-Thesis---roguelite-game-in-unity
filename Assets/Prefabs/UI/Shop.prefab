@@ -1720,12 +1720,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc51bc4a9726e9f498459b9c5fdb3fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBonusHp: 50
-  maxBonusMs: 5
+  maxBonusHp: 20
+  maxBonusMs: 3
   maxBonusEn: 20
-  HpPrice: 1000
-  MsPrice: 1000
-  EnPrice: 1000
+  HpPrice: 2500
+  MsPrice: 2500
+  EnPrice: 2500
   hPScript: {fileID: 2984796338495021050}
   mSScript: {fileID: 5065653905847487822}
   eNScript: {fileID: 5672911170693798781}

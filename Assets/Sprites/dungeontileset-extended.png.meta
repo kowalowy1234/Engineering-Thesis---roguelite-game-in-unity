@@ -7796,7 +7796,7 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7804,6 +7804,27 @@ TextureImporter:
       bones: []
       spriteID: c29439e2e268fe54a81e22bf81fe6d18
       internalID: -680109832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trophy1
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 941
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ae85d60312b794a9017d8f55eca2bf
+      internalID: 837477057
       vertices: []
       indices: 
       edges: []
@@ -8111,6 +8132,7 @@ TextureImporter:
       dungeontileset-extended_194: -8830122653094465309
       dungeontileset-extended_225: -884093924108043739
       dungeontileset-extended_298: 2247033278362936892
+      trophy1: 837477057
       dungeontileset-extended_212: 8488072934870562487
       dungeontileset-extended_263: -3329178618651188000
       dungeontileset-extended_223: -7607433910276958812
