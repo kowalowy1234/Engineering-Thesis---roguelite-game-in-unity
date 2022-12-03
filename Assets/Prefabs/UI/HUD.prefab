@@ -1482,9 +1482,12 @@ MonoBehaviour:
   ScrollName: {fileID: 7777194649564487749}
   WeaponSprite: {fileID: 8805369336551980599}
   WeaponInfo: {fileID: 4176623032423873108}
-  TrophySprite: {fileID: 692242189060699605}
   WeaponDescription: {fileID: 1937933116885350108}
   WeaponName: {fileID: 6406367338379562228}
+  TrophySprite: {fileID: 692242189060699605}
+  TrophyInfo: {fileID: 6581408722212929236}
+  TrophyDescription: {fileID: 4560584554893703911}
+  TrophyName: {fileID: 921519682712261922}
   Points: {fileID: 4602969224324969624}
   BonusPointsModificator: {fileID: 1822167265733565178}
 --- !u!1 &3268374181663438391

@@ -23,8 +23,8 @@ public class SaveManager : MonoBehaviour
   public Dictionary<int, List<bool>> levelCompletion = new Dictionary<int, List<bool>>();
   //==================================================================================
 
-  public int currentTrophy;
-  // Passive boss trophy goes here (not yet implemented)
+  public TrophyTemplate currentTrophy;
+  public TrophyTemplate carriedTrophy;
 
   // Points;
   public int points;
@@ -32,6 +32,7 @@ public class SaveManager : MonoBehaviour
 
   // Attributes
   public float playerMaxHealth;
+  public float itemMaxHealthBonus;
   public float playerMaxEnergy;
   public float playerMoveSpeed;
 
@@ -67,7 +68,7 @@ public class SaveManager : MonoBehaviour
 
   public void Save()
   {
-    EquipmentData equipmentData = new EquipmentData(currentWeapon, currentScroll, currentElixir);
+    EquipmentData equipmentData = new EquipmentData(currentWeapon, currentScroll, currentElixir, carriedTrophy, currentTrophy);
     SaveSystem.Save(equipmentData, EQUIPMENT_KEY);
 
     ProgressData progressData = new ProgressData(levelCompletion);
@@ -76,7 +77,7 @@ public class SaveManager : MonoBehaviour
     PointsData pointsData = new PointsData(points, bonusPointsModificator);
     SaveSystem.Save(pointsData, POINTS_KEY);
 
-    AttributesData attributesData = new AttributesData(playerMaxHealth, playerMoveSpeed, playerMaxEnergy);
+    AttributesData attributesData = new AttributesData(playerMaxHealth, playerMoveSpeed, playerMaxEnergy, itemMaxHealthBonus);
     SaveSystem.Save(attributesData, ATTRIBUTES_KEY);
   }
 
@@ -90,11 +91,14 @@ public class SaveManager : MonoBehaviour
     currentWeapon = Resources.Load<WeaponTemplate>(equipmentData.scriptedWeaponName);
     currentScroll = Resources.Load<ScrollTemplate>(equipmentData.scriptedScrollName);
     currentElixir = Resources.Load<ElixirTemplate>(equipmentData.scriptedElixirName);
+    carriedTrophy = Resources.Load<TrophyTemplate>(equipmentData.scriptedCarriedTrophyName);
+    currentTrophy = Resources.Load<TrophyTemplate>(equipmentData.scriptedCurrentTrophyName);
 
     AttributesData attributesData = SaveSystem.Load<AttributesData>(ATTRIBUTES_KEY);
     playerMaxHealth = attributesData.health;
     playerMoveSpeed = attributesData.moveSpeed;
     playerMaxEnergy = attributesData.energy;
+    itemMaxHealthBonus = attributesData.itemMaxHealthBonus;
 
     // Progression load
     ProgressData progressData = SaveSystem.Load<ProgressData>(PROGRESS_KEY);
@@ -104,7 +108,6 @@ public class SaveManager : MonoBehaviour
       levelCompletion[progressData.Keys[i]] = progressData.Levels[i];
     }
 
-    currentTrophy = 1;
   }
 
   private void OnApplicationQuit()

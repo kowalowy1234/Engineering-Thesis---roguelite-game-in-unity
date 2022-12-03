@@ -12,16 +12,29 @@ public class PlayerController : MonoBehaviour
   private bool takingDotDamage = false;
 
   private GameController gameController;
+  private HUDScript hud;
   public HealthBar healthBar;
+  public GameObject CarriedTrophySprite;
+  public TrophyTemplate CarriedTrophy;
+  public TrophyTemplate EquippedTrophy;
 
   void Start()
   {
     gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    hud = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>();
     healthBar = GameObject.FindGameObjectWithTag("HUDHealthbar").GetComponent<HealthBar>();
-    maxHealth = gameController.playerMaxHealth;
+
+    maxHealth = gameController.playerMaxHealth + gameController.itemMaxHealthBonus;
     currentHealth = gameController.playerMaxHealth;
-    healthBar.SetMaxHealth(gameController.playerMaxHealth);
-    healthBar.SetHealth(gameController.playerMaxHealth);
+    healthBar.SetMaxHealth(gameController.playerMaxHealth + gameController.itemMaxHealthBonus);
+    healthBar.SetHealth(gameController.playerMaxHealth + gameController.itemMaxHealthBonus);
+
+
+    CarriedTrophySprite.GetComponent<SpriteRenderer>().sprite = gameController.carriedTrophy.TrophySprite;
+    EquippedTrophy = gameController.currentTrophy;
+    CarriedTrophy = gameController.carriedTrophy;
+    EquippedTrophy.UnequipTrophy();
+    EquippedTrophy.EquipTrophy();
   }
 
   void Update()
@@ -79,6 +92,21 @@ public class PlayerController : MonoBehaviour
       currentHealth += health;
       healthBar.SetHealth(currentHealth);
     }
+  }
+
+  public void EquipNewTrophy(TrophyTemplate newTrophy)
+  {
+    CarriedTrophySprite.GetComponent<SpriteRenderer>().sprite = null;
+    CarriedTrophy = null;
+    EquippedTrophy.UnequipTrophy();
+    EquippedTrophy = newTrophy;
+    newTrophy.EquipTrophy();
+  }
+
+  public void SellTrophy()
+  {
+    CarriedTrophySprite.GetComponent<SpriteRenderer>().sprite = null;
+    CarriedTrophy = null;
   }
 
   IEnumerator damageOverTime(int damage, int duration)

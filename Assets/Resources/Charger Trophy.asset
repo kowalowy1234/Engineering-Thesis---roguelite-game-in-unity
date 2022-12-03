@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afdc12cdc529b6e40a72a1707592955c, type: 3}
-  m_Name: DefaultScroll
+  m_Script: {fileID: 11500000, guid: bfabdcfcd6df9cf47b0b5eeccd16f639, type: 3}
+  m_Name: Charger Trophy
   m_EditorClassIdentifier: 
-  ScrollName: No scroll equipped
-  cooldown: 0
-  duration: 0
-  description: 
-  sprite: {fileID: 1500759465651550764, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
+  TrophyName: Boss1 Trophy
+  TrophyPrice: 500
+  TrophyDescription: Increases max HP by 10.
+  TrophySprite: {fileID: 837477057, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  bonusMaxHp: 10
