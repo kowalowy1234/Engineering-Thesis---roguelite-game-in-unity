@@ -268,7 +268,7 @@ MonoBehaviour:
   boss: 1
   healthBar: {fileID: 992517407357632284}
   Teleport: {fileID: 2292131052784687305, guid: 1a8c66829da0fe2478f7efb57ead3b59, type: 3}
-  Trophy: {fileID: 0}
+  Trophy: {fileID: 11400000, guid: 77973b121f49d5f4881fe8909dcf536d, type: 2}
   pointsObject: {fileID: 3531506940919530016, guid: ed96618fe9c0aa14fa4cd9ef02277cae, type: 3}
 --- !u!114 &3433942527775780163
 MonoBehaviour:

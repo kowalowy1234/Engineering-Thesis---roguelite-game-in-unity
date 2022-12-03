@@ -44,15 +44,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f236e287c3a03874ead5da6435ffa025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerController: {fileID: 0}
   saveManager: {fileID: 0}
   currentWeapon: {fileID: 0}
   currentScroll: {fileID: 0}
   currentElixir: {fileID: 0}
-  player: {fileID: 0}
-  currentTrophy: 0
+  currentTrophy: {fileID: 11400000, guid: 919edafab40736049a4a9af1ea58b78d, type: 2}
+  carriedTrophy: {fileID: 11400000, guid: 919edafab40736049a4a9af1ea58b78d, type: 2}
+  defaultTrophy: {fileID: 11400000, guid: 919edafab40736049a4a9af1ea58b78d, type: 2}
   points: 0
   bonusPointsModificator: 1
   maxBonusModificator: 3
+  baseMaxHp: 10
+  baseMs: 7
+  baseMaxEnergy: 10
   playerMaxHealth: 10
   playerMaxEnergy: 10
-  inGameMenu: {fileID: 0}
+  playerMoveSpeed: 7

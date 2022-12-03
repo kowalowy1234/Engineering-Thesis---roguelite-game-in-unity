@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
 
   public HealthBar healthBar;
   public GameObject Teleport;
-  public GameObject Trophy;
+  public TrophyTemplate Trophy;
   public GameObject pointsObject;
   private RoomController roomController;
   private IEnumerator coroutine;
@@ -68,6 +68,7 @@ public class Enemy : MonoBehaviour
     if (boss)
     {
       Instantiate(Teleport, transform.position, Quaternion.identity);
+      GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().PickUpTrophy(Trophy);
     }
     roomController = transform.parent.GetComponent<RoomController>();
     roomController.Kill(gameObject);

@@ -20,9 +20,14 @@ public class HUDScript : MonoBehaviour
   [Header("Weapon")]
   public Image WeaponSprite;
   public GameObject WeaponInfo;
-  public Image TrophySprite;
   public Text WeaponDescription;
   public Text WeaponName;
+
+  [Header("Trophy")]
+  public Image TrophySprite;
+  public GameObject TrophyInfo;
+  public Text TrophyDescription;
+  public Text TrophyName;
 
   [Header("Points")]
   public Text Points;
@@ -41,6 +46,8 @@ public class HUDScript : MonoBehaviour
 
     UpdateWeaponInfo(gameController.currentWeapon.name, gameController.currentWeapon.description);
     UpdateWeaponSprite(gameController.currentWeapon.sprite);
+
+    UpdateTrophyInfo(gameController.currentTrophy.TrophySprite, gameController.currentTrophy.name, gameController.currentTrophy.TrophyDescription);
 
     UpdatePoints(gameController.points, gameController.bonusPointsModificator);
   }
@@ -101,9 +108,11 @@ public class HUDScript : MonoBehaviour
     WeaponDescription.text = description;
   }
 
-  public void UpdateTrophySprite(Sprite sprite)
+  public void UpdateTrophyInfo(Sprite sprite, string name, string description)
   {
     TrophySprite.sprite = sprite;
+    TrophyName.text = name;
+    TrophyDescription.text = description;
   }
 
   public void UpdatePoints(int points, float bonusPointsModificator)
@@ -118,6 +127,7 @@ public class HUDScript : MonoBehaviour
     ElixirInfo.SetActive(true);
     ScrollInfo.SetActive(true);
     WeaponInfo.SetActive(true);
+    TrophyInfo.SetActive(true);
   }
 
   private void HideItemInfo()
@@ -126,5 +136,6 @@ public class HUDScript : MonoBehaviour
     ElixirInfo.SetActive(false);
     ScrollInfo.SetActive(false);
     WeaponInfo.SetActive(false);
+    TrophyInfo.SetActive(false);
   }
 }

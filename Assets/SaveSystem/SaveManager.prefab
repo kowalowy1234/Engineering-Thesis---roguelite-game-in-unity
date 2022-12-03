@@ -54,7 +54,8 @@ MonoBehaviour:
     levels: 00
   - DungeonKey: 3
     levels: 0000
-  currentTrophy: 0
+  currentTrophy: {fileID: 11400000, guid: 919edafab40736049a4a9af1ea58b78d, type: 2}
+  carriedTrophy: {fileID: 11400000, guid: 919edafab40736049a4a9af1ea58b78d, type: 2}
   points: 0
   bonusPointsModificator: 1
   playerMaxHealth: 10

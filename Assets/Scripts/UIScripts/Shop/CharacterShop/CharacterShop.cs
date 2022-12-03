@@ -58,7 +58,7 @@ public class CharacterShop : MonoBehaviour
       gameController.points -= HpPrice;
       gameController.AddPoints(-HpPrice);
       gameController.playerMaxHealth += 10f;
-      playerController.maxHealth = playerController.maxHealth += 10f;
+      playerController.maxHealth += 10f;
       playerController.currentHealth = playerController.maxHealth;
       playerController.healthBar.SetMaxHealth(playerController.maxHealth);
       playerController.healthBar.SetHealth(playerController.maxHealth);
