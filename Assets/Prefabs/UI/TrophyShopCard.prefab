@@ -286,8 +286,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -340,6 +340,7 @@ MonoBehaviour:
   Description: {fileID: 7589353341138848355}
   Price: {fileID: 4640303619431475144}
   Image: {fileID: 661394274862203911}
+  gameController: {fileID: 0}
 --- !u!1 &5559603266456935881
 GameObject:
   m_ObjectHideFlags: 0

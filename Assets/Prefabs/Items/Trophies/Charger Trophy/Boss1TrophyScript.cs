@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Trophies/Boss1 Trophy")]
+[CreateAssetMenu(menuName = "Trophies/Charger Trophy")]
 public class Boss1TrophyScript : TrophyTemplate
 {
   public float bonusMaxHp;
