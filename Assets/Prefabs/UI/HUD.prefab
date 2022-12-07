@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6328752859232804954}
   - component: {fileID: 7515499491191572988}
   - component: {fileID: 2036135252237803547}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 7564859304932248383}
   - component: {fileID: 6546645004131341010}
   - component: {fileID: 2567965975180954186}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ScrollCooldown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 4163623471895045233}
   - component: {fileID: 7196187179310108456}
   - component: {fileID: 4000494316161637647}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 8592376046449965426}
   - component: {fileID: 895345044206332312}
   - component: {fileID: 7704429329647499169}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 7282763407095658599}
   - component: {fileID: 4586738820708949616}
   - component: {fileID: 915370070073780363}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 2596287620953734527}
   - component: {fileID: 3347441757308751085}
   - component: {fileID: 7548329959760616825}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (Legacy) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 396363203600812875}
   - component: {fileID: 1966693102986477457}
   - component: {fileID: 1003490654845807690}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ItemInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 3565345046041521242}
   - component: {fileID: 3741739202887906188}
   - component: {fileID: 1937933116885350108}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: WeaponDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 8154182541156612835}
   - component: {fileID: 2977983404062156428}
   - component: {fileID: 8718732384140023542}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +721,7 @@ GameObject:
   - component: {fileID: 2704091494486385560}
   - component: {fileID: 8920449662802180282}
   - component: {fileID: 4602969224324969624}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -801,7 +801,7 @@ GameObject:
   - component: {fileID: 4608281308182521271}
   - component: {fileID: 6868376157996311469}
   - component: {fileID: 1822167265733565178}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Points (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -879,7 +879,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4939672996445405834}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Resources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -919,7 +919,7 @@ GameObject:
   - component: {fileID: 3268374180454432763}
   - component: {fileID: 3268374180454432757}
   - component: {fileID: 3268374180454432756}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 3268374180556423541}
   - component: {fileID: 3268374180556423543}
   - component: {fileID: 3268374180556423542}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1077,7 +1077,7 @@ GameObject:
   - component: {fileID: 3268374180672065699}
   - component: {fileID: 3268374180672065698}
   - component: {fileID: 3268374180672065697}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Utilities
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1183,7 +1183,7 @@ GameObject:
   - component: {fileID: 3268374180694144789}
   - component: {fileID: 3268374180694144791}
   - component: {fileID: 3268374180694144790}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Bar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1260,7 +1260,7 @@ GameObject:
   - component: {fileID: 3268374180829750807}
   - component: {fileID: 3268374180829750806}
   - component: {fileID: 7370832811907844342}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1365,7 +1365,7 @@ GameObject:
   - component: {fileID: 3268374180869185281}
   - component: {fileID: 3268374180869185283}
   - component: {fileID: 3268374180869185282}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Bar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1441,7 +1441,7 @@ GameObject:
   - component: {fileID: 3268374180880025618}
   - component: {fileID: 3268374180880025708}
   - component: {fileID: 3268374180880025619}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1521,7 +1521,8 @@ GameObject:
   - component: {fileID: 3268374181054473579}
   - component: {fileID: 3268374181054473578}
   - component: {fileID: 1797010998571283037}
-  m_Layer: 5
+  - component: {fileID: 2220086732879141340}
+  m_Layer: 3
   m_Name: HUD
   m_TagString: HUD
   m_Icon: {fileID: 0}
@@ -1647,6 +1648,18 @@ MonoBehaviour:
   TrophyName: {fileID: 921519682712261922}
   Points: {fileID: 4602969224324969624}
   BonusPointsModificator: {fileID: 1822167265733565178}
+--- !u!225 &2220086732879141340
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3268374181054473577}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &3268374181663438391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,7 +1671,7 @@ GameObject:
   - component: {fileID: 3268374181663438384}
   - component: {fileID: 3268374181663438386}
   - component: {fileID: 3268374181663438385}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1739,7 +1752,7 @@ GameObject:
   - component: {fileID: 3268374181954554124}
   - component: {fileID: 3268374181954554126}
   - component: {fileID: 3268374181954554125}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Bar (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1818,7 +1831,7 @@ GameObject:
   - component: {fileID: 4340730204406014487}
   - component: {fileID: 1070077035336504127}
   - component: {fileID: 3682375727101205528}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (Legacy) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1898,7 +1911,7 @@ GameObject:
   - component: {fileID: 9129263038078632056}
   - component: {fileID: 4993629111472564486}
   - component: {fileID: 4782713062511099907}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ElixirName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1978,7 +1991,7 @@ GameObject:
   - component: {fileID: 936167877759238672}
   - component: {fileID: 54563899227379589}
   - component: {fileID: 2657591055062816373}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ItemInfo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2056,7 +2069,7 @@ GameObject:
   - component: {fileID: 7146728626330078714}
   - component: {fileID: 8944045308386436765}
   - component: {fileID: 1503816568856544399}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ScrollDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2136,7 +2149,7 @@ GameObject:
   - component: {fileID: 3657572832416633394}
   - component: {fileID: 7851312841373509854}
   - component: {fileID: 4800258024458726110}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ElixirCharges
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2216,7 +2229,7 @@ GameObject:
   - component: {fileID: 3804928879503087249}
   - component: {fileID: 1241881330698474014}
   - component: {fileID: 5438670544947138923}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2292,7 +2305,7 @@ GameObject:
   - component: {fileID: 572038296003061600}
   - component: {fileID: 6537993788632238594}
   - component: {fileID: 475443687705194391}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ElixirSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2368,7 +2381,7 @@ GameObject:
   - component: {fileID: 8397565054669767528}
   - component: {fileID: 3160963457230406527}
   - component: {fileID: 8448014929509922077}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2448,7 +2461,7 @@ GameObject:
   - component: {fileID: 622413164076307624}
   - component: {fileID: 9183005432133538481}
   - component: {fileID: 7095277557579860842}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ElixirDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2528,7 +2541,7 @@ GameObject:
   - component: {fileID: 5895097724301130157}
   - component: {fileID: 3420893713310215304}
   - component: {fileID: 692242189060699605}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: TrophySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2604,7 +2617,7 @@ GameObject:
   - component: {fileID: 6265891369414001743}
   - component: {fileID: 5564010682676912708}
   - component: {fileID: 8805369336551980599}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: WeaponSptire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2680,7 +2693,7 @@ GameObject:
   - component: {fileID: 4395328497614037634}
   - component: {fileID: 1015581599138789955}
   - component: {fileID: 3391764765498684615}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (Legacy) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2760,7 +2773,7 @@ GameObject:
   - component: {fileID: 849015898702052239}
   - component: {fileID: 5626457903100634860}
   - component: {fileID: 6627865047955470294}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ScrollSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2836,7 +2849,7 @@ GameObject:
   - component: {fileID: 5118850973139706704}
   - component: {fileID: 9050102311043759362}
   - component: {fileID: 4560584554893703911}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: TrophyDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2916,7 +2929,7 @@ GameObject:
   - component: {fileID: 6662506267785816650}
   - component: {fileID: 6407906004168060760}
   - component: {fileID: 2292556666622646318}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ItemInfo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2993,7 +3006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 234077709709054996}
   - component: {fileID: 1259024306790674086}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BonusPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3059,7 +3072,7 @@ GameObject:
   - component: {fileID: 1862267476857175639}
   - component: {fileID: 1344080876713766861}
   - component: {fileID: 8951276124579134691}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3135,7 +3148,7 @@ GameObject:
   - component: {fileID: 1991516908956893932}
   - component: {fileID: 1097152133151971269}
   - component: {fileID: 6406367338379562228}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: WeaponName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3215,7 +3228,7 @@ GameObject:
   - component: {fileID: 6937827563877958043}
   - component: {fileID: 4557367232851772615}
   - component: {fileID: 1234396274813333433}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ItemInfo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3292,7 +3305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3288114116420678691}
   - component: {fileID: 8961602076276439203}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3358,7 +3371,7 @@ GameObject:
   - component: {fileID: 7895403223048824181}
   - component: {fileID: 8721072233149459670}
   - component: {fileID: 1752184165958642501}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3434,7 +3447,7 @@ GameObject:
   - component: {fileID: 5205631962624069033}
   - component: {fileID: 1840143383194860057}
   - component: {fileID: 7777194649564487749}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ScrollName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3514,7 +3527,7 @@ GameObject:
   - component: {fileID: 3927580638282666334}
   - component: {fileID: 6303685331878952338}
   - component: {fileID: 921519682712261922}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: TrophyName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3598,6 +3611,10 @@ PrefabInstance:
       propertyPath: m_OverrideSorting
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 472560974790642658, guid: 3fa3b09eac19cb34eb26a65ba99ffae5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2484511879424816929, guid: 3fa3b09eac19cb34eb26a65ba99ffae5, type: 3}
       propertyPath: m_Color.b
       value: 0.2396226
@@ -3609,6 +3626,10 @@ PrefabInstance:
     - target: {fileID: 4095602032444807390, guid: 3fa3b09eac19cb34eb26a65ba99ffae5, type: 3}
       propertyPath: m_Name
       value: HealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095602032444807390, guid: 3fa3b09eac19cb34eb26a65ba99ffae5, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5183734304130771148, guid: 3fa3b09eac19cb34eb26a65ba99ffae5, type: 3}
       propertyPath: m_Pivot.x
@@ -3706,9 +3727,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5439890121990222043, guid: 3fa3b09eac19cb34eb26a65ba99ffae5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6938079444518887028, guid: 3fa3b09eac19cb34eb26a65ba99ffae5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7754701689463365415, guid: 3fa3b09eac19cb34eb26a65ba99ffae5, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7754701689463365415, guid: 3fa3b09eac19cb34eb26a65ba99ffae5, type: 3}
       propertyPath: m_TagString
@@ -3732,6 +3761,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyBar
       objectReference: {fileID: 0}
+    - target: {fileID: 746561682105566607, guid: 9ba2829e52df7ad4896f2198ab306f77, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748136244395398835, guid: 9ba2829e52df7ad4896f2198ab306f77, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4972630019518181553, guid: 9ba2829e52df7ad4896f2198ab306f77, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
@@ -3739,6 +3776,10 @@ PrefabInstance:
     - target: {fileID: 5963843167853953829, guid: 9ba2829e52df7ad4896f2198ab306f77, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419016657917330038, guid: 9ba2829e52df7ad4896f2198ab306f77, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6419016657917330038, guid: 9ba2829e52df7ad4896f2198ab306f77, type: 3}
       propertyPath: m_TagString
@@ -3843,6 +3884,10 @@ PrefabInstance:
     - target: {fileID: 8465222894351758749, guid: 9ba2829e52df7ad4896f2198ab306f77, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787805466862136714, guid: 9ba2829e52df7ad4896f2198ab306f77, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ba2829e52df7ad4896f2198ab306f77, type: 3}
