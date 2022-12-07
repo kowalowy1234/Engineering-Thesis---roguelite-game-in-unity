@@ -5,13 +5,17 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Trophies/Spinner Trophy")]
 public class SpinnerTrophyScript : TrophyTemplate
 {
+  public GameObject stalkerShield;
+  private GameObject shieldInstance;
+  private GameObject player;
+
   public override void EquipTrophy()
   {
-    base.EquipTrophy();
+    shieldInstance = Instantiate(stalkerShield);
   }
 
   public override void UnequipTrophy()
   {
-    base.EquipTrophy();
+    Destroy(shieldInstance);
   }
 }
