@@ -13,7 +13,7 @@ public class ShieldScript : MonoBehaviour
     transform.Rotate(new Vector3(0f, 0f, rotationSpeed * Time.deltaTime));
   }
 
-  void OnTriggerEnter(Collider other)
+  void OnTriggerEnter2D(Collider2D other)
   {
     if (other.gameObject.layer == 16)
     {

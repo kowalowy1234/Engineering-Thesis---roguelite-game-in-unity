@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9e61ecbe12386c4a98063909c674b55, type: 3}
-  m_Name: Spinner Trophy
+  m_Name: Stalker Trophy
   m_EditorClassIdentifier: 
   TrophyName: Spinner Trophy
   TrophyPrice: 600
   TrophyDescription: Provides a barrier with a chance to block projectiles.
   TrophySprite: {fileID: -449814910, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  stalkerShield: {fileID: 2666931398448365105, guid: 0e6c40ecba7f7fe4e86dddf0754dc8b7, type: 3}
