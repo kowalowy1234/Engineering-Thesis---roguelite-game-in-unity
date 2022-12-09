@@ -3064,7 +3064,7 @@ PrefabInstance:
     - target: {fileID: 6183319204222925276, guid: 486439e06e2ff754e9df10deefa1e948, type: 3}
       propertyPath: Trophy
       value: 
-      objectReference: {fileID: 11400000, guid: 962677687ff661b4d90a81f149345352, type: 2}
+      objectReference: {fileID: 11400000, guid: 589b25f03d881ca4d876503df4bbf251, type: 2}
     - target: {fileID: 7280344542528756236, guid: 486439e06e2ff754e9df10deefa1e948, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

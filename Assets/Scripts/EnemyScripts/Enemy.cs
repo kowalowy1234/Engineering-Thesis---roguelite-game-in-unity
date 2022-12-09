@@ -17,13 +17,37 @@ public class Enemy : MonoBehaviour
   public GameObject Teleport;
   public TrophyTemplate Trophy;
   public GameObject pointsObject;
+  [SerializeField]
   private RoomController roomController;
   private IEnumerator coroutine;
+  public GameObject Alpha;
+  public LineRenderer lineRenderer;
 
   void Start()
   {
+    if (Alpha)
+    {
+      lineRenderer = gameObject.GetComponent<LineRenderer>();
+    }
     currentHealth = maxHealth;
     healthBar.SetMaxHealth(maxHealth);
+  }
+
+  private void Update()
+  {
+    if (Alpha)
+    {
+      DrawLineToAlpha();
+    }
+    else
+    {
+      HideLine();
+    }
+
+    if (!roomController)
+    {
+      roomController = transform.parent.GetComponent<RoomController>();
+    }
   }
 
   public void takeDamage(int damage)
@@ -32,6 +56,10 @@ public class Enemy : MonoBehaviour
     {
       if (currentHealth - damage <= 0)
       {
+        if (Alpha)
+        {
+          Alpha.GetComponent<AlphaScript>().DealDamageToParent();
+        }
         die();
       }
       else
@@ -72,7 +100,8 @@ public class Enemy : MonoBehaviour
     }
     roomController = transform.parent.GetComponent<RoomController>();
     roomController.Kill(gameObject);
-    Destroy(gameObject);
+    // Destroy(gameObject);
+    gameObject.SetActive(false);
   }
 
   IEnumerator damageOverTime(int damage, int duration)
@@ -90,5 +119,17 @@ public class Enemy : MonoBehaviour
 
     dotTicks = 0;
     takingDotDamage = false;
+  }
+
+  private void DrawLineToAlpha()
+  {
+    lineRenderer.SetPosition(0, transform.position);
+    lineRenderer.SetPosition(1, Alpha.transform.position);
+  }
+
+  private void HideLine()
+  {
+    lineRenderer.SetPosition(0, transform.position);
+    lineRenderer.SetPosition(1, transform.position);
   }
 }

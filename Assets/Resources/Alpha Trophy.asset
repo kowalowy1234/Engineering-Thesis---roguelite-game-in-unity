@@ -16,3 +16,4 @@ MonoBehaviour:
   TrophyPrice: 700
   TrophyDescription: Creates a field that deals continuous damage to enemies.
   TrophySprite: {fileID: -562266087, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  alphaDamagePool: {fileID: 7557887873607561985, guid: f347b099e6fab484ebcae4289ac110c5, type: 3}

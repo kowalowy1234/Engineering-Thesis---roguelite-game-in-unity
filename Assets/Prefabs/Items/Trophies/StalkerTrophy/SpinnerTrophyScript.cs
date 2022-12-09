@@ -7,7 +7,6 @@ public class SpinnerTrophyScript : TrophyTemplate
 {
   public GameObject stalkerShield;
   private GameObject shieldInstance;
-  private GameObject player;
 
   public override void EquipTrophy()
   {
