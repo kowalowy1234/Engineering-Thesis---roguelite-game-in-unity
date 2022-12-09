@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfabdcfcd6df9cf47b0b5eeccd16f639, type: 3}
   m_Name: Charger Trophy
   m_EditorClassIdentifier: 
-  TrophyName: Boss1 Trophy
+  TrophyName: Charger Trophy
   TrophyPrice: 500
   TrophyDescription: Increases max HP by 10.
   TrophySprite: {fileID: 837477057, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}

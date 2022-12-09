@@ -7892,7 +7892,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7900,6 +7900,27 @@ TextureImporter:
       bones: []
       spriteID: b85ce6fb3dbf6a94db7fb549db5ec7e6
       internalID: -10505760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmptyImage
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 687
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1d84244a449d448b34cc044b849be7
+      internalID: 1753796188
       vertices: []
       indices: 
       edges: []
@@ -8204,6 +8225,7 @@ TextureImporter:
       dungeontileset-extended_16: -7996808963434139365
       dungeontileset-extended_93: -7357715077758276938
       Staff1: 7555586439735394427
+      EmptyImage: 1753796188
       dungeontileset-extended_192: 6848381103118036138
       dungeontileset-extended_217: -1585742501357597863
       dungeontileset-extended_194: -8830122653094465309

@@ -24,6 +24,7 @@ TagManager:
   - HUD
   - ProgressManager
   - UIManager
+  - AlphaDamagePool
   layers:
   - Default
   - TransparentFX
@@ -44,8 +45,8 @@ TagManager:
   - EnemyProjectile
   - RoomController
   - Shield
-  - 
-  - 
+  - UntargetableEnemy
+  - PlayerDamagePool
   - 
   - 
   - 

@@ -1147,7 +1147,7 @@ PrefabInstance:
     - target: {fileID: 8781042381675285572, guid: 4d07da872fb663149abd7aff1a52939f, type: 3}
       propertyPath: boss
       value: 
-      objectReference: {fileID: 9104392897368079256, guid: 8c14dacada53cb54b8fca7e30865feaa, type: 3}
+      objectReference: {fileID: 7981051213779720948, guid: a391c33960e5530439444a51932e3c1f, type: 3}
     - target: {fileID: 8781042381675285572, guid: 4d07da872fb663149abd7aff1a52939f, type: 3}
       propertyPath: portal
       value: 

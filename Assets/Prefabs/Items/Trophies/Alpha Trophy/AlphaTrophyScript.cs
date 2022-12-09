@@ -5,13 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Trophies/Alpha Trophy")]
 public class AlphaTrophyScript : TrophyTemplate
 {
+  public GameObject alphaDamagePool;
+
   public override void EquipTrophy()
   {
-    base.EquipTrophy();
+    Instantiate(alphaDamagePool);
   }
 
   public override void UnequipTrophy()
   {
-    base.EquipTrophy();
+    Destroy(GameObject.FindGameObjectWithTag("AlphaDamagePool"));
   }
 }
