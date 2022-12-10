@@ -25,6 +25,7 @@ TagManager:
   - ProgressManager
   - UIManager
   - AlphaDamagePool
+  - TeleportsOpened
   layers:
   - Default
   - TransparentFX

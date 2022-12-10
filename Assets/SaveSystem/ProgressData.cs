@@ -7,9 +7,11 @@ public class ProgressData
 {
   public List<int> Keys;
   public List<List<bool>> Levels;
+  public List<SaveManager.TeleportOpenedPair> teleportsOpened;
 
-  public ProgressData(Dictionary<int, List<bool>> levelCompletion)
+  public ProgressData(Dictionary<int, List<bool>> levelCompletion, List<SaveManager.TeleportOpenedPair> teleportOpenedList)
   {
+    teleportsOpened = teleportOpenedList;
     Keys = new List<int>();
     Levels = new List<List<bool>>();
 
