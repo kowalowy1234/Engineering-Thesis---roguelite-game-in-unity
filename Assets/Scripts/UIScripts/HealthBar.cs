@@ -5,6 +5,7 @@ public class HealthBar : MonoBehaviour
 {
 
   public Slider slider;
+  public Text currentHpText;
 
   public void SetMaxHealth(float health)
   {
@@ -15,5 +16,6 @@ public class HealthBar : MonoBehaviour
   public void SetHealth(float health)
   {
     slider.value = health;
+    currentHpText.text = "" + Mathf.Ceil(health);
   }
 }
