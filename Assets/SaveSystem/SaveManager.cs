@@ -21,7 +21,17 @@ public class SaveManager : MonoBehaviour
   [SerializeField]
   public List<DungeonStructure> DungeonList = new List<DungeonStructure>();
   public Dictionary<int, List<bool>> levelCompletion = new Dictionary<int, List<bool>>();
-  //==================================================================================
+
+  //=========================== Teleports opened =====================================
+
+  [System.Serializable]
+  public class TeleportOpenedPair
+  {
+    public string dungeonName;
+    public bool isOpened;
+  }
+
+  public List<TeleportOpenedPair> teleportsOpenedList = new List<TeleportOpenedPair>();
 
   public TrophyTemplate currentTrophy;
   public TrophyTemplate carriedTrophy;
@@ -35,10 +45,6 @@ public class SaveManager : MonoBehaviour
   public float itemMaxHealthBonus;
   public float playerMaxEnergy;
   public float playerMoveSpeed;
-
-  // Progress
-  public Dictionary<string, bool[]> dungeonProgress;
-  public bool[] portalsOpened;
 
   // Settings
   const string EQUIPMENT_KEY = "/equipment";
@@ -71,7 +77,7 @@ public class SaveManager : MonoBehaviour
     EquipmentData equipmentData = new EquipmentData(currentWeapon, currentScroll, currentElixir, carriedTrophy, currentTrophy);
     SaveSystem.Save(equipmentData, EQUIPMENT_KEY);
 
-    ProgressData progressData = new ProgressData(levelCompletion);
+    ProgressData progressData = new ProgressData(levelCompletion, teleportsOpenedList);
     SaveSystem.Save(progressData, PROGRESS_KEY);
 
     PointsData pointsData = new PointsData(points, bonusPointsModificator);
@@ -102,6 +108,8 @@ public class SaveManager : MonoBehaviour
 
     // Progression load
     ProgressData progressData = SaveSystem.Load<ProgressData>(PROGRESS_KEY);
+
+    teleportsOpenedList = progressData.teleportsOpened;
 
     for (int i = 0; i < progressData.Keys.Count; i++)
     {

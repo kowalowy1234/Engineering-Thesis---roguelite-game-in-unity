@@ -15,4 +15,4 @@ MonoBehaviour:
   TrophyName: 
   TrophyPrice: 0
   TrophyDescription: 
-  TrophySprite: {fileID: -7198956592190449974, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
+  TrophySprite: {fileID: 1753796188, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
