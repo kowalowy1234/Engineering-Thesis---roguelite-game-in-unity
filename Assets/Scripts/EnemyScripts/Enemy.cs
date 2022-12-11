@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
   public GameObject Teleport;
   public TrophyTemplate Trophy;
   public GameObject pointsObject;
+  private Vector3 initialPositon;
   [SerializeField]
   private RoomController roomController;
   private IEnumerator coroutine;
@@ -25,12 +26,14 @@ public class Enemy : MonoBehaviour
 
   void Start()
   {
+    initialPositon = transform.position;
     if (Alpha)
     {
       lineRenderer = gameObject.GetComponent<LineRenderer>();
     }
     currentHealth = maxHealth;
     healthBar.SetMaxHealth(maxHealth);
+    healthBar.SetHealth(maxHealth);
   }
 
   private void Update()
@@ -95,7 +98,7 @@ public class Enemy : MonoBehaviour
     Instantiate(pointsObject, transform.position, Quaternion.identity);
     if (boss)
     {
-      Instantiate(Teleport, transform.position, Quaternion.identity);
+      Instantiate(Teleport, initialPositon, Quaternion.identity);
       GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().PickUpTrophy(Trophy);
     }
     roomController = transform.parent.GetComponent<RoomController>();
