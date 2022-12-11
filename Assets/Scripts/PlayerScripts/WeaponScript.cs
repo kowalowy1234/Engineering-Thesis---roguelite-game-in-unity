@@ -26,7 +26,10 @@ public class WeaponScript : MonoBehaviour
   {
     if (Input.GetMouseButton(0) && Time.time > nextShot)
     {
-      Shoot();
+      if (Time.timeScale > 0)
+      {
+        Shoot();
+      }
     }
   }
 

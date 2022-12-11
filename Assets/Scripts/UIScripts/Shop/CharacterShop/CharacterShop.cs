@@ -13,6 +13,10 @@ public class CharacterShop : MonoBehaviour
   public int MsPrice = 2500;
   public int EnPrice = 2500;
 
+  public Text HpPriceText;
+  public Text MsPriceText;
+  public Text EnPriceText;
+
   private GameController gameController;
   private PlayerController playerController;
   private PlayerMovement playerMovement;
@@ -37,6 +41,10 @@ public class CharacterShop : MonoBehaviour
     eNScript.SetMaxValue(maxBonusEn);
     eNScript.SetValue(gameController.playerMaxEnergy - gameController.baseMaxEnergy);
 
+    HpPriceText.text = "" + HpPrice;
+    MsPriceText.text = "" + MsPrice;
+    EnPriceText.text = "" + EnPrice;
+
     if (gameController.playerMaxHealth == maxBonusHp + gameController.baseMaxHp)
     {
       BuyHPButton.interactable = false;
@@ -49,14 +57,20 @@ public class CharacterShop : MonoBehaviour
     {
       BuyEnButton.interactable = false;
     }
+
+    CheckIfCanBuy();
+  }
+
+  private void OnEnable()
+  {
+    CheckIfCanBuy();
   }
 
   public void BuyHp()
   {
     if (gameController.points >= HpPrice)
     {
-      gameController.points -= HpPrice;
-      gameController.AddPoints(-HpPrice);
+      gameController.RemovePoints(HpPrice);
       gameController.playerMaxHealth += 10f;
       playerController.maxHealth += 10f;
       playerController.currentHealth = playerController.maxHealth;
@@ -71,14 +85,14 @@ public class CharacterShop : MonoBehaviour
     }
 
     gameController.SaveGame();
+    CheckIfCanBuy();
   }
 
   public void BuyMs()
   {
     if (gameController.points >= MsPrice)
     {
-      gameController.points -= MsPrice;
-      gameController.AddPoints(-MsPrice);
+      gameController.RemovePoints(MsPrice);
       gameController.playerMoveSpeed += 1f;
       playerMovement.moveSpeed = playerMovement.moveSpeed + 1f;
       mSScript.SetValue(gameController.playerMoveSpeed - gameController.baseMs);
@@ -90,14 +104,14 @@ public class CharacterShop : MonoBehaviour
     }
 
     gameController.SaveGame();
+    CheckIfCanBuy();
   }
 
   public void BuyEn()
   {
     if (gameController.points >= EnPrice)
     {
-      gameController.points -= EnPrice;
-      gameController.AddPoints(-EnPrice);
+      gameController.RemovePoints(EnPrice);
       gameController.playerMaxEnergy += 10f;
       playerMovement.maxEnergy += 10f;
       playerMovement.energyBar.SetMaxEnergy(playerMovement.maxEnergy);
@@ -111,5 +125,24 @@ public class CharacterShop : MonoBehaviour
     }
 
     gameController.SaveGame();
+    CheckIfCanBuy();
+  }
+
+  private void CheckIfCanBuy()
+  {
+    if (gameController.points < HpPrice)
+    {
+      BuyHPButton.interactable = false;
+    }
+
+    if (gameController.points < MsPrice)
+    {
+      BuyMsButton.interactable = false;
+    }
+
+    if (gameController.points < EnPrice)
+    {
+      BuyEnButton.interactable = false;
+    }
   }
 }

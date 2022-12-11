@@ -188,6 +188,12 @@ public class GameController : MonoBehaviour
     GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdatePoints(points, bonusPointsModificator);
   }
 
+  public void RemovePoints(int pointsToRemove)
+  {
+    points -= pointsToRemove;
+    GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>().UpdatePoints(points, bonusPointsModificator);
+  }
+
   public void Sell(int pointsToAdd)
   {
     points += pointsToAdd;
