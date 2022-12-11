@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fbd29252daf964cbb81f2f1b37f903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 320
+  maxHealth: 280
   currentHealth: 0
   invoulnerable: 1
   boss: 1
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 465810203839614756}
   - component: {fileID: 5543569262871328852}
   - component: {fileID: 393646721831988125}
-  m_Layer: 16
+  m_Layer: 21
   m_Name: ChargeState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580d21708b634114a9013187b4cbd81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeVelocity: 20
+  chargeVelocity: 25
   chargeDamage: 5
   prepareState: {fileID: 2254908416680574583}
   stunnedState: {fileID: 1534524125781920737}

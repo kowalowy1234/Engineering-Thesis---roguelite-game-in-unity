@@ -236,5 +236,5 @@ MonoBehaviour:
   damageOverTime: 0
   dotDuration: 0
   playerController: {fileID: 0}
-  healAmount: 3
+  healAmount: 1
   healChance: 0.3
