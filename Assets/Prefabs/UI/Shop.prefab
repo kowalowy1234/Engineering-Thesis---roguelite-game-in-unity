@@ -333,15 +333,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13333334, g: 0.13333334, b: 0.13333334, a: 1}
+  m_Color: {r: 0.09411765, g: 0.09411765, b: 0.09411765, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: -4880425147404727518, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -562,8 +562,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -2870433004414691837, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -856,8 +856,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -2870433004414691837, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -990,8 +990,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -2870433004414691837, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1974,8 +1974,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: -4880425147404727518, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2223,8 +2223,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -2870433004414691837, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2588,8 +2588,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -2870433004414691837, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3419,6 +3419,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7017550107190745557}
     m_Modifications:
+    - target: {fileID: 3461508866908533775, guid: 486439e06e2ff754e9df10deefa1e948, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461508866908533775, guid: 486439e06e2ff754e9df10deefa1e948, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4880425147404727518, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
     - target: {fileID: 3634295205164935627, guid: 486439e06e2ff754e9df10deefa1e948, type: 3}
       propertyPath: m_Name
       value: TrophyShopCard (1)
@@ -3593,6 +3601,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7017550107190745557}
     m_Modifications:
+    - target: {fileID: 3461508866908533775, guid: 486439e06e2ff754e9df10deefa1e948, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461508866908533775, guid: 486439e06e2ff754e9df10deefa1e948, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4880425147404727518, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
     - target: {fileID: 3634295205164935627, guid: 486439e06e2ff754e9df10deefa1e948, type: 3}
       propertyPath: m_Name
       value: TrophyShopCard (2)
@@ -3771,10 +3787,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrophyShopCard
       objectReference: {fileID: 0}
-    - target: {fileID: 3634295205164935627, guid: 486439e06e2ff754e9df10deefa1e948, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3850909352052079965, guid: 486439e06e2ff754e9df10deefa1e948, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3823,10 +3835,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -115.11125
       objectReference: {fileID: 0}
-    - target: {fileID: 6183319204222925276, guid: 486439e06e2ff754e9df10deefa1e948, type: 3}
-      propertyPath: Trophy
-      value: 
-      objectReference: {fileID: 11400000, guid: 77973b121f49d5f4881fe8909dcf536d, type: 2}
     - target: {fileID: 7280344542528756236, guid: 486439e06e2ff754e9df10deefa1e948, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

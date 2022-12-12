@@ -50,6 +50,11 @@ public class MainMenu : MonoBehaviour
     SceneManager.LoadScene("Solitude");
   }
 
+  public void GoToSettings()
+  {
+    SceneManager.LoadScene("SettingsScreen");
+  }
+
   public void Quit()
   {
     Application.Quit();

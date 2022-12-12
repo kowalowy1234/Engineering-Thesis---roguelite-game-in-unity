@@ -71,3 +71,10 @@ MonoBehaviour:
   itemMaxHealthBonus: 0
   playerMaxEnergy: 10
   playerMoveSpeed: 7
+  isFullScreen: 1
+  resolutionWidth: 1920
+  resolutionHeight: 1080
+  musicVolume: 0
+  musicMixer: {fileID: 24100000, guid: 2c72207b38d15654eafd8f09593814ca, type: 2}
+  sfxVolume: 0
+  sfxMixer: {fileID: 24100000, guid: e238b1aedb80d104e8cbfdcc1a4226c5, type: 2}

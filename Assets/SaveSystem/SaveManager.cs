@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SaveManager : MonoBehaviour
 {
@@ -46,7 +47,16 @@ public class SaveManager : MonoBehaviour
   public float playerMaxEnergy;
   public float playerMoveSpeed;
 
-  // Settings
+  //Settings;
+  public bool isFullScreen;
+  public int resolutionWidth;
+  public int resolutionHeight;
+  public float musicVolume;
+  public AudioMixer musicMixer;
+  public float sfxVolume;
+  public AudioMixer sfxMixer;
+
+  // Keys
   const string EQUIPMENT_KEY = "/equipment";
   const string POINTS_KEY = "/points";
   const string ATTRIBUTES_KEY = "/attributes";
@@ -55,6 +65,9 @@ public class SaveManager : MonoBehaviour
 
   private void Awake()
   {
+    resolutionWidth = Screen.currentResolution.width;
+    resolutionHeight = Screen.currentResolution.height;
+
     if (instance == null)
     {
       instance = this;
@@ -85,6 +98,9 @@ public class SaveManager : MonoBehaviour
 
     AttributesData attributesData = new AttributesData(playerMaxHealth, playerMoveSpeed, playerMaxEnergy, itemMaxHealthBonus);
     SaveSystem.Save(attributesData, ATTRIBUTES_KEY);
+
+    SettingsData settingsData = new SettingsData(isFullScreen, resolutionWidth, resolutionHeight, musicVolume, sfxVolume);
+    SaveSystem.Save(settingsData, SETTINGS_KEY);
   }
 
   void Load()
@@ -116,6 +132,16 @@ public class SaveManager : MonoBehaviour
       levelCompletion[progressData.Keys[i]] = progressData.Levels[i];
     }
 
+    SettingsData settingsData = SaveSystem.Load<SettingsData>(SETTINGS_KEY);
+    resolutionHeight = settingsData.resolutionHeight;
+    resolutionWidth = settingsData.resolutionWidth;
+    isFullScreen = settingsData.isFullScreen;
+    Screen.SetResolution(resolutionWidth, resolutionHeight, Screen.fullScreen);
+    Screen.fullScreen = isFullScreen;
+    musicVolume = settingsData.musicVolume;
+    sfxVolume = settingsData.sfxVolume;
+    musicMixer.SetFloat("Volume", musicVolume);
+    sfxMixer.SetFloat("Volume", sfxVolume);
   }
 
   private void OnApplicationQuit()

@@ -89,7 +89,7 @@ public class GameController : MonoBehaviour
       SceneManager.LoadScene("TestingScene");
     }
 
-    if (player == null && SceneManager.GetActiveScene().name != "Main menu" && SceneManager.GetActiveScene().name != "DeathScreen")
+    if (player == null && SceneManager.GetActiveScene().name != "Main menu" && SceneManager.GetActiveScene().name != "DeathScreen" && SceneManager.GetActiveScene().name != "SettingsScreen")
     {
       player = GameObject.FindGameObjectWithTag("Player");
       scrollController = player.GetComponent<ScrollController>();

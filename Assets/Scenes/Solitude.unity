@@ -135,6 +135,10 @@ PrefabInstance:
       value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 5548229637372362106, guid: 9fee170b7c4a8114ebc97b100835ec2f, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5548229637372362106, guid: 9fee170b7c4a8114ebc97b100835ec2f, type: 3}
       propertyPath: orthographic
       value: 1
       objectReference: {fileID: 0}

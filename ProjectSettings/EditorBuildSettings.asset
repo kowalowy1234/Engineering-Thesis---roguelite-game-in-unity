@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main menu.unity
     guid: 76a305de6c8e4a14584e21a02461798e
   - enabled: 1
+    path: Assets/Scenes/SettingsScreen.unity
+    guid: e3fba49a93e12714aa8089d163a59b0e
+  - enabled: 1
     path: Assets/Scenes/Solitude.unity
     guid: fdb39fc89c4051e42a7e36a1726d95fb
   - enabled: 1

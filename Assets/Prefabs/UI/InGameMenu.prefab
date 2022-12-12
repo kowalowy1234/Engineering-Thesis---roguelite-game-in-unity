@@ -255,7 +255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 4491593792817037607, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -410,6 +410,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: InGameMenu, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 7043256288520041374, guid: ce300769ad357b44ba564d179901c7f3, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043256288520041374, guid: ce300769ad357b44ba564d179901c7f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8316607113054144499, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
     - target: {fileID: 7043256288883035739, guid: ce300769ad357b44ba564d179901c7f3, type: 3}
       propertyPath: m_Text
       value: Continue
@@ -552,6 +560,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: InGameMenu, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 7043256288520041374, guid: ce300769ad357b44ba564d179901c7f3, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043256288520041374, guid: ce300769ad357b44ba564d179901c7f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8316607113054144499, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
     - target: {fileID: 7043256288883035739, guid: ce300769ad357b44ba564d179901c7f3, type: 3}
       propertyPath: m_Text
       value: 'Main menu
@@ -696,6 +712,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: InGameMenu, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 7043256288520041374, guid: ce300769ad357b44ba564d179901c7f3, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043256288520041374, guid: ce300769ad357b44ba564d179901c7f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8316607113054144499, guid: 89fd46e41f360964e91265944eb0a375, type: 3}
     - target: {fileID: 7043256288883035739, guid: ce300769ad357b44ba564d179901c7f3, type: 3}
       propertyPath: m_Text
       value: Exit Game

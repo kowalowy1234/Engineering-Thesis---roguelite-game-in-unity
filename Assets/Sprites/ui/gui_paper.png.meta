@@ -330,7 +330,7 @@ TextureImporter:
         height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 32, y: 32, z: 32, w: 32}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -372,7 +372,7 @@ TextureImporter:
         height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 32, y: 32, z: 32, w: 32}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -618,10 +618,10 @@ TextureImporter:
       name: gui_paper_14
       rect:
         serializedVersion: 2
-        x: 384
-        y: 206
-        width: 182
-        height: 40
+        x: 490
+        y: 234
+        width: 76
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -724,9 +724,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 592
-        y: 202
-        width: 104
-        height: 12
+        y: 207
+        width: 65
+        height: 2
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1290,10 +1290,10 @@ TextureImporter:
       name: gui_paper_46
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
-        width: 128
-        height: 96
+        x: 331
+        y: 108
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1354,9 +1354,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 484
-        y: 79
-        width: 140
-        height: 45
+        y: 100
+        width: 88
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1647,9 +1647,9 @@ TextureImporter:
       name: gui_paper_63
       rect:
         serializedVersion: 2
-        x: 560
+        x: 650
         y: 43
-        width: 166
+        width: 76
         height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1673,7 +1673,7 @@ TextureImporter:
         width: 96
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 32, y: 32, z: 32, w: 32}
       outline: []
       physicsShape: []
@@ -1681,6 +1681,69 @@ TextureImporter:
       bones: []
       spriteID: fae848b59637c234ab4f9d17a1b7094f
       internalID: -895893310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui_paper_65
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 79
+        width: 64
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ccab71475e6b25498d557b461ba18f0
+      internalID: 1306255923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui_paper_66
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 47
+        width: 64
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b770b3cf4b49ed4496297af57708d05
+      internalID: 910028234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui_paper_67
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 202
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d58b275e2a3da84db2c8b3e44415012
+      internalID: -1475310670
       vertices: []
       indices: 
       edges: []
@@ -1696,6 +1759,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      gui_paper_66: 910028234
       gui_paper_51: -376241742968505882
       gui_paper_53: 8411363555413930464
       gui_paper_5: -3334079535791250161
@@ -1718,6 +1782,7 @@ TextureImporter:
       gui_paper_33: 5503004479555622505
       gui_paper_42: 6004263912928437396
       gui_paper_30: -6687070014832379202
+      gui_paper_67: -1475310670
       gui_paper_48: 8316607113054144499
       gui_paper_56: -4910597369255442954
       gui_paper_0: -4880425147404727518
@@ -1760,6 +1825,7 @@ TextureImporter:
       gui_paper_61: 125337079501456573
       gui_paper_31: -1640881750261776670
       gui_paper_1: -8840559861522753125
+      gui_paper_65: 1306255923
       gui_paper_43: -6742164230092219683
   spritePackingTag: 
   pSDRemoveMatte: 0
