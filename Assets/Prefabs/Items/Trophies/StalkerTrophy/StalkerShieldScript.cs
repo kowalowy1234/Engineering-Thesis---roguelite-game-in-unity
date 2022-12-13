@@ -22,7 +22,6 @@ public class StalkerShieldScript : MonoBehaviour
   void OnTriggerEnter2D(Collider2D other)
   {
     float randomNumber = Random.Range(0f, 1f);
-    Debug.Log("bruh");
     if (other.gameObject.layer == 16 && randomNumber >= 0.7f)
     {
       other.gameObject.SetActive(false);
