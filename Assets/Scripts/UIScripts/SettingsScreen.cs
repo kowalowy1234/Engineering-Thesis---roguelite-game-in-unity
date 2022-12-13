@@ -45,12 +45,15 @@ public class SettingsScreen : MonoBehaviour
     ResolutionDropdown.AddOptions(Options);
     ResolutionDropdown.value = currentResolutionIndex;
     ResolutionDropdown.RefreshShownValue();
+
+    saveManager.Save();
   }
 
   public void SetFullScreen(bool isFullScreen)
   {
     Screen.fullScreen = isFullScreen;
     saveManager.isFullScreen = isFullScreen;
+    saveManager.Save();
   }
 
   public void SetResolution(int resolutionIndex)
@@ -60,23 +63,27 @@ public class SettingsScreen : MonoBehaviour
     Screen.fullScreen = saveManager.isFullScreen;
     saveManager.resolutionHeight = resolution.height;
     saveManager.resolutionWidth = resolution.width;
+    saveManager.Save();
   }
 
   public void SetMusicVolume(float volume)
   {
     MusicMixer.SetFloat("Volume", volume);
     saveManager.musicVolume = volume;
+    saveManager.Save();
   }
 
   public void SetSfxVolume(float volume)
   {
     SfxMixer.SetFloat("Volume", volume);
     saveManager.sfxVolume = volume;
+    saveManager.Save();
   }
 
   public void GoToMainMenu()
   {
     SceneManager.LoadScene("Main menu");
+    saveManager.Save();
   }
 
   public void Exit()

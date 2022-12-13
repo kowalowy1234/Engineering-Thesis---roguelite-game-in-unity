@@ -17,8 +17,6 @@ public class Boss1TrophyScript : TrophyTemplate
     playerController.currentHealth = gameController.playerMaxHealth + gameController.itemMaxHealthBonus;
     playerController.healthBar.SetMaxHealth(playerController.maxHealth);
     playerController.healthBar.SetHealth(playerController.maxHealth);
-
-    Debug.Log("Equipped charger trophy");
   }
 
   public override void UnequipTrophy()
@@ -31,7 +29,5 @@ public class Boss1TrophyScript : TrophyTemplate
     playerController.currentHealth = playerController.maxHealth;
     playerController.healthBar.SetMaxHealth(playerController.maxHealth);
     playerController.healthBar.SetHealth(playerController.maxHealth);
-
-    Debug.Log("Unequipped charger trophy");
   }
 }
