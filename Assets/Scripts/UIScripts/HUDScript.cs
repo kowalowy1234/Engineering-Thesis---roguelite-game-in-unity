@@ -33,6 +33,8 @@ public class HUDScript : MonoBehaviour
   public Text Points;
   public Text BonusPointsModificator;
 
+  private bool itemsShowing;
+
   private void Start()
   {
     GameController gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -54,12 +56,12 @@ public class HUDScript : MonoBehaviour
 
   private void Update()
   {
-    if (Input.GetKeyDown(KeyCode.LeftAlt))
+    if (Input.GetKeyDown(KeyCode.LeftAlt) && Time.timeScale > 0f)
     {
       ShowItemInfo();
     }
 
-    if (Input.GetKeyUp(KeyCode.LeftAlt))
+    if (Input.GetKeyUp(KeyCode.LeftAlt) && itemsShowing)
     {
       HideItemInfo();
     }
@@ -123,16 +125,21 @@ public class HUDScript : MonoBehaviour
 
   private void ShowItemInfo()
   {
-    Time.timeScale = 0f;
-    ElixirInfo.SetActive(true);
-    ScrollInfo.SetActive(true);
-    WeaponInfo.SetActive(true);
-    TrophyInfo.SetActive(true);
+    if (Time.timeScale > 0f)
+    {
+      Time.timeScale = 0f;
+      itemsShowing = true;
+      ElixirInfo.SetActive(true);
+      ScrollInfo.SetActive(true);
+      WeaponInfo.SetActive(true);
+      TrophyInfo.SetActive(true);
+    }
   }
 
   private void HideItemInfo()
   {
     Time.timeScale = 1f;
+    itemsShowing = false;
     ElixirInfo.SetActive(false);
     ScrollInfo.SetActive(false);
     WeaponInfo.SetActive(false);
