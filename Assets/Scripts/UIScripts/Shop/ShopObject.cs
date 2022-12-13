@@ -11,6 +11,7 @@ public class ShopObject : MonoBehaviour
 
   void Start()
   {
+    GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>().Save();
     player = GameObject.FindGameObjectWithTag("Player");
   }
 

@@ -140,6 +140,8 @@ public class SaveManager : MonoBehaviour
     Screen.fullScreen = isFullScreen;
     musicVolume = settingsData.musicVolume;
     sfxVolume = settingsData.sfxVolume;
+    musicMixer.SetFloat("Volume", musicVolume);
+    sfxMixer.SetFloat("Volume", sfxVolume);
   }
 
   private void OnApplicationQuit()
