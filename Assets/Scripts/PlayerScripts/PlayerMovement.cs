@@ -23,6 +23,10 @@ public class PlayerMovement : MonoBehaviour
   private Rigidbody2D rigidBody2D;
   public EnergyBar energyBar;
 
+  [Header("Audio")]
+  public AudioClip blinkSound;
+  public AudioSource audioSource;
+
   private void Start()
   {
     gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -34,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     playerSprite = gameObject.GetComponent<SpriteRenderer>();
     energyBar.SetMaxEnergy(maxEnergy);
     energyBar.SetEnergy(maxEnergy);
+    audioSource.clip = blinkSound;
 
     InvokeRepeating("RechargeEnergy", 1f, 1f);
   }
@@ -47,6 +52,11 @@ public class PlayerMovement : MonoBehaviour
     {
       if (moveDirection != Vector3.zero)
       {
+        if (audioSource.clip != blinkSound)
+        {
+          audioSource.clip = blinkSound;
+        }
+        audioSource.Play();
         currentEnergy -= 10f;
         energyBar.SetEnergy(currentEnergy);
         isBlinking = true;

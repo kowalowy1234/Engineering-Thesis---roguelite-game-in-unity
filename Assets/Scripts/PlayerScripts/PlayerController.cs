@@ -18,6 +18,11 @@ public class PlayerController : MonoBehaviour
   public TrophyTemplate CarriedTrophy;
   public TrophyTemplate EquippedTrophy;
 
+  [Header("Audio")]
+  public AudioClip hurtSound;
+  public AudioClip healSound;
+  public AudioSource audioSource;
+
   void Start()
   {
     gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -35,6 +40,8 @@ public class PlayerController : MonoBehaviour
     CarriedTrophy = gameController.carriedTrophy;
     EquippedTrophy.UnequipTrophy();
     EquippedTrophy.EquipTrophy();
+
+    audioSource.clip = hurtSound;
   }
 
   void Update()
@@ -54,6 +61,11 @@ public class PlayerController : MonoBehaviour
   {
     if (!invoulnerable)
     {
+      if (audioSource.clip != hurtSound)
+      {
+        audioSource.clip = hurtSound;
+      }
+      audioSource.Play();
       if (currentHealth - (damage * damageReduce) <= 0)
       {
         die();
@@ -82,6 +94,11 @@ public class PlayerController : MonoBehaviour
 
   public void Heal(float health)
   {
+    if (audioSource.clip != healSound)
+    {
+      audioSource.clip = healSound;
+    }
+    audioSource.Play();
     if (currentHealth + health > maxHealth)
     {
       currentHealth = maxHealth;

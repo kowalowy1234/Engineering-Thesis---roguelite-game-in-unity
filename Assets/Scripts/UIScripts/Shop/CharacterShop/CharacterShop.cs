@@ -130,19 +130,36 @@ public class CharacterShop : MonoBehaviour
 
   private void CheckIfCanBuy()
   {
+    if (gameController == null)
+    {
+      gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    }
+
     if (gameController.points < HpPrice)
     {
       BuyHPButton.interactable = false;
+    }
+    else
+    {
+      BuyHPButton.interactable = true;
     }
 
     if (gameController.points < MsPrice)
     {
       BuyMsButton.interactable = false;
     }
+    else
+    {
+      BuyMsButton.interactable = true;
+    }
 
     if (gameController.points < EnPrice)
     {
       BuyEnButton.interactable = false;
+    }
+    else
+    {
+      BuyEnButton.interactable = true;
     }
   }
 }

@@ -1,10 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
 
+  [Header("Stats")]
   public float maxHealth = 100;
   [SerializeField]
   public float currentHealth;
@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
   public bool invoulnerable = false;
   public bool boss;
 
+  [Header("Components")]
   public HealthBar healthBar;
   public GameObject Teleport;
   public TrophyTemplate Trophy;
@@ -24,6 +25,10 @@ public class Enemy : MonoBehaviour
   public GameObject Alpha;
   public LineRenderer lineRenderer;
 
+  [Header("Sound")]
+  public AudioClip hurtSound;
+  public AudioSource audioSource;
+
   void Start()
   {
     initialPositon = transform.position;
@@ -34,6 +39,7 @@ public class Enemy : MonoBehaviour
     currentHealth = maxHealth;
     healthBar.SetMaxHealth(maxHealth);
     healthBar.SetHealth(maxHealth);
+    audioSource.clip = hurtSound;
   }
 
   private void Update()
@@ -57,6 +63,11 @@ public class Enemy : MonoBehaviour
   {
     if (!invoulnerable)
     {
+      if (audioSource.clip != hurtSound)
+      {
+        audioSource.clip = hurtSound;
+      }
+      audioSource.Play();
       if (currentHealth - damage <= 0)
       {
         if (Alpha)

@@ -50,6 +50,10 @@ public class CardScript : MonoBehaviour
 
   private void RefreshCard()
   {
+    if (gameController == null)
+    {
+      gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    }
     if (gameController.carriedTrophy.name != Trophy.name)
     {
       SellButton.interactable = false;

@@ -15,6 +15,7 @@ public class SettingsScreen : MonoBehaviour
   public Slider sfxVolumeSlider;
 
   private SaveManager saveManager;
+  public AudioSource audioSource;
 
   Resolution[] Resolutions;
 
@@ -78,6 +79,11 @@ public class SettingsScreen : MonoBehaviour
     SfxMixer.SetFloat("Volume", volume);
     saveManager.sfxVolume = volume;
     saveManager.Save();
+  }
+
+  public void TestSfx()
+  {
+    audioSource.Play();
   }
 
   public void GoToMainMenu()
