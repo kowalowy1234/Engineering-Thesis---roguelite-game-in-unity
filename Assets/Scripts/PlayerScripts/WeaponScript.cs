@@ -9,12 +9,14 @@ public class WeaponScript : MonoBehaviour
   private WeaponTemplate weapon;
   public Transform shootingPoint;
   public PlayerController playerController;
+  public AudioSource audioSource;
 
   private void Start()
   {
     weapon = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().currentWeapon;
     weaponSprite = gameObject.GetComponent<SpriteRenderer>();
     weaponSprite.sprite = weapon.sprite;
+    audioSource.clip = weapon.shootSound;
 
     if (weapon.name == "Earth Staff")
     {
@@ -36,6 +38,7 @@ public class WeaponScript : MonoBehaviour
   private void Shoot()
   {
     nextShot = Time.time + weapon.rateOfFire;
+    audioSource.Play();
     Instantiate(weapon.projectile, shootingPoint.position, transform.rotation);
   }
 
@@ -43,6 +46,7 @@ public class WeaponScript : MonoBehaviour
   {
     weapon = newWeapon;
     weaponSprite.sprite = newWeapon.sprite;
+    audioSource.clip = newWeapon.shootSound;
 
     if (weapon.name == "Earth Staff")
     {
