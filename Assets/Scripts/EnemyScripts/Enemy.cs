@@ -105,12 +105,14 @@ public class Enemy : MonoBehaviour
 
   public void die()
   {
+    GameController gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    gameController.ModifyBonusPoints(0.1f);
     StopAllCoroutines();
     Instantiate(pointsObject, transform.position, Quaternion.identity);
     if (boss)
     {
       Instantiate(Teleport, initialPositon, Quaternion.identity);
-      GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().PickUpTrophy(Trophy);
+      gameController.PickUpTrophy(Trophy);
     }
     roomController = transform.parent.GetComponent<RoomController>();
     roomController.Kill(gameObject);

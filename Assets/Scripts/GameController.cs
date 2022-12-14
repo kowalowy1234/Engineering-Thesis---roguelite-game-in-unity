@@ -75,16 +75,16 @@ public class GameController : MonoBehaviour
 
   void Update()
   {
-    if (Input.GetKey(KeyCode.B))
+    if (Input.GetKey(KeyCode.B) && Application.isEditor)
     {
       SceneManager.LoadScene("Solitude");
     }
-    if (Input.GetKey(KeyCode.M))
+    if (Input.GetKey(KeyCode.M) && Application.isEditor)
     {
       SaveGame();
       SceneManager.LoadScene("Main menu");
     }
-    if (Input.GetKey(KeyCode.T))
+    if (Input.GetKey(KeyCode.T) && Application.isEditor)
     {
       SceneManager.LoadScene("TestingScene");
     }
