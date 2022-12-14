@@ -12,15 +12,36 @@ public class PlayerController : MonoBehaviour
   private bool takingDotDamage = false;
 
   private GameController gameController;
+  private HUDScript hud;
   public HealthBar healthBar;
+  public GameObject CarriedTrophySprite;
+  public TrophyTemplate CarriedTrophy;
+  public TrophyTemplate EquippedTrophy;
+
+  [Header("Audio")]
+  public AudioClip hurtSound;
+  public AudioClip healSound;
+  public AudioSource audioSource;
 
   void Start()
   {
     gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-    maxHealth = gameController.playerMaxHealth;
+    hud = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>();
+    healthBar = GameObject.FindGameObjectWithTag("HUDHealthbar").GetComponent<HealthBar>();
+
+    maxHealth = gameController.playerMaxHealth + gameController.itemMaxHealthBonus;
     currentHealth = gameController.playerMaxHealth;
-    healthBar.SetMaxHealth(gameController.playerMaxHealth);
-    healthBar.SetHealth(gameController.playerMaxHealth);
+    healthBar.SetMaxHealth(gameController.playerMaxHealth + gameController.itemMaxHealthBonus);
+    healthBar.SetHealth(gameController.playerMaxHealth + gameController.itemMaxHealthBonus);
+
+
+    CarriedTrophySprite.GetComponent<SpriteRenderer>().sprite = gameController.carriedTrophy.TrophySprite;
+    EquippedTrophy = gameController.currentTrophy;
+    CarriedTrophy = gameController.carriedTrophy;
+    EquippedTrophy.UnequipTrophy();
+    EquippedTrophy.EquipTrophy();
+
+    audioSource.clip = hurtSound;
   }
 
   void Update()
@@ -40,6 +61,11 @@ public class PlayerController : MonoBehaviour
   {
     if (!invoulnerable)
     {
+      if (audioSource.clip != hurtSound)
+      {
+        audioSource.clip = hurtSound;
+      }
+      audioSource.Play();
       if (currentHealth - (damage * damageReduce) <= 0)
       {
         die();
@@ -62,14 +88,42 @@ public class PlayerController : MonoBehaviour
 
   public void die()
   {
-    // Destroy(gameObject);
     healthBar.SetHealth(0);
-    Debug.Log("Game Over");
+    gameController.PlayerDied();
   }
 
-  public void Heal(int health)
+  public void Heal(float health)
   {
-    //heal logic;
+    if (audioSource.clip != healSound)
+    {
+      audioSource.clip = healSound;
+    }
+    audioSource.Play();
+    if (currentHealth + health > maxHealth)
+    {
+      currentHealth = maxHealth;
+      healthBar.SetHealth(maxHealth);
+    }
+    else
+    {
+      currentHealth += health;
+      healthBar.SetHealth(currentHealth);
+    }
+  }
+
+  public void EquipNewTrophy(TrophyTemplate newTrophy)
+  {
+    CarriedTrophySprite.GetComponent<SpriteRenderer>().sprite = null;
+    CarriedTrophy = null;
+    EquippedTrophy.UnequipTrophy();
+    EquippedTrophy = newTrophy;
+    newTrophy.EquipTrophy();
+  }
+
+  public void SellTrophy()
+  {
+    CarriedTrophySprite.GetComponent<SpriteRenderer>().sprite = null;
+    CarriedTrophy = null;
   }
 
   IEnumerator damageOverTime(int damage, int duration)

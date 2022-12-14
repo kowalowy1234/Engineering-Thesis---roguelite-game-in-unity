@@ -3,8 +3,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scrolls/ExplosionScroll")]
 public class ExplosionScrollScript : ScrollTemplate
 {
-  public override void Activate()
+  public GameObject explosionProjectile;
+
+  public override bool Activate()
   {
-    Debug.Log("Used explosion scroll");
+    Instantiate(explosionProjectile, GameObject.FindGameObjectWithTag("Player").transform);
+    return true;
   }
 }

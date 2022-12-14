@@ -47,9 +47,34 @@ MonoBehaviour:
   currentWeapon: {fileID: 11400000, guid: 8ab68691a8d00fb4184d0c8304943c46, type: 2}
   currentScroll: {fileID: 11400000, guid: 018d1ff915506a9409f5859b67fe217a, type: 2}
   currentElixir: {fileID: 11400000, guid: fcb919b9267bb8748a2865596a0c3a80, type: 2}
-  currentTrophy: 0
+  DungeonList:
+  - DungeonKey: 1
+    levels: 
+  - DungeonKey: 2
+    levels: 00
+  - DungeonKey: 3
+    levels: 0000
+  teleportsOpenedList:
+  - dungeonName: Dungeon1
+    isOpened: 1
+  - dungeonName: Dungeon2
+    isOpened: 0
+  - dungeonName: Dungeon3
+    isOpened: 0
+  - dungeonName: VictoryScreen
+    isOpened: 0
+  currentTrophy: {fileID: 11400000, guid: 919edafab40736049a4a9af1ea58b78d, type: 2}
+  carriedTrophy: {fileID: 11400000, guid: 919edafab40736049a4a9af1ea58b78d, type: 2}
   points: 0
   bonusPointsModificator: 1
   playerMaxHealth: 10
+  itemMaxHealthBonus: 0
   playerMaxEnergy: 10
-  portalsOpened: 
+  playerMoveSpeed: 7
+  isFullScreen: 1
+  resolutionWidth: 1920
+  resolutionHeight: 1080
+  musicVolume: -20
+  musicMixer: {fileID: 24100000, guid: 2c72207b38d15654eafd8f09593814ca, type: 2}
+  sfxVolume: -20
+  sfxMixer: {fileID: 24100000, guid: e238b1aedb80d104e8cbfdcc1a4226c5, type: 2}

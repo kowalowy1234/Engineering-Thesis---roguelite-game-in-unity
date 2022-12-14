@@ -16,3 +16,5 @@ MonoBehaviour:
   rateOfFire: 0.6
   sprite: {fileID: 903854775207698278, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
   projectile: {fileID: 3670291305755581006, guid: e21b834bdbe4d7347b5dbf06ee3ca02a, type: 3}
+  description: Chance to heal upon hitting an enemy, slow rafe of fire.
+  shootSound: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}

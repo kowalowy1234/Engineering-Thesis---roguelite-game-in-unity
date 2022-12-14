@@ -1,35 +1,28 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class InGameMenu : MonoBehaviour
 {
   public GameObject container;
+  public UIManager UIManager;
+  private SaveManager saveManager;
 
-  private void Update()
+  private void Start()
   {
-    if (Input.GetKeyDown(KeyCode.Escape))
-    {
-      if (container.activeSelf)
-      {
-        container.SetActive(false);
-        Time.timeScale = 1;
-      }
-      else
-      {
-        container.SetActive(true);
-        Time.timeScale = 0;
-      }
-    }
+    saveManager = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>();
   }
 
   public void Continue()
   {
     container.SetActive(false);
+    UIManager.currentlyOpen = null;
     Time.timeScale = 1;
   }
 
   public void GoToMainMenu()
   {
+    saveManager.Save();
     Time.timeScale = 1;
     SceneManager.LoadScene("Main menu");
   }

@@ -9,12 +9,14 @@ namespace ExplodingEnemy
     public GameObject explosionTrigger;
     public ChaseState chaseState;
     public GameObject body;
+    private Rigidbody2D rb;
     private GameObject player;
     private Vector3 playerPosition;
 
     private void Start()
     {
       player = GameObject.FindGameObjectWithTag("Player");
+      rb = body.GetComponent<Rigidbody2D>();
     }
 
     public override State RunCurrentState()
@@ -34,6 +36,11 @@ namespace ExplodingEnemy
     public void Explode()
     {
       explosionTrigger.SetActive(true);
+    }
+
+    public override void RunPhysicsState()
+    {
+      rb.velocity = Vector2.zero;
     }
   }
 }

@@ -5,8 +5,8 @@ public class PlayerMovement : MonoBehaviour
   [SerializeField]
   LayerMask blinkLayerMask;
 
-  public float moveSpeed = 10f;
-  public float maxEnergy = 10f;
+  public float moveSpeed;
+  public float maxEnergy;
   public float currentEnergy = 10f;
   public float blinkRange = 3f;
   public float energyRechargeRate = 0f;
@@ -16,21 +16,29 @@ public class PlayerMovement : MonoBehaviour
   bool isBlinking = false;
 
   public Animator animator;
+  public Vector3 playerDestination;
   private GameController gameController;
   private Vector3 moveDirection;
   private SpriteRenderer playerSprite;
   private Rigidbody2D rigidBody2D;
   public EnergyBar energyBar;
 
+  [Header("Audio")]
+  public AudioClip blinkSound;
+  public AudioSource audioSource;
+
   private void Start()
   {
     gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    moveSpeed = gameController.playerMoveSpeed;
+    energyBar = GameObject.FindGameObjectWithTag("HUDEnergybar").GetComponent<EnergyBar>();
     maxEnergy = gameController.playerMaxEnergy;
     currentEnergy = maxEnergy;
     rigidBody2D = GetComponent<Rigidbody2D>();
     playerSprite = gameObject.GetComponent<SpriteRenderer>();
     energyBar.SetMaxEnergy(maxEnergy);
     energyBar.SetEnergy(maxEnergy);
+    audioSource.clip = blinkSound;
 
     InvokeRepeating("RechargeEnergy", 1f, 1f);
   }
@@ -44,11 +52,18 @@ public class PlayerMovement : MonoBehaviour
     {
       if (moveDirection != Vector3.zero)
       {
+        if (audioSource.clip != blinkSound)
+        {
+          audioSource.clip = blinkSound;
+        }
+        audioSource.Play();
         currentEnergy -= 10f;
         energyBar.SetEnergy(currentEnergy);
         isBlinking = true;
       }
     }
+
+    playerDestination = transform.position + moveDirection;
   }
 
   private void FixedUpdate()

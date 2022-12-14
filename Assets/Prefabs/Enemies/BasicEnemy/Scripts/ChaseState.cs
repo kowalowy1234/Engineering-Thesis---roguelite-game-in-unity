@@ -8,7 +8,7 @@ namespace BasicEnemy
     private float distanceToPlayer;
 
     public AttackState attackState;
-    public GameObject body;
+    public Rigidbody2D rb;
     private GameObject player;
     private Vector3 playerPosition;
 
@@ -27,8 +27,13 @@ namespace BasicEnemy
         return attackState;
       }
 
-      body.transform.position = Vector3.MoveTowards(transform.position, playerPosition, chaseSpeed * Time.deltaTime);
+      // body.transform.position = Vector3.MoveTowards(transform.position, playerPosition, chaseSpeed * Time.deltaTime);
       return this;
+    }
+
+    public override void RunPhysicsState()
+    {
+      rb.velocity = (playerPosition - transform.position).normalized * chaseSpeed;
     }
   }
 }

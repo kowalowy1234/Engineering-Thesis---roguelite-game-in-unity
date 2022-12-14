@@ -17,11 +17,20 @@ TagManager:
   - Room
   - RoomController
   - Door
+  - Shield
+  - WeaponPivot
+  - HUDHealthbar
+  - HUDEnergybar
+  - HUD
+  - ProgressManager
+  - UIManager
+  - AlphaDamagePool
+  - TeleportsOpened
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - HUD
   - Water
   - UI
   - Player
@@ -36,9 +45,9 @@ TagManager:
   - RoomCover
   - EnemyProjectile
   - RoomController
-  - 
-  - 
-  - 
+  - Shield
+  - UntargetableEnemy
+  - PlayerDamagePool
   - 
   - 
   - 

@@ -8,6 +8,7 @@ public class Chest : MonoBehaviour
   private Animator animator;
   private float distanceToPlayer;
   private bool inactive = false;
+  public AudioSource audioSource;
 
   void Start()
   {
@@ -30,6 +31,10 @@ public class Chest : MonoBehaviour
   {
     animator.SetBool("isOpen", false);
     GameObject item = lootPool[Random.Range(0, lootPool.Length)];
+    if (item.name == "Points")
+    {
+      audioSource.Play();
+    }
     Instantiate(item, transform.position, Quaternion.Euler(item.transform.eulerAngles));
     inactive = true;
   }

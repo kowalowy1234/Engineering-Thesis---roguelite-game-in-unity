@@ -6,12 +6,14 @@ public class MainMenu : MonoBehaviour
 {
   public GameObject gameController;
   public GameObject saveManager;
+  public GameObject progressManager;
   public Button continueButton;
 
   void Start()
   {
     gameController = GameObject.FindGameObjectWithTag("GameController");
     saveManager = GameObject.FindGameObjectWithTag("SaveManager");
+    progressManager = GameObject.FindGameObjectWithTag("ProgressManager");
 
     if (SaveSystem.CanContinueGame() == true)
     {
@@ -35,6 +37,10 @@ public class MainMenu : MonoBehaviour
     {
       Destroy(saveManager);
     }
+    if (progressManager != null)
+    {
+      Destroy(progressManager);
+    }
 
     SceneManager.LoadScene("Solitude");
   }
@@ -42,6 +48,11 @@ public class MainMenu : MonoBehaviour
   public void ContinueGame()
   {
     SceneManager.LoadScene("Solitude");
+  }
+
+  public void GoToSettings()
+  {
+    SceneManager.LoadScene("SettingsScreen");
   }
 
   public void Quit()

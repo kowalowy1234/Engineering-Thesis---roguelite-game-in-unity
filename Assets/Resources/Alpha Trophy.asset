@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8eff5376de529d45b94c4a86fd7b604, type: 3}
+  m_Name: Alpha Trophy
+  m_EditorClassIdentifier: 
+  TrophyName: Alpha Trophy
+  TrophyPrice: 700
+  TrophyDescription: Creates a field that deals continuous damage to enemies.
+  TrophySprite: {fileID: -562266087, guid: dedecae9a0cbf3e4bb37df480b4b230e, type: 3}
+  alphaDamagePool: {fileID: 7557887873607561985, guid: f347b099e6fab484ebcae4289ac110c5, type: 3}

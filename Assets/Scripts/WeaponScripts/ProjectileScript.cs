@@ -6,6 +6,8 @@ public class ProjectileScript : MonoBehaviour
   public int damage = 10;
   public int damageOverTime = 2;
   public int dotDuration = 2;
+
+  public PlayerController playerController;
   private Rigidbody2D rigidBD;
 
   private void Awake()
@@ -13,8 +15,9 @@ public class ProjectileScript : MonoBehaviour
     rigidBD = gameObject.GetComponent<Rigidbody2D>();
   }
 
-  void Start()
+  private void Start()
   {
+    playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     rigidBD.velocity = transform.up * velocity;
   }
 

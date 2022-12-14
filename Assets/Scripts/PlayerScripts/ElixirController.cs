@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class ElixirController : MonoBehaviour
 {
-
+  public AudioSource audioSource;
+  public AudioClip drinkSound;
   public ElixirTemplate currentElixir;
+  private HUDScript hud;
   float cooldownTime;
   float activeTime;
-  int chargesLeft;
+  public int chargesLeft;
 
   enum State
   {
@@ -20,6 +22,7 @@ public class ElixirController : MonoBehaviour
   void Start()
   {
     currentElixir = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().currentElixir;
+    hud = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDScript>();
     chargesLeft = currentElixir.charges;
     if (chargesLeft == 0)
     {
@@ -35,11 +38,18 @@ public class ElixirController : MonoBehaviour
       case State.READY:
         if (Input.GetKeyDown(KeyCode.E))
         {
-          currentElixir.Activate();
-          currentState = State.iS_ACTIVE;
-          activeTime = currentElixir.duration;
-          chargesLeft -= 1;
-          Debug.Log("Charges left: " + chargesLeft);
+          if (currentElixir.Activate() == true)
+          {
+            if (audioSource.clip != drinkSound)
+            {
+              audioSource.clip = drinkSound;
+            }
+            audioSource.Play();
+            currentState = State.iS_ACTIVE;
+            activeTime = currentElixir.duration;
+            chargesLeft -= 1;
+            hud.UpdateElixirCharges(chargesLeft);
+          };
         }
         break;
 
@@ -53,10 +63,12 @@ public class ElixirController : MonoBehaviour
         {
           if (chargesLeft == 0)
           {
+            currentElixir.Deactivate();
             currentState = State.DEPLETED;
           }
           else
           {
+            currentElixir.Deactivate();
             currentState = State.READY;
           }
         }
@@ -69,7 +81,6 @@ public class ElixirController : MonoBehaviour
 
   public void Swap(ElixirTemplate newElixir)
   {
-    Debug.Log("Swapped Elixir to" + newElixir);
     currentElixir = newElixir;
     chargesLeft = newElixir.charges;
     currentState = State.READY;

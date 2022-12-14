@@ -5,12 +5,14 @@ public class ElixirTemplate : ScriptableObject
   public string ElixirName;
   public float duration;
   public int charges;
+  public string description;
 
   public Sprite sprite;
 
-  public virtual void Activate()
+  public virtual bool Activate()
   {
     // Elixir activation logic
+    return true;
   }
 
   public virtual void Active()

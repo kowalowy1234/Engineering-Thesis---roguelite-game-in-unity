@@ -70,7 +70,6 @@ namespace ShootingEnemy
       {
         if (!projectilePool[i].activeInHierarchy)
         {
-          Debug.Log(projectilePool[i].name);
           return projectilePool[i];
         }
       }

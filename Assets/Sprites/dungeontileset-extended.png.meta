@@ -1064,6 +1064,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -7796,7 +7808,7 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7804,6 +7816,111 @@ TextureImporter:
       bones: []
       spriteID: c29439e2e268fe54a81e22bf81fe6d18
       internalID: -680109832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trophy1
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 941
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ae85d60312b794a9017d8f55eca2bf
+      internalID: 837477057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trophy2
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 740
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2b11aba340fd240b0bc97f86071a43
+      internalID: -449814910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Trophy3
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 890
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10653c430b959b42a74d7599cde048f
+      internalID: -562266087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floorTile
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 944
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85ce6fb3dbf6a94db7fb549db5ec7e6
+      internalID: -10505760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmptyImage
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 687
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1d84244a449d448b34cc044b849be7
+      internalID: 1753796188
       vertices: []
       indices: 
       edges: []
@@ -7841,6 +7958,7 @@ TextureImporter:
       dungeontileset-extended_215: -3066745221911595005
       dungeontileset-extended_183: 5749300399417697787
       dungeontileset-extended_188: 2064521030655544918
+      Trophy3: -562266087
       dungeontileset-extended_255: 8647247119771214116
       dungeontileset-extended_238: -4502731403189526949
       dungeontileset-extended_175: -6406638700769579675
@@ -8036,6 +8154,7 @@ TextureImporter:
       FemaleWizardJump2: -6491896863023587324
       dungeontileset-extended_65: -8050960907205511324
       dungeontileset-extended_197: -5587299346763019475
+      floorTile: -10505760
       dungeontileset-extended_61: -2110370594210321807
       dungeontileset-extended_226: 6776741845825665918
       dungeontileset-extended_50: 435135538135570966
@@ -8106,11 +8225,13 @@ TextureImporter:
       dungeontileset-extended_16: -7996808963434139365
       dungeontileset-extended_93: -7357715077758276938
       Staff1: 7555586439735394427
+      EmptyImage: 1753796188
       dungeontileset-extended_192: 6848381103118036138
       dungeontileset-extended_217: -1585742501357597863
       dungeontileset-extended_194: -8830122653094465309
       dungeontileset-extended_225: -884093924108043739
       dungeontileset-extended_298: 2247033278362936892
+      trophy1: 837477057
       dungeontileset-extended_212: 8488072934870562487
       dungeontileset-extended_263: -3329178618651188000
       dungeontileset-extended_223: -7607433910276958812
@@ -8140,6 +8261,7 @@ TextureImporter:
       dungeontileset-extended_228: 3950945738567751163
       dungeontileset-extended_42: 2476495104179136506
       dungeontileset-extended_274: 3006821826220327252
+      Trophy2: -449814910
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
