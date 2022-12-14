@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MoveAndFinish : MonoBehaviour
 {
-  public float y = 1350f;
+  public float y = 900f;
   public float moveSpeed = 1f;
   public RectTransform rectTransform;
 
   // Update is called once per frame
   void Update()
   {
+    Debug.Log(rectTransform.position.y);
     if (rectTransform.position.y >= y)
     {
       SceneManager.LoadScene("Main menu");
