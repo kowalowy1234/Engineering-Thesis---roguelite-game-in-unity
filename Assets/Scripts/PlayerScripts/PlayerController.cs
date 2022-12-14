@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
   [Header("Audio")]
   public AudioClip hurtSound;
+  public AudioClip healSound;
   public AudioSource audioSource;
 
   void Start()
@@ -93,6 +94,11 @@ public class PlayerController : MonoBehaviour
 
   public void Heal(float health)
   {
+    if (audioSource.clip != healSound)
+    {
+      audioSource.clip = healSound;
+    }
+    audioSource.Play();
     if (currentHealth + health > maxHealth)
     {
       currentHealth = maxHealth;

@@ -18,3 +18,4 @@ MonoBehaviour:
   projectile: {fileID: 3670291305755581006, guid: a28fb47c52c15e04f98452d7147c5b4f, type: 3}
   description: Provides moderate reduction to all damage recieved, medium rate of
     fire.
+  shootSound: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}

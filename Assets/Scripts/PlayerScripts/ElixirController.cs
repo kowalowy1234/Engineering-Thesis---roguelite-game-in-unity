@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class ElixirController : MonoBehaviour
 {
-
+  public AudioSource audioSource;
+  public AudioClip drinkSound;
   public ElixirTemplate currentElixir;
   private HUDScript hud;
   float cooldownTime;
@@ -39,6 +40,11 @@ public class ElixirController : MonoBehaviour
         {
           if (currentElixir.Activate() == true)
           {
+            if (audioSource.clip != drinkSound)
+            {
+              audioSource.clip = drinkSound;
+            }
+            audioSource.Play();
             currentState = State.iS_ACTIVE;
             activeTime = currentElixir.duration;
             chargesLeft -= 1;
