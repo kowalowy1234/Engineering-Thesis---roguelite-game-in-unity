@@ -12,7 +12,6 @@ public class MoveAndFinish : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    Debug.Log(rectTransform.position.y);
     if (rectTransform.position.y >= y)
     {
       SceneManager.LoadScene("Main menu");
