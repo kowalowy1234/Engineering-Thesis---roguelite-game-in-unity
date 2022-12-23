@@ -75,16 +75,19 @@ public class GameController : MonoBehaviour
 
   void Update()
   {
-    if (Input.GetKey(KeyCode.B) && Application.isEditor)
+    // if (Input.GetKey(KeyCode.B) && Application.isEditor)
+    if (Input.GetKey(KeyCode.B))
     {
       SceneManager.LoadScene("Solitude");
     }
-    if (Input.GetKey(KeyCode.M) && Application.isEditor)
+    // if (Input.GetKey(KeyCode.M) && Application.isEditor)
+    if (Input.GetKey(KeyCode.M))
     {
       SaveGame();
       SceneManager.LoadScene("Main menu");
     }
-    if (Input.GetKey(KeyCode.T) && Application.isEditor)
+    // if (Input.GetKey(KeyCode.T) && Application.isEditor)
+    if (Input.GetKey(KeyCode.T))
     {
       SceneManager.LoadScene("TestingScene");
     }

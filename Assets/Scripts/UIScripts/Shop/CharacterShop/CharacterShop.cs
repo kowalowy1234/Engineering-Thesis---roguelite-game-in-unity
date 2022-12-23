@@ -68,7 +68,7 @@ public class CharacterShop : MonoBehaviour
 
   public void BuyHp()
   {
-    if (gameController.points >= HpPrice)
+    if (gameController.points >= HpPrice && gameController.playerMaxHealth < gameController.baseMaxHp + maxBonusHp)
     {
       gameController.RemovePoints(HpPrice);
       gameController.playerMaxHealth += 10f;
@@ -77,6 +77,10 @@ public class CharacterShop : MonoBehaviour
       playerController.healthBar.SetMaxHealth(playerController.maxHealth);
       playerController.healthBar.SetHealth(playerController.maxHealth);
       hPScript.SetValue(gameController.playerMaxHealth - gameController.baseMaxHp);
+    }
+    else
+    {
+      BuyHPButton.interactable = false;
     }
 
     if (gameController.playerMaxHealth == maxBonusHp + gameController.baseMaxHp)
@@ -90,12 +94,16 @@ public class CharacterShop : MonoBehaviour
 
   public void BuyMs()
   {
-    if (gameController.points >= MsPrice)
+    if (gameController.points >= MsPrice && gameController.playerMoveSpeed < gameController.baseMs + maxBonusMs)
     {
       gameController.RemovePoints(MsPrice);
       gameController.playerMoveSpeed += 1f;
       playerMovement.moveSpeed = playerMovement.moveSpeed + 1f;
       mSScript.SetValue(gameController.playerMoveSpeed - gameController.baseMs);
+    }
+    else
+    {
+      BuyMsButton.interactable = false;
     }
 
     if (gameController.playerMoveSpeed == maxBonusMs + gameController.baseMs)
@@ -109,7 +117,7 @@ public class CharacterShop : MonoBehaviour
 
   public void BuyEn()
   {
-    if (gameController.points >= EnPrice)
+    if (gameController.points >= EnPrice && gameController.playerMaxEnergy < gameController.baseMaxEnergy + maxBonusEn)
     {
       gameController.RemovePoints(EnPrice);
       gameController.playerMaxEnergy += 10f;
@@ -117,6 +125,10 @@ public class CharacterShop : MonoBehaviour
       playerMovement.energyBar.SetMaxEnergy(playerMovement.maxEnergy);
       playerMovement.energyBar.SetEnergy(playerMovement.maxEnergy);
       eNScript.SetValue(gameController.playerMaxEnergy - gameController.baseMaxEnergy);
+    }
+    else
+    {
+      BuyEnButton.interactable = false;
     }
 
     if (gameController.playerMaxEnergy == maxBonusEn + gameController.baseMaxEnergy)
